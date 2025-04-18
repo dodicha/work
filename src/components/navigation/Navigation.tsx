@@ -1,9 +1,18 @@
-import React from "react";
+"use client";
+
 import Link from "next/link";
 import FacebookIcon from "../icons/Facebook";
 import InstagramIcon from "../icons/Instagram";
+import React, { useState } from "react";
+import router, { useRouter } from "next/router";
 
 export default function Navigation() {
+  const [cklicked, setClicked] = useState("");
+
+  const cklickedNav = (href: string) => {
+    setClicked(href);
+  };
+
   return (
     <div>
       <div className="w-[220px] h-screen flex items-center justify-center  bg-gradient-to-b from-[#07071b] to-[#0d0d5e]">
@@ -13,25 +22,37 @@ export default function Navigation() {
           <ul className="flex flex-col mt-[210px] font-neue gap-[30px] font-bold text-xl">
             <Link
               href="/"
-              className="transition-all duration-300 hover:scale-110"
+              className={`transition-all duration-300 hover:scale-110 ${
+                cklicked === "/" ? "scale-110" : "hover:scale-110"
+              }`}
+              onClick={() => cklickedNav("/")}
             >
               HOME
             </Link>
             <Link
               href="/about"
-              className="transition-all duration-300 hover:scale-110"
+              className={`transition-all duration-300 hover:scale-110 ${
+                cklicked === "/about" ? "scale-110" : "hover:scale-110"
+              }`}
+              onClick={() => cklickedNav("/about")}
             >
               ABOUT
             </Link>
             <Link
               href="/work"
-              className="transition-all duration-300 hover:scale-110"
+              className={`transition-all duration-300 hover:scale-110 ${
+                cklicked === "/work" ? "scale-110" : "hover:scale-110"
+              }`}
+              onClick={() => cklickedNav("/work")}
             >
               WORKS
             </Link>
             <Link
               href="/contact"
-              className="transition-all duration-300 hover:scale-110"
+              className={`transition-all duration-300 hover:scale-110 ${
+                cklicked === "/contact" ? "scale-110" : "hover:scale-110"
+              }`}
+              onClick={() => cklickedNav("/contact")}
             >
               CONTACT
             </Link>
