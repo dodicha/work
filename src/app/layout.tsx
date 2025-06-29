@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} flex`}>{children}</body>
+      <body className={`${inter.className} flex`}>
+        {children}
+        <NavBar />
+      </body>
     </html>
   );
 }

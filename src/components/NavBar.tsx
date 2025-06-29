@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+const navItems = ["Home", "About", "Projects", "Contact"];
 
 export default function NavBar() {
   const [active, setActive] = useState("Home");
@@ -14,7 +14,7 @@ export default function NavBar() {
         return (
           <a
             key={item}
-            href={`#${item.toLowerCase()}`}
+            href={`${item.toLowerCase()}`}
             onClick={() => setActive(item)}
             className={`
               relative font-medium text-sm md:text-base transition-all duration-300
