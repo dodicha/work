@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function ResumePage() {
   return (
     <main
-      className="min-h-screen w-full flex  font-serif"
+      className="min-h-screen w-full font-serif"
       style={{
         backgroundImage: "url('/images/background.jpg')",
         backgroundSize: "cover",
@@ -16,14 +16,18 @@ export default function ResumePage() {
         filter: "grayscale(0.3)",
       }}
     >
-      <About />
-      <div className="w-2/3 ">
-        <div className="flex w-full h-1/2">
-          <Biography />
-          <Experiance />
+      <h1 className="text-[5vw] font-extrabold text-center uppercase tracking-widest drop-shadow-lg">
+        breaking news
+      </h1>
+      <div className="flex pt-12 pr-12 pl-12">
+        <About />
+        <div className="w-2/3">
+          <div className="flex w-full h-1/2">
+            <Biography />
+            <Experiance />
+          </div>
+          <Projects />
         </div>
-
-        <Projects />
       </div>
     </main>
   );
