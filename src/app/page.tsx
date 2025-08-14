@@ -17,7 +17,7 @@ export default function ResumePage() {
       }}
     >
       <h1 className="text-[5vw] font-extrabold text-center uppercase tracking-widest drop-shadow-lg">
-        breaking news
+        Tech Time News
       </h1>
       <div className="flex pt-12 pr-12 pl-12">
         <About />
