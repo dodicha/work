@@ -1,10 +1,15 @@
-import About from "@/components/About";
-import Biography from "@/components/Biography";
-import Experiance from "@/components/Experiance";
-import Projects from "@/components/Projects";
+"use client";
+
+import About from "../components/About";
+import Experiance from "../components/Experiance";
+import Skills from "../components/Skills";
 import Image from "next/image";
+import Evidence from "../components/Evidence";
+import { useEffect, useState } from "react";
 
 export default function ResumePage() {
+  const [showExperiance, setShowExperiance] = useState(false);
+
   return (
     <main
       className="min-h-screen w-full font-serif"
@@ -23,10 +28,10 @@ export default function ResumePage() {
         <About />
         <div className="w-2/3">
           <div className="flex w-full h-1/2">
-            <Biography />
+            <Skills />
             <Experiance />
           </div>
-          <Projects />
+          <Evidence />
         </div>
       </div>
     </main>
