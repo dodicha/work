@@ -6,24 +6,11 @@ import Link from "next/link";
 
 const projects = [
   {
-    title: "3D Warehouse Visualizer",
+    title: "Epilog Project",
     description:
-      "Built an interactive 3D warehouse model using Three.js and React.",
+      "An app that helps operators coordinate materials, laser machines, and properties for efficient production.",
     date: "2025",
-    link: "/projects/3d-warehouse",
-  },
-  {
-    title: "Tago Glamping Platform",
-    description:
-      "Frontend for a glamping reservation system emphasizing smooth UX.",
-    date: "2025",
-    link: "/projects/tago-glamping",
-  },
-  {
-    title: "Portfolio Website",
-    description: "Personal website showcasing resume and creative works.",
-    date: "2025",
-    link: "/projects/portfolio-website",
+    link: "/projects/epilog",
   },
 ];
 export default function Evidence() {
