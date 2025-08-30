@@ -118,23 +118,25 @@ export default function EpilogPage() {
         <div>
           <h2 className="text-xl font-bold mb-4">Choose Operation</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {Object.keys(
-              data[selectedMachine].Watt[selectedWatt].operations
-            ).map((operation) => (
-              <div
-                key={operation}
-                onClick={() => setSelectedOperation(operation)}
-                className="cursor-pointer border rounded-2xl shadow-md p-4 hover:scale-105 transition bg-white"
-              >
-                <h3 className="text-center font-semibold">{operation}</h3>
-              </div>
-            ))}
+            {selectedMachine &&
+              selectedWatt &&
+              Object.keys(
+                data[selectedMachine].Watt[selectedWatt].operations
+              ).map((operation) => (
+                <div
+                  key={operation}
+                  onClick={() => setSelectedOperation(operation)}
+                  className="cursor-pointer border rounded-2xl shadow-md p-4 hover:scale-105 transition bg-white"
+                >
+                  <h3 className="text-center font-semibold">{operation}</h3>
+                </div>
+              ))}
           </div>
         </div>
       )}
 
       {/* Material Parameters */}
-      {selectedOperation && (
+      {selectedOperation && selectedMachine && selectedWatt && (
         <div>
           <h2 className="text-xl font-bold mb-4">Parameters</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
