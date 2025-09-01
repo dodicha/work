@@ -138,7 +138,9 @@ export default function EpilogPage() {
       {/* Material Parameters */}
       {selectedOperation && selectedMachine && selectedWatt && (
         <div>
-          <h2 className="text-xl font-bold mb-4">Parameters</h2>
+          <h2 className="text-xl font-bold mb-4">
+            {selectedOperation} Parameters
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {Object.entries(
               data[selectedMachine].Watt[selectedWatt].operations[

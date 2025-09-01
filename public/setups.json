@@ -1391,6 +1391,602 @@
           }
         }
       }
+    },
+    "Fiber mark": {
+      "image": "/images/machines/fiber-mark.jpeg",
+      "Watt": {
+        "20 Watt": {
+          "description": "The 20 Watt fiber laser is ideal for marking and engraving metals and plastics. It offers high precision and is perfect for small-scale industrial applications.",
+          "operations": {
+            "Marking": {
+              "Materials": {
+                "Aluminum": {
+                  "DPI": "600",
+                  "speed": "30-40",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.06 to +.07"
+                },
+                "Brass": {
+                  "DPI": "600",
+                  "speed": "20-30",
+                  "Power": "100",
+                  "Frequency": "5-20",
+                  "focus": "0"
+                },
+                "Plastic": {
+                  "DPI": "600",
+                  "speed": "40-50",
+                  "Power": "60-70",
+                  "Frequency": "50",
+                  "focus": "0"
+                },
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "20-30",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "-.01 to +.01"
+                },
+                "Titanium": {
+                  "DPI": "600",
+                  "speed": "20-30",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "-.01 to +.01"
+                },
+                "Plated Metals": {
+                  "DPI": "600-1200",
+                  "speed": "10-20",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "+.09 to .1"
+                }
+              }
+            },
+            "Annealing": {
+              "Materials": {
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "5-10",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.08 to +.11"
+                },
+                "Titanium": {
+                  "DPI": "600",
+                  "speed": "5-10",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.08 to +.11"
+                }
+              }
+            },
+            "Polishing": {
+              "Materials": {
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "50-60",
+                  "Power": "35-40",
+                  "Frequency": "50-60",
+                  "focus": "0"
+                }
+              }
+            }
+          }
+        },
+        "30 Watt": {
+          "description": "The 30 Watt fiber laser is a versatile machine suitable for marking, engraving and annealing a variety of metals and plastics. It provides a good balance between power and presicion for medium-scale industrial applications.",
+          "operations": {
+            "Marking": {
+              "Materials": {
+                "Aluminum": {
+                  "DPI": "600",
+                  "speed": "40-50",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.06 to +.07"
+                },
+                "Brass": {
+                  "DPI": "600",
+                  "speed": "30-40",
+                  "Power": "100",
+                  "Frequency": "5-20",
+                  "focus": "0"
+                },
+                "Plastic": {
+                  "DPI": "600",
+                  "speed": "50-60",
+                  "Power": "60-70",
+                  "Frequency": "50",
+                  "focus": "0"
+                },
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "30-40",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "-.01 to +.01"
+                },
+                "Titanium": {
+                  "DPI": "600",
+                  "speed": "30-40",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "-.01 to +.01"
+                },
+                "Plated Metals": {
+                  "DPI": "600-1200",
+                  "speed": "20-30",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "+.09 to .1"
+                }
+              }
+            },
+            "Annealing": {
+              "Materials": {
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "7-12",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.08 to +.11"
+                },
+                "Titanium": {
+                  "DPI": "600",
+                  "speed": "7-12",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.08 to +.11"
+                }
+              }
+            },
+            "Polishing": {
+              "Materials": {
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "60-70",
+                  "Power": "35-40",
+                  "Frequency": "50-60",
+                  "focus": "0"
+                }
+              }
+            }
+          }
+        },
+        "50 Watt": {
+          "description": "The 50 Watt fiber laser is a high power machine designed for heavy-duty marking, engraving and annealing tasks on a wide range of metals and plastics. It is ideal for large-scale industrial applications that require maximum power and efficiency.",
+          "operations": {
+            "Marking": {
+              "Materials": {
+                "Aluminum": {
+                  "DPI": "600",
+                  "speed": "50-60",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.06 to +.07"
+                },
+                "Brass": {
+                  "DPI": "600",
+                  "speed": "40-50",
+                  "Power": "100",
+                  "Frequency": "5-20",
+                  "focus": "0"
+                },
+                "Plastic": {
+                  "DPI": "600",
+                  "speed": "60-70",
+                  "Power": "60-70",
+                  "Frequency": "50",
+                  "focus": "0"
+                },
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "40-50",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "-.01 to +.01"
+                },
+                "Titanium": {
+                  "DPI": "600",
+                  "speed": "40-50",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "-.01 to +.01"
+                },
+                "Plated Metals": {
+                  "DPI": "600-1200",
+                  "speed": "30-40",
+                  "Power": "100",
+                  "Frequency": "1-5",
+                  "focus": "+.09 to .1"
+                }
+              }
+            },
+            "Annealing": {
+              "Materials": {
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "10-15",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.08 to +.11"
+                },
+                "Titanium": {
+                  "DPI": "600",
+                  "speed": "11-15",
+                  "Power": "100",
+                  "Frequency": "1",
+                  "focus": "+.08 to +.11"
+                }
+              }
+            },
+            "Polishing": {
+              "Materials": {
+                "Stainless Steel": {
+                  "DPI": "600",
+                  "speed": "70-80",
+                  "Power": "35-40",
+                  "Frequency": "50-60",
+                  "focus": "0"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Fusion Maker": {
+      "image": "/images/machines/fusion-maker.webp",
+      "Watt": {
+        "30 Watt": {
+          "description": "The 30 Watt fusion maker laser is a versatile machine suitable for engraving and cutting a variety of materials including wood and acrylic up to 1/8 inch. It is ideal for hobbyists and small-scale projects that require precision and detail.",
+          "operations": {
+            "Photo Engraving": {
+              "Materials": {
+                "Acrylic": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "22"
+                },
+                "Alumamark": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "55"
+                },
+                "Cork": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "40"
+                },
+                "Fleece": {
+                  "DPI": "200",
+                  "Speed": "100",
+                  "Power": "25"
+                },
+                "Glass": {
+                  "DPI": "300",
+                  "Speed": "30",
+                  "Power": "100"
+                },
+                "Leather": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "35"
+                },
+                "Marble": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "50"
+                },
+                "Painted Brass": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "50"
+                },
+                "Plastics": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "35"
+                },
+                "Stainless Steel": {
+                  "DPI": "500",
+                  "Speed": "15",
+                  "Power": "100"
+                },
+                "Wood": {
+                  "DPI": "500",
+                  "Speed": "35",
+                  "Power": "100"
+                }
+              }
+            },
+            "Cutting": {
+              "Materials": {
+                "Acryic": {
+                  "3 milimeter": {
+                    "Frequency": "100",
+                    "Speed": "8",
+                    "Power": "100"
+                  },
+                  "6 milimeter": {
+                    "Frequency": "100",
+                    "Speed": "2",
+                    "Power": "100"
+                  }
+                },
+                "Leather": {
+                  "Frequency": "10",
+                  "Speed": "20",
+                  "Power": "100"
+                },
+                "Mat Board": {
+                  "Frequency": "100",
+                  "Speed": "15",
+                  "Power": "100"
+                },
+                "Twill": {
+                  "Frequency": "100",
+                  "Speed": "35",
+                  "Power": "40"
+                },
+                "Wood": {
+                  "3 milimeter": {
+                    "Frequency": "20",
+                    "Speed": "15",
+                    "Power": "100"
+                  },
+                  "6 milimeter": {
+                    "Frequency": "20",
+                    "Speed": "2",
+                    "Power": "100"
+                  }
+                },
+                "Plastic": {
+                  "Frequency": "100",
+                  "Speed": "15",
+                  "Power": "100"
+                }
+              }
+            }
+          }
+        },
+        "40 Watt": {
+          "description": "The 40 Watt fusion maker laser offers increased power for cutting and engraving a wider range of materials including wood, acrylic and leather up to 1/4 inch thick. It is suitable for more detailed projects that require higher precision and speed.",
+          "operations": {
+            "Photo Engraving": {
+              "Materials": {
+                "Acrylic": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "40"
+                },
+                "Alumamark": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "22"
+                },
+                "Cork": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "25"
+                },
+                "Fleece": {
+                  "DPI": "200",
+                  "Speed": "100",
+                  "Power": "15"
+                },
+                "Glass": {
+                  "DPI": "300",
+                  "Speed": "40",
+                  "Power": "100"
+                },
+                "Leather": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "25"
+                },
+                "Marble": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "40"
+                },
+                "Painted Brass": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "40"
+                },
+                "Plastics": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "25"
+                },
+                "Stainless Steel": {
+                  "DPI": "500",
+                  "Speed": "20",
+                  "Power": "100"
+                },
+                "Wood": {
+                  "DPI": "500",
+                  "Speed": "50",
+                  "Power": "100"
+                }
+              }
+            },
+            "Cutting": {
+              "Materials": {
+                "Acryic": {
+                  "3 milimeter": {
+                    "Frequency": "100",
+                    "Speed": "10",
+                    "Power": "100"
+                  },
+                  "6 milimeter": {
+                    "Frequency": "100",
+                    "Speed": "4",
+                    "Power": "100"
+                  }
+                },
+                "Leather": {
+                  "Frequency": "10",
+                  "Speed": "30",
+                  "Power": "100"
+                },
+                "Mat Board": {
+                  "Frequency": "100",
+                  "Speed": "20",
+                  "Power": "100"
+                },
+                "Twill": {
+                  "Frequency": "100",
+                  "Speed": "50",
+                  "Power": "40"
+                },
+                "Wood": {
+                  "3 milimeter": {
+                    "Frequency": "10",
+                    "Speed": "20",
+                    "Power": "100"
+                  },
+                  "6 milimeter": {
+                    "Frequency": "50",
+                    "Speed": "4",
+                    "Power": "100"
+                  }
+                },
+                "Plastic": {
+                  "Frequency": "100",
+                  "Speed": "20",
+                  "Power": "80"
+                }
+              }
+            }
+          }
+        },
+        "50 Watt": {
+          "description": "The 50 Watt fusion maker laser is a high power option capable of handling a wide range of materials including thicker wood, acrylic and leather up to 1/2 inch thick. It is sutable for both intricate engraving and heavy-duty cutting tasks.",
+          "operations": {
+            "Photo Engraving": {
+              "Materials": {
+                "Acrylic": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "30"
+                },
+                "Alumamark": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "25"
+                },
+                "Cork": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "20"
+                },
+                "Fleece": {
+                  "DPI": "200",
+                  "Speed": "100",
+                  "Power": "10"
+                },
+                "Glass": {
+                  "DPI": "300",
+                  "Speed": "50",
+                  "Power": "100"
+                },
+                "Leather": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "15"
+                },
+                "Marble": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "30"
+                },
+                "Painted Brass": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "30"
+                },
+                "Plastics": {
+                  "DPI": "300",
+                  "Speed": "100",
+                  "Power": "20"
+                },
+                "Stainless Steel": {
+                  "DPI": "500",
+                  "Speed": "25",
+                  "Power": "100"
+                },
+                "Wood": {
+                  "DPI": "500",
+                  "Speed": "60",
+                  "Power": "100"
+                }
+              }
+            },
+            "Cutting": {
+              "Materials": {
+                "Acryic": {
+                  "3 milimeter": {
+                    "Frequency": "100",
+                    "Speed": "12",
+                    "Power": "100"
+                  },
+                  "6 milimeter": {
+                    "Frequency": "100",
+                    "Speed": "6",
+                    "Power": "100"
+                  },
+                  "9.5 milimeter": {
+                    "Frequency": "100",
+                    "Speed": "2",
+                    "Power": "100"
+                  }
+                },
+                "Leather": {
+                  "Frequency": "10",
+                  "Speed": "40",
+                  "Power": "100"
+                },
+                "Mat Board": {
+                  "Frequency": "100",
+                  "Speed": "25",
+                  "Power": "100"
+                },
+                "Twill": {
+                  "Frequency": "100",
+                  "Speed": "65 ",
+                  "Power": "40"
+                },
+                "Wood": {
+                  "3 milimeter": {
+                    "Frequency": "20",
+                    "Speed": "825",
+                    "Power": "100"
+                  },
+                  "6 milimeter": {
+                    "Frequency": "20",
+                    "Speed": "6",
+                    "Power": "100"
+                  },
+                  "9.5 milimeter": {
+                    "Frequency": "10",
+                    "Speed": "2",
+                    "Power": "100"
+                  }
+                },
+                "Plastic": {
+                  "Frequency": "100",
+                  "Speed": "25",
+                  "Power": "60"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
