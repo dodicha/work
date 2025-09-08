@@ -12,7 +12,7 @@ export default function ResumePage() {
 
   return (
     <main
-      className="min-h-screen w-full font-serif"
+      className="w-full lg:min-h-screen font-serif"
       style={{
         backgroundImage: "url('/images/background.jpg')",
         backgroundSize: "cover",
@@ -21,9 +21,7 @@ export default function ResumePage() {
         filter: "grayscale(0.3)",
       }}
     >
-      <h1 className="text-[5vw] font-extrabold text-center uppercase tracking-widest drop-shadow-lg">
-        Tech Time News
-      </h1>
+      <h1 className="text-[5vw] font-extrabold text-center">TECH TIME NEWS</h1>
       <div className="flex pt-12 pr-12 pl-12">
         <About />
         <div className="w-2/3">
