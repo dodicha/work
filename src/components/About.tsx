@@ -3,57 +3,72 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="w-1/3 h-screen border-r-4 border-l-4 border-black flex flex-col   pl-5 pr-5 ">
-      <div className="flex border-b-2 border-dashed border-black">
-        <div className="text-center w-1/2 ">
-          <h1 className="font-extrabold tracking-widest  drop-shadow-lg text-[2.5rem]">
+    <div
+      className="
+      w-full md:w-1/3 h-auto md:h-screen 
+      border-r-4 border-l-4 border-black 
+      flex flex-col pl-3 pr-3 md:pl-5 md:pr-5
+    "
+    >
+      {/* Header */}
+      <div className="flex flex-col md:flex-row border-b-2 border-dashed border-black">
+        {/* Left side */}
+        <div className="text-center md:w-1/2 ">
+          <h1 className="font-extrabold tracking-widest drop-shadow-lg text-[8vw] md:text-[2.5rem]">
             WANTED
           </h1>
-          <h1 className="font-extrabold tracking-widest drop-shadow-lg text-[1.5rem] ">
+          <h1 className="font-extrabold tracking-widest drop-shadow-lg text-[5vw] md:text-[1.5rem]">
             AT ANY COST
           </h1>
           <Image
             src="/images/wanted.jpg"
             alt={"wanted"}
-            width={280}
-            height={280}
+            width={220}
+            height={220}
+            className="mx-auto"
           />
-          <h1 className=" font-extrabold text-[1.5rem] font-serif pt-2">
+          <h1 className="font-extrabold text-[5vw] md:text-[1.5rem] font-serif pt-2">
             Giorgi Gogichaishvili
           </h1>
-          <h1 className="font-serif font-extrabold text-[1.5rem]">
+          <h1 className="font-serif font-extrabold text-[5vw] md:text-[1.5rem]">
             Software Engineer
           </h1>
         </div>
-        <div className="w-1/2 justify-center items-center flex m-5 text-2xl text-center">
+
+        {/* Right side */}
+        <div className="w-full md:w-1/2 justify-center items-center flex m-3 md:m-5 text-[4vw] md:text-2xl text-center">
           <h1>
             Teams around the world look to it to complete projects faster,
             cleaner, and remarkably error-free.
           </h1>
         </div>
       </div>
-      <div className="space-y-4 pt-4 text-2xl">
-        <div className="flex items-center">
-          <span className="text-4xl text-black mr-3">•</span>
-          <span className="font-serif ">
+
+      {/* Bullets */}
+      <div className="space-y-4 pt-4 text-[4vw] md:text-2xl">
+        <div className="flex items-start">
+          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="font-serif">
             A digital criminal with a reputation for solving unsolved problems.
           </span>
         </div>
 
-        <div className="flex items-center">
-          <span className="text-4xl text-black mr-3">•</span>
-          <span className="font-serif ">
+        <div className="flex items-start">
+          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="font-serif">
             Known to refactor without warning and build experiences users
             actually enjoy.
           </span>
         </div>
-        <div className="flex items-center">
-          <span className="text-4xl text-black mr-3">•</span>
-          <span className="font-serif ">Works silently, delivers loudly.</span>
+
+        <div className="flex items-start">
+          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="font-serif">Works silently, delivers loudly.</span>
         </div>
-        <div className="flex items-center">
-          <span className="text-4xl text-black mr-3">•</span>
-          <span className="font-serif ">
+
+        <div className="flex items-start">
+          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="font-serif">
             You can always count on him for something special.
           </span>
         </div>

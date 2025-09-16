@@ -19,21 +19,18 @@ const exp = [
 ];
 export default function Experiance() {
   return (
-    <div className="w-1/2 ">
-      <div className="px-6 pt-6">
-        <h2 className="font-serif text-2xl sm:text-3xl tracking-wide uppercase font-extrabold text-stone-900">
+    <div className="w-full md:w-1/2">
+      <div className="px-4 pt-4 md:px-6 md:pt-6">
+        <h2 className="font-serif text-[5vw] md:text-2xl tracking-wide uppercase font-extrabold text-stone-900">
           Record of Operations
         </h2>
-        <p className="mt-1 text-sm text-stone-900 italic">
+        <p className="mt-1 text-[3.5vw] md:text-sm text-stone-900 italic">
           No major gang activity detected; suspect operates alone
         </p>
-
-        {/* Divider styled like a newspaper rule */}
         <div className="mt-4 h-[1px] w-full bg-stone-600" />
       </div>
 
-      {/* Experience list */}
-      <ul className="px-6 py-6 space-y-3 font-serif text-base leading-relaxed text-stone-800">
+      <ul className="px-4 md:px-6 py-4 md:py-6 space-y-3 font-serif text-[4vw] md:text-xl leading-relaxed text-stone-800">
         {exp.map((e, i) => (
           <motion.li
             key={e.label}
@@ -45,7 +42,7 @@ export default function Experiance() {
               stiffness: 120,
               damping: 16,
             }}
-            className=" pb-2 text-2xl"
+            className="pb-2"
           >
             <span className="font-bold">{e.label}:</span> {e.note}
           </motion.li>

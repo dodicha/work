@@ -12,7 +12,7 @@ export default function ResumePage() {
 
   return (
     <main
-      className="w-full lg:min-h-screen font-serif"
+      className="w-full lg:min-h-screen font-serif overflow-x-hidden"
       style={{
         backgroundImage: "url('/images/background.jpg')",
         backgroundSize: "cover",
@@ -21,11 +21,16 @@ export default function ResumePage() {
         filter: "grayscale(0.3)",
       }}
     >
-      <h1 className="text-[5vw] font-extrabold text-center">TECH TIME NEWS</h1>
-      <div className="flex pt-12 pr-12 pl-12">
+      <h1 className="text-[6vw] md:text-[5vw] font-extrabold text-center">
+        TECH TIME NEWS
+      </h1>
+
+      {/* მობილურზე სვეტები გადადის column-ში */}
+      <div className="flex flex-col lg:flex-row pt-6 lg:pt-12 px-4 lg:px-12">
         <About />
-        <div className="w-2/3">
-          <div className="flex w-full h-1/2">
+
+        <div className="w-full lg:w-2/3">
+          <div className="flex flex-col md:flex-row w-full">
             <Skills />
             <Experiance />
           </div>
