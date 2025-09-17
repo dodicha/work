@@ -5,56 +5,61 @@ export default function About() {
   return (
     <div
       className="
-      w-full md:w-1/3 h-auto md:h-screen 
-      border-r-4 border-l-4 border-black 
-      flex flex-col pl-3 pr-3 md:pl-5 md:pr-5
-    "
+        w-full min-h-screen 
+        border-x-4 border-black 
+        flex flex-col 
+        px-4 sm:px-6 lg:flex-col lg:px-10
+      "
     >
-      {/* Header */}
-      <div className="flex flex-col md:flex-row border-b-2 border-dashed border-black">
-        {/* Left side */}
-        <div className="text-center md:w-1/2 ">
-          <h1 className="font-extrabold tracking-widest drop-shadow-lg text-[8vw] md:text-[2.5rem]">
+      {/* Header Section */}
+      <div className="flex flex-col lg:flex-row border-b-2 border-dashed border-black">
+        {/* Left Side */}
+        <div className="text-center lg:w-1/2 flex flex-col items-center justify-center py-6">
+          <h1 className="font-extrabold tracking-widest drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-5xl">
             WANTED
           </h1>
-          <h1 className="font-extrabold tracking-widest drop-shadow-lg text-[5vw] md:text-[1.5rem]">
+          <h1 className="font-extrabold tracking-widest drop-shadow-lg text-2xl sm:text-3xl md:text-4xl lg:text-2xl">
             AT ANY COST
           </h1>
           <Image
             src="/images/wanted.jpg"
-            alt={"wanted"}
-            width={220}
-            height={220}
-            className="mx-auto"
+            alt="wanted"
+            width={280}
+            height={280}
+            className="my-4 w-40 sm:w-56 md:w-64 lg:w-72 h-auto"
           />
-          <h1 className="font-extrabold text-[5vw] md:text-[1.5rem] font-serif pt-2">
+          <h1 className="font-extrabold font-serif text-xl sm:text-2xl md:text-3xl lg:text-2xl pt-2">
             Giorgi Gogichaishvili
           </h1>
-          <h1 className="font-serif font-extrabold text-[5vw] md:text-[1.5rem]">
+          <h1 className="font-extrabold font-serif text-lg sm:text-xl md:text-2xl lg:text-xl">
             Software Engineer
           </h1>
         </div>
 
-        {/* Right side */}
-        <div className="w-full md:w-1/2 justify-center items-center flex m-3 md:m-5 text-[4vw] md:text-2xl text-center">
-          <h1>
+        {/* Right Side */}
+        <div className="lg:w-1/2 flex items-center justify-center m-4 text-center">
+          <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl">
             Teams around the world look to it to complete projects faster,
             cleaner, and remarkably error-free.
           </h1>
         </div>
       </div>
 
-      {/* Bullets */}
-      <div className="space-y-4 pt-4 text-[4vw] md:text-2xl">
+      {/* Bullet Points */}
+      <div className="space-y-4 pt-6 px-2 sm:px-4 text-base sm:text-lg md:text-xl lg:text-2xl">
         <div className="flex items-start">
-          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black mr-3">
+            •
+          </span>
           <span className="font-serif">
             A digital criminal with a reputation for solving unsolved problems.
           </span>
         </div>
 
         <div className="flex items-start">
-          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black mr-3">
+            •
+          </span>
           <span className="font-serif">
             Known to refactor without warning and build experiences users
             actually enjoy.
@@ -62,12 +67,16 @@ export default function About() {
         </div>
 
         <div className="flex items-start">
-          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black mr-3">
+            •
+          </span>
           <span className="font-serif">Works silently, delivers loudly.</span>
         </div>
 
         <div className="flex items-start">
-          <span className="text-[6vw] md:text-4xl text-black mr-3">•</span>
+          <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black mr-3">
+            •
+          </span>
           <span className="font-serif">
             You can always count on him for something special.
           </span>
