@@ -1,9 +1,14 @@
 "use client";
 
 import React, { useMemo, useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import MachineDetails from "./components/MachineDetails";
+import MachineList from "./components/MachineList";
+import MaterialSelector from "./components/MaterialSelector";
+import OperationSelector from "./components/OperationSelector";
+import ParamsTable from "./components/ParamsTable";
+import WattSelector from "./components/WattSelector";
+import ThicknessSelector from "./components/Thickness.Selector";
 
-// Machine descriptions
 const MACHINE_DESCRIPTIONS: Record<string, string> = {
   "Fusion Edge":
     "კომპაქტური და სწრაფი CO₂ სისტემა სამუშაოებისთვის, სადაც მნიშვნელოვანია სიმკვეთრე და საიმედოობა. იდეალურია ყოველდღიური გრივირებისა და სუფთა ჭრისთვის მცირე/საშუალო რაოდენობებზე.",
@@ -23,59 +28,32 @@ const MACHINE_DESCRIPTIONS: Record<string, string> = {
     "ზინგ სერია — კომპაქტური და ხელმისაწვდომი მოწყობილობა. იდეალურია დამწყები მომხმარებლებისთვის და მცირე სამუშაოებისთვის, სადაც მნიშვნელოვანია მარტივი მართვა და ეფექტური შედეგები.",
 };
 
-// Helpers
-const get = (obj: any, key: string) =>
-  obj?.[key] ?? obj?.[key.toLowerCase()] ?? obj?.[capitalize(key)];
-const capitalize = (s: string) =>
-  s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
-
-function getMaterials(opNode: any) {
-  return get(opNode, "Materials") || get(opNode, "materials") || {};
-}
-
-function nodeHasThicknessChoices(node: any) {
-  if (!node || typeof node !== "object") return false;
-  const keys = Object.keys(node);
-  const paramKeys = [
-    "DPI",
-    "dpi",
-    "Speed",
-    "speed",
-    "Power",
-    "power",
-    "Frequency",
-    "frequency",
-    "focus",
-  ];
-  const hasParam = keys.some((k) => paramKeys.includes(k));
-  return !hasParam;
-}
-
-function Pill({
-  active,
-  onClick,
-  children,
-}: {
-  active?: boolean;
-  onClick?: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`rounded-full px-4 py-2 border text-sm transition-all whitespace-nowrap 
-        ${
-          active
-            ? "bg-neutral-900 text-white border-neutral-900"
-            : "bg-white hover:bg-neutral-100 border-neutral-300"
-        }`}
-    >
-      {children}
-    </button>
-  );
-}
-
 export default function Page() {
+  const get = (obj: any, key: string) =>
+    obj?.[key] ?? obj?.[key.toLowerCase()] ?? obj?.[capitalize(key)];
+  const capitalize = (s: string) =>
+    s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+  function getMaterials(opNode: any) {
+    return get(opNode, "Materials") || get(opNode, "materials") || {};
+  }
+  function nodeHasThicknessChoices(node: any) {
+    if (!node || typeof node !== "object") return false;
+    const keys = Object.keys(node);
+    const paramKeys = [
+      "DPI",
+      "dpi",
+      "Speed",
+      "speed",
+      "Power",
+      "power",
+      "Frequency",
+      "frequency",
+      "focus",
+    ];
+    const hasParam = keys.some((k) => paramKeys.includes(k));
+    return !hasParam;
+  }
+
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
@@ -135,211 +113,58 @@ export default function Page() {
     return matNode;
   }, [materialMap, selectedMaterial, selectedThickness]);
 
-  const finalResult = useMemo(() => {
-    if (!paramsNode) return null;
-    return {
-      machine: selectedMachine,
-      watt: selectedWatt,
-      operation: selectedOperation,
-      material: selectedMaterial,
-      thickness: selectedThickness,
-      params: paramsNode,
-    };
-  }, [
-    paramsNode,
-    selectedMachine,
-    selectedWatt,
-    selectedOperation,
-    selectedMaterial,
-    selectedThickness,
-  ]);
-
   if (!data) return <div className="p-6">Loading…</div>;
 
   return (
     <div className="w-screen h-screen bg-neutral-50 text-neutral-900 overflow-hidden">
       <div className="w-full h-full grid grid-cols-[320px_1fr]">
-        {/* Left rail */}
-        <aside className="h-full border-r bg-white overflow-y-auto">
-          <div className="p-4 border-b">
-            <h2 className="text-lg font-semibold">დანადგარები</h2>
-            <p className="text-xs text-neutral-500 mt-1">
-              აირჩიეთ მოდელი სიიდან
-            </p>
-          </div>
-          <ul className="p-2 space-y-2">
-            {machineList.map(({ name, node }) => (
-              <li key={name}>
-                <button
-                  onClick={() => {
-                    setSelectedMachine(name);
-                    setSelectedWatt(null);
-                    setSelectedOperation(null);
-                    setSelectedMaterial(null);
-                    setSelectedThickness(null);
-                  }}
-                  className={`w-full text-left p-3 rounded-xl transition border flex items-center gap-3 
-                    ${
-                      selectedMachine === name
-                        ? "bg-neutral-900 text-white border-neutral-900"
-                        : "bg-white hover:bg-neutral-100 border-neutral-300"
-                    }`}
-                >
-                  <div>
-                    <div className="font-medium">{name}</div>
-                    <div
-                      className={`text-xs ${
-                        selectedMachine === name
-                          ? "text-neutral-200"
-                          : "text-neutral-500"
-                      }`}
-                    >
-                      {node.description}
-                    </div>
-                  </div>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </aside>
-
-        {/* Main content */}
+        <MachineList
+          machineList={machineList}
+          selectedMachine={selectedMachine}
+          setSelectedMachine={setSelectedMachine}
+          setSelectedWatt={setSelectedWatt}
+          setSelectedOperation={setSelectedOperation}
+          setSelectedMaterial={setSelectedMaterial}
+          setSelectedThickness={setSelectedThickness}
+        />
         <main className="relative h-full overflow-y-auto">
           <div className="p-6">
-            {/* Selected machine */}
-            <AnimatePresence>
-              {machineNode && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                  className="rounded-2xl bg-white border border-neutral-200 shadow-sm p-4 max-w-xl"
-                >
-                  <h1 className="text-xl font-semibold">{selectedMachine}</h1>
-                  <p className="text-sm text-neutral-600 mt-1">
-                    {machineNode.description}
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            {/* Watt selection */}
-            {machineNode && (
-              <section className="mt-6">
-                <h3 className="text-sm font-semibold mb-2">
-                  ნაბიჯი 1 — აირჩიეთ სიმძლავრე (Watt)
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {Object.keys(wattMap).map((w) => (
-                    <Pill
-                      key={w}
-                      active={selectedWatt === w}
-                      onClick={() => {
-                        setSelectedWatt(w);
-                        setSelectedOperation(null);
-                        setSelectedMaterial(null);
-                        setSelectedThickness(null);
-                      }}
-                    >
-                      {w}
-                    </Pill>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* Operation selection */}
-            {selectedWatt && (
-              <section className="mt-6">
-                <h3 className="text-sm font-semibold mb-2">
-                  ნაბიჯი 2 — ოპერაცია
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {Object.keys(operationMap).map((op) => (
-                    <Pill
-                      key={op}
-                      active={selectedOperation === op}
-                      onClick={() => {
-                        setSelectedOperation(op);
-                        setSelectedMaterial(null);
-                        setSelectedThickness(null);
-                      }}
-                    >
-                      {op}
-                    </Pill>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* Material selection */}
-            {selectedOperation && (
-              <section className="mt-6">
-                <h3 className="text-sm font-semibold mb-2">
-                  ნაბიჯი 3 — მასალა
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {Object.keys(materialMap).map((mat) => (
-                    <Pill
-                      key={mat}
-                      active={selectedMaterial === mat}
-                      onClick={() => {
-                        setSelectedMaterial(mat);
-                        setSelectedThickness(null);
-                      }}
-                    >
-                      {mat}
-                    </Pill>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* Thickness */}
-            {selectedMaterial &&
-              nodeHasThicknessChoices(materialMap[selectedMaterial]) && (
-                <section className="mt-6">
-                  <h3 className="text-sm font-semibold mb-2">
-                    ნაბიჯი 4 — სისქე
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {Object.keys(materialMap[selectedMaterial] || {}).map(
-                      (th) => (
-                        <Pill
-                          key={th}
-                          active={selectedThickness === th}
-                          onClick={() => setSelectedThickness(th)}
-                        >
-                          {th}
-                        </Pill>
-                      )
-                    )}
-                  </div>
-                </section>
-              )}
-
-            {/* Final parameters */}
-            {paramsNode && (
-              <section className="mt-6">
-                <h3 className="text-sm font-semibold mb-2">
-                  ბოლო ნაბიჯი — პარამეტრები
-                </h3>
-                <table className="min-w-[480px] bg-white border border-neutral-200 rounded-xl overflow-hidden">
-                  <tbody>
-                    {Object.entries(paramsNode).map(([k, v]) => (
-                      <tr key={k} className="border-t">
-                        <td className="px-4 py-2 text-sm text-neutral-600">
-                          {k}
-                        </td>
-                        <td className="px-4 py-2 text-sm font-medium">
-                          {String(v)}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </section>
-            )}
+            <MachineDetails
+              machineNode={machineNode}
+              selectedMachine={selectedMachine}
+            />
+            <WattSelector
+              machineNode={machineNode}
+              wattMap={wattMap}
+              selectedWatt={selectedWatt}
+              setSelectedWatt={setSelectedWatt}
+              setSelectedOperation={setSelectedOperation}
+              setSelectedMaterial={setSelectedMaterial}
+              setSelectedThickness={setSelectedThickness}
+            />
+            <OperationSelector
+              selectedWatt={selectedWatt}
+              operationMap={operationMap}
+              selectedOperation={selectedOperation}
+              setSelectedOperation={setSelectedOperation}
+              setSelectedMaterial={setSelectedMaterial}
+              setSelectedThickness={setSelectedThickness}
+            />
+            <MaterialSelector
+              selectedOperation={selectedOperation}
+              materialMap={materialMap}
+              selectedMaterial={selectedMaterial}
+              setSelectedMaterial={setSelectedMaterial}
+              setSelectedThickness={setSelectedThickness}
+            />
+            <ThicknessSelector
+              selectedMaterial={selectedMaterial}
+              materialMap={materialMap}
+              selectedThickness={selectedThickness}
+              setSelectedThickness={setSelectedThickness}
+              nodeHasThicknessChoices={nodeHasThicknessChoices}
+            />
+            <ParamsTable paramsNode={paramsNode} />
           </div>
         </main>
       </div>

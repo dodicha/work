@@ -8,7 +8,7 @@ import Evidence from "../components/Evidence";
 import { useEffect, useState } from "react";
 
 export default function ResumePage() {
-  const [showExperiance, setShowExperiance] = useState(false);
+  // const [showExperiance, setShowExperiance] = useState(false);
 
   return (
     <main

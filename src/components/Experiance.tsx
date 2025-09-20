@@ -51,22 +51,3 @@ export default function Experiance() {
     </div>
   );
 }
-
-// export default function WantedExperience() {
-//   return (
-//     <section className="relative w-full max-w-3xl mx-auto p-6 sm:p-8">
-//       {/* Newspaper container */}
-//       <div className="bg-stone-50 text-stone-900 shadow-inner ring-1 ring-stone-300 overflow-hidden">
-//         {/* Title area */}
-
-//         {/* Footer note */}
-//         <div className="px-6 pb-6">
-//           <p className="text-xs text-stone-600 italic">
-//             * According to the Gazette, the developer has yet to join a crew but
-//             is marked as highly capable in solo raids.
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
