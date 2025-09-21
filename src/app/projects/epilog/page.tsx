@@ -28,36 +28,37 @@ const MACHINE_DESCRIPTIONS: Record<string, string> = {
     "ზინგ სერია — კომპაქტური და ხელმისაწვდომი მოწყობილობა. იდეალურია დამწყები მომხმარებლებისთვის და მცირე სამუშაოებისთვის, სადაც მნიშვნელოვანია მარტივი მართვა და ეფექტური შედეგები.",
 };
 
-export default function Page() {
-  const get = (obj: any, key: string) =>
-    obj?.[key] ?? obj?.[key.toLowerCase()] ?? obj?.[capitalize(key)];
-  const capitalize = (s: string) =>
-    s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
-  function getMaterials(opNode: any) {
-    return get(opNode, "Materials") || get(opNode, "materials") || {};
-  }
-  function nodeHasThicknessChoices(node: any) {
-    if (!node || typeof node !== "object") return false;
-    const keys = Object.keys(node);
-    const paramKeys = [
-      "DPI",
-      "dpi",
-      "Speed",
-      "speed",
-      "Power",
-      "power",
-      "Frequency",
-      "frequency",
-      "focus",
-    ];
-    const hasParam = keys.some((k) => paramKeys.includes(k));
-    return !hasParam;
-  }
+const capitalize = (s: string) =>
+  s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+const get = (obj: any, key: string) =>
+  obj?.[key] ?? obj?.[key.toLowerCase()] ?? obj?.[capitalize(key)];
 
+function getMaterials(opNode: any) {
+  return get(opNode, "Materials") || get(opNode, "materials") || {};
+}
+function nodeHasThicknessChoices(node: any) {
+  if (!node || typeof node !== "object") return false;
+  const keys = Object.keys(node);
+  const paramKeys = [
+    "DPI",
+    "dpi",
+    "Speed",
+    "speed",
+    "Power",
+    "power",
+    "Frequency",
+    "frequency",
+    "focus",
+  ];
+  const hasParam = keys.some((k) => paramKeys.includes(k));
+  return !hasParam;
+}
+
+export default function Page() {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    fetch("/setups.json")
+    fetch("/epilogSetups.json")
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);
