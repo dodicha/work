@@ -1,4 +1,6 @@
 "use client";
+import { number } from "framer-motion";
+import { useState } from "react";
 
 // import React, { useMemo, useState, useEffect } from "react";
 // import MachineDetails from "./components/MachineDetails";
@@ -187,13 +189,34 @@ const machines = [
 ];
 
 export default function Page() {
-  const selectMachine = machines.map((machine, _index) => {
+  const [wattSelection, setWattSelection] = useState<number>(10);
+  const [activeIndex, setActiveIndex] = useState<boolean>(false);
+  const selectMachine = machines.map((machine, index) => {
     return (
-      <div
-        key={_index}
-        className="sm:flex flex-col w-[280px] h-[100px] bg-gray-600 m-[10px] text-center"
-      >
-        {machine}
+      <div>
+        <div
+          key={index}
+          className="sm:flex flex-col w-[280px] h-[100px] bg-gray-600 m-[10px] text-center"
+          onClick={() => {
+            console.log("working ");
+            console.log(index);
+            setWattSelection(index);
+            setActiveIndex(!activeIndex);
+          }}
+        >
+          {machine}
+        </div>
+        <div
+          key={index + 100}
+          className={`"sm:w-[280px] h-[100px] bg-slate-200  m-[10px] ${
+            wattSelection === index && activeIndex ? "block" : "hidden"
+          }`}
+          onClick={() => {
+            console.log(index + 1);
+          }}
+        >
+          {index + 100}
+        </div>
       </div>
     );
   });
