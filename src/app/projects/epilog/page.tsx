@@ -1,6 +1,6 @@
 "use client";
 import { number } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // import React, { useMemo, useState, useEffect } from "react";
 // import MachineDetails from "./components/MachineDetails";
@@ -188,38 +188,75 @@ const machines = [
   "Epilog Zing",
 ];
 
-export default function Page() {
-  const [wattSelection, setWattSelection] = useState<number>(10);
-  const [activeIndex, setActiveIndex] = useState<boolean>(false);
-  const selectMachine = machines.map((machine, index) => {
+const selectItem = (item: string[]) => {
+  const itemList = item.map((item, index) => {
     return (
-      <div>
-        <div
-          key={index}
-          className="sm:flex flex-col w-[280px] h-[100px] bg-gray-600 m-[10px] text-center"
-          onClick={() => {
-            console.log("working ");
-            console.log(index);
-            setWattSelection(index);
-            setActiveIndex(!activeIndex);
-          }}
-        >
-          {machine}
-        </div>
-        <div
-          key={index + 100}
-          className={`"sm:w-[280px] h-[100px] bg-slate-200  m-[10px] ${
-            wattSelection === index && activeIndex ? "block" : "hidden"
-          }`}
-          onClick={() => {
-            console.log(index + 1);
-          }}
-        >
-          {index + 100}
-        </div>
+      <div
+        key={index}
+        className="sm:flex flex-col w-[280px] h-[100px] m-[20px] bg-gray-600 text-center cursor-pointer"
+      >
+        {item}
       </div>
     );
   });
+  return itemList;
+};
 
-  return <div>{selectMachine}</div>;
+const showInnerDiv = (key: string) => {
+  return <div>{/* შესაბამისი დანადგარის watt პარამეტრები */}</div>;
+};
+
+export default function Page() {
+  const [data, setData] = useState<any>(null);
+  const [activeIndexes, setActiveIndexes] = useState<string[]>([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fetch("/epilogSetups.json");
+      const json = await res.json();
+      setData(json);
+      console.log(json);
+    };
+    getData();
+  }, []);
+
+  const toggleIndex = (index: string) => {
+    if (activeIndexes.includes(index)) {
+      // თუ უკვე არის აქტიური → ამოვშალოთ
+      setActiveIndexes(activeIndexes.filter((i) => i !== index));
+    } else {
+      // თუ არაა აქტიური → დავამატოთ
+      setActiveIndexes([...activeIndexes, index]);
+    }
+  };
+
+  // const selectMachine = machines.map((machine, index) => {
+  //   return (
+  //     <div key={index} className="m-[10px]">
+  //       <div
+  //         className="sm:flex flex-col w-[280px] h-[100px] bg-gray-600 text-center cursor-pointer"
+  //         onClick={() => toggleIndex(machine)}
+  //       >
+  //         {machine}
+  //       </div>
+
+  //       <div
+  //         className={`sm:w-[280px] h-[100px] bg-slate-200 text-center transition-all duration-300 ${
+  //           activeIndexes.includes(machine) ? "block" : "hidden"
+  //         }`}
+  //       ></div>
+  //     </div>
+  //   );
+  // });
+
+  return (
+    <div
+      className="items-center justify-center"
+      onClick={() => {
+        console.log(data);
+      }}
+    >
+      {selectItem(machines)}
+    </div>
+  );
 }
