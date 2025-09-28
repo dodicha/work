@@ -177,7 +177,7 @@ import { useEffect, useState } from "react";
 //   );
 // }
 
-const machines = [
+const machineNames = [
   "Fusion Edge",
   "Fusion M2",
   "Fiber mark",
@@ -188,13 +188,10 @@ const machines = [
   "Epilog Zing",
 ];
 
-const selectItem = (item: string[]) => {
+const selectItem = (item: string[], style: string) => {
   const itemList = item.map((item, index) => {
     return (
-      <div
-        key={index}
-        className="sm:flex flex-col w-[280px] h-[100px] m-[20px] bg-gray-600 text-center cursor-pointer"
-      >
+      <div key={index} className={style}>
         {item}
       </div>
     );
@@ -202,8 +199,11 @@ const selectItem = (item: string[]) => {
   return itemList;
 };
 
-const showInnerDiv = (key: string) => {
-  return <div>{/* შესაბამისი დანადგარის watt პარამეტრები */}</div>;
+// const wattKeys = Object.keys(data.machines["Fusion Edge"].Watt);
+
+const innerDivItems = (machine: string, arrayOfKeys: string[], data: any) => {
+  const items = Object.keys(data[machine]);
+  return items;
 };
 
 export default function Page() {
@@ -254,9 +254,13 @@ export default function Page() {
       className="items-center justify-center"
       onClick={() => {
         console.log(data);
+        console.log(innerDivItems("Fusion Edge", machineNames, data));
       }}
     >
-      {selectItem(machines)}
+      {selectItem(
+        machineNames,
+        "sm:flex flex-col w-[280px] h-[100px] m-[20px] bg-gray-600 text-center cursor-pointer"
+      )}
     </div>
   );
 }
