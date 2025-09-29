@@ -199,10 +199,13 @@ const selectItem = (item: string[], style: string) => {
   return itemList;
 };
 
-// const wattKeys = Object.keys(data.machines["Fusion Edge"].Watt);
-
-const innerDivItems = (machine: string, arrayOfKeys: string[], data: any) => {
-  const items = Object.keys(data[machine]);
+const innerDivItems = (arrayOfKeys: string[], data: any) => {
+  const items: object = arrayOfKeys.reduce((acc: string[], current: string) => {
+    if (data && data[current]) {
+      return data[current];
+    }
+    return acc;
+  }, {} as any);
   return items;
 };
 
@@ -215,7 +218,7 @@ export default function Page() {
       const res = await fetch("/epilogSetups.json");
       const json = await res.json();
       setData(json);
-      console.log(json);
+      // console.log(json);
     };
     getData();
   }, []);
@@ -240,23 +243,17 @@ export default function Page() {
   //         {machine}
   //       </div>
 
-  //       <div
-  //         className={`sm:w-[280px] h-[100px] bg-slate-200 text-center transition-all duration-300 ${
-  //           activeIndexes.includes(machine) ? "block" : "hidden"
-  //         }`}
-  //       ></div>
+  // <div
+  //   className={`sm:w-[280px] h-[100px] bg-slate-200 text-center transition-all duration-300 ${
+  //     activeIndexes.includes(machine) ? "block" : "hidden"
+  //   }`}
+  // ></div>
   //     </div>
   //   );
   // });
 
   return (
-    <div
-      className="items-center justify-center"
-      onClick={() => {
-        console.log(data);
-        console.log(innerDivItems("Fusion Edge", machineNames, data));
-      }}
-    >
+    <div className="items-center justify-center">
       {selectItem(
         machineNames,
         "sm:flex flex-col w-[280px] h-[100px] m-[20px] bg-gray-600 text-center cursor-pointer"
