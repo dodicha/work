@@ -69,6 +69,28 @@ const getOptions = (
 
 export default function Page() {
   const [data, setData] = useState<any>(null);
+  const [activeWatt, setActiveWatt] = useState<string>("");
+  const [activeDiv, setactiveDiv] = useState<string>("");
+  const [activeOperationType, setactiveOperationType] = useState<string>("");
+  const [activeMaterial, setactiveMaterial] = useState<string>("");
+
+  // const [activeWatt, setActiveWatt] = useState<string[]>([]);
+  // const [activeDiv, setActiveDiv] = useState<string[]>([]);
+
+  // const toggleDiv = (name: string) => {
+  //   if (activeDiv.includes(name)) {
+  //     setActiveDiv(activeDiv.filter((item) => item !== name));
+  //   } else {
+  //     setActiveDiv([...activeDiv, name]);
+  //   }
+  // };
+  // const toggleWatt = (name: string) => {
+  //   if (activeWatt.includes(name)) {
+  //     setActiveWatt(activeWatt.filter((item) => item !== name));
+  //   } else {
+  //     setActiveWatt([...activeWatt, name]);
+  //   }
+  // };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -88,7 +110,7 @@ export default function Page() {
         <div
           className="sm:flex flex-col w-full h-max-content bg-gray-300 text-center cursor-pointer"
           onClick={() => {
-            console.log(getWatt(machine, data)[1]);
+            setactiveDiv(machine);
           }}
         >
           <h1>{machine}</h1>
@@ -102,8 +124,13 @@ export default function Page() {
             return (
               <div
                 key={wIndex}
-                className="sm:h-[30px] flex items-center justify-center 
-                    bg-gray-300 rounded-md text-s m-[5px] p-[15px]"
+                className={`sm:h-[30px] flex items-center justify-center 
+                    bg-gray-300 rounded-md text-s m-[5px] p-[15px] ${
+                      activeDiv === machine ? "block" : "hidden"
+                    }`}
+                onClick={() => {
+                  setActiveWatt(watt);
+                }}
               >
                 {watt}
               </div>
@@ -117,8 +144,15 @@ export default function Page() {
               return (
                 <div
                   key={opIndex}
-                  className="sm:h-[30px] flex items-center justify-center 
-                    bg-gray-300 rounded-md text-s m-[5px] p-[15px]"
+                  className={`sm:h-[30px] flex items-center justify-center 
+                    bg-gray-300 rounded-md text-s m-[5px] p-[15px] ${
+                      activeDiv === machine && activeWatt === activeWatt
+                        ? "block"
+                        : "hidden"
+                    }`}
+                  onClick={() => {
+                    setactiveOperationType(operation);
+                  }}
                 >
                   {operation}
                 </div>
@@ -137,8 +171,14 @@ export default function Page() {
             return (
               <div
                 key={mIndex}
-                className="sm:h-[30px] flex items-center justify-center 
-                    bg-gray-300 rounded-md text-s m-[5px] p-[15px]"
+                className={`sm:h-[30px] flex items-center justify-center 
+                    bg-gray-300 rounded-md text-s m-[5px] p-[15px] ${
+                      activeDiv === machine &&
+                      activeWatt === activeWatt &&
+                      activeOperationType === activeOperationType
+                        ? "block"
+                        : "hidden"
+                    }`}
               >
                 {material}
               </div>
