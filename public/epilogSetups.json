@@ -59,7 +59,7 @@
         }
       },
       "Cutting": {
-        "Acryic": {
+        "Acrylic": {
           "3 milimeter": {
             "Frequency": "100",
             "Speed": "6",
@@ -748,56 +748,54 @@
         }
       },
       "Cutting": {
-        "Materials": {
-          "Acryic": {
-            "3 milimeter": {
-              "Frequency": "100",
-              "Speed": "6",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "100",
-              "Speed": "3",
-              "Power": "100"
-            }
-          },
-          "Leather": {
-            "Frequency": "50",
-            "Speed": "45",
+        "Acryic": {
+          "3 milimeter": {
+            "Frequency": "100",
+            "Speed": "6",
             "Power": "100"
           },
-          "Mat Board": {
-            "Frequency": "50",
-            "Speed": "20",
-            "Power": "50"
-          },
-          "Twill": {
-            "Frequency": "25",
-            "Speed": "50",
-            "Power": "35"
-          },
-          "Wood": {
-            "3 milimeter": {
-              "Frequency": "10",
-              "Speed": "6",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "50",
-              "Speed": "1",
-              "Power": "100"
-            }
-          },
-          "Plastic": {
+          "6 milimeter": {
             "Frequency": "100",
-            "Speed": "10",
-            "Power": "75"
-          },
-          "Rubber Stamps": {
-            "Frequency": "100",
-            "Speed": "10",
+            "Speed": "3",
             "Power": "100"
           }
+        },
+        "Leather": {
+          "Frequency": "50",
+          "Speed": "45",
+          "Power": "100"
+        },
+        "Mat Board": {
+          "Frequency": "50",
+          "Speed": "20",
+          "Power": "50"
+        },
+        "Twill": {
+          "Frequency": "25",
+          "Speed": "50",
+          "Power": "35"
+        },
+        "Wood": {
+          "3 milimeter": {
+            "Frequency": "10",
+            "Speed": "6",
+            "Power": "100"
+          },
+          "6 milimeter": {
+            "Frequency": "50",
+            "Speed": "1",
+            "Power": "100"
+          }
+        },
+        "Plastic": {
+          "Frequency": "100",
+          "Speed": "10",
+          "Power": "75"
+        },
+        "Rubber Stamps": {
+          "Frequency": "100",
+          "Speed": "10",
+          "Power": "100"
         }
       }
     },
@@ -865,66 +863,64 @@
         }
       },
       "Cutting": {
-        "Materials": {
-          "Acryic": {
-            "3 milimeter": {
-              "Frequency": "100",
-              "Speed": "7",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "100",
-              "Speed": "1",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "100",
-              "Speed": "2",
-              "Power": "100"
-            }
-          },
-          "Leather": {
-            "Frequency": "50",
-            "Speed": "40",
+        "Acryic": {
+          "3 milimeter": {
+            "Frequency": "100",
+            "Speed": "7",
             "Power": "100"
           },
-          "Mat Board": {
-            "Frequency": "50",
-            "Speed": "25",
-            "Power": "40"
-          },
-          "Twill": {
-            "Frequency": "25",
-            "Speed": "70 ",
+          "6 milimeter": {
+            "Frequency": "100",
+            "Speed": "1",
             "Power": "100"
           },
-          "Wood": {
-            "3 milimeter": {
-              "Frequency": "10",
-              "Speed": "8",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "10",
-              "Speed": "2",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "10",
-              "Speed": "2",
-              "Power": "100"
-            }
-          },
-          "Plastic": {
+          "9.5 milimeter": {
             "Frequency": "100",
-            "Speed": "10",
-            "Power": "65"
-          },
-          "Rubber Stamps": {
-            "Frequency": "100",
-            "Speed": "15",
+            "Speed": "2",
             "Power": "100"
           }
+        },
+        "Leather": {
+          "Frequency": "50",
+          "Speed": "40",
+          "Power": "100"
+        },
+        "Mat Board": {
+          "Frequency": "50",
+          "Speed": "25",
+          "Power": "40"
+        },
+        "Twill": {
+          "Frequency": "25",
+          "Speed": "70 ",
+          "Power": "100"
+        },
+        "Wood": {
+          "3 milimeter": {
+            "Frequency": "10",
+            "Speed": "8",
+            "Power": "100"
+          },
+          "6 milimeter": {
+            "Frequency": "10",
+            "Speed": "2",
+            "Power": "100"
+          },
+          "9.5 milimeter": {
+            "Frequency": "10",
+            "Speed": "2",
+            "Power": "100"
+          }
+        },
+        "Plastic": {
+          "Frequency": "100",
+          "Speed": "10",
+          "Power": "65"
+        },
+        "Rubber Stamps": {
+          "Frequency": "100",
+          "Speed": "15",
+          "Power": "100"
         }
       }
     },
@@ -992,66 +988,64 @@
         }
       },
       "Cutting": {
-        "Materials": {
-          "Acryic": {
-            "3 milimeter": {
-              "Frequency": "100",
-              "Speed": "8",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "100",
-              "Speed": "2",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "100",
-              "Speed": "1",
-              "Power": "100"
-            }
-          },
-          "Leather": {
-            "Frequency": "50",
-            "Speed": "35",
+        "Acryic": {
+          "3 milimeter": {
+            "Frequency": "100",
+            "Speed": "8",
             "Power": "100"
           },
-          "Mat Board": {
-            "Frequency": "50",
-            "Speed": "25",
-            "Power": "30"
-          },
-          "Twill": {
-            "Frequency": "25",
-            "Speed": "90 ",
+          "6 milimeter": {
+            "Frequency": "100",
+            "Speed": "2",
             "Power": "100"
           },
-          "Wood": {
-            "3 milimeter": {
-              "Frequency": "10",
-              "Speed": "10",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "10",
-              "Speed": "3",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "10",
-              "Speed": "1",
-              "Power": "100"
-            }
-          },
-          "Plastic": {
+          "9.5 milimeter": {
             "Frequency": "100",
-            "Speed": "10",
-            "Power": "55"
-          },
-          "Rubber Stamps": {
-            "Frequency": "100",
-            "Speed": "20",
+            "Speed": "1",
             "Power": "100"
           }
+        },
+        "Leather": {
+          "Frequency": "50",
+          "Speed": "35",
+          "Power": "100"
+        },
+        "Mat Board": {
+          "Frequency": "50",
+          "Speed": "25",
+          "Power": "30"
+        },
+        "Twill": {
+          "Frequency": "25",
+          "Speed": "90 ",
+          "Power": "100"
+        },
+        "Wood": {
+          "3 milimeter": {
+            "Frequency": "10",
+            "Speed": "10",
+            "Power": "100"
+          },
+          "6 milimeter": {
+            "Frequency": "10",
+            "Speed": "3",
+            "Power": "100"
+          },
+          "9.5 milimeter": {
+            "Frequency": "10",
+            "Speed": "1",
+            "Power": "100"
+          }
+        },
+        "Plastic": {
+          "Frequency": "100",
+          "Speed": "10",
+          "Power": "55"
+        },
+        "Rubber Stamps": {
+          "Frequency": "100",
+          "Speed": "20",
+          "Power": "100"
         }
       }
     },
@@ -1642,235 +1636,229 @@
       }
     },
     "40 Watt": {
-      "description": "The 40 Watt fusion maker laser offers increased power for cutting and engraving a wider range of materials including wood, acrylic and leather up to 1/4 inch thick. It is suitable for more detailed projects that require higher precision and speed.",
-      "operations": {
-        "Photo Engraving": {
-          "Materials": {
-            "Acrylic": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "40"
-            },
-            "Alumamark": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "22"
-            },
-            "Cork": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "25"
-            },
-            "Fleece": {
-              "DPI": "200",
-              "Speed": "100",
-              "Power": "15"
-            },
-            "Glass": {
-              "DPI": "300",
-              "Speed": "40",
-              "Power": "100"
-            },
-            "Leather": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "25"
-            },
-            "Marble": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "40"
-            },
-            "Painted Brass": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "40"
-            },
-            "Plastics": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "25"
-            },
-            "Stainless Steel": {
-              "DPI": "500",
-              "Speed": "20",
-              "Power": "100"
-            },
-            "Wood": {
-              "DPI": "500",
-              "Speed": "50",
-              "Power": "100"
-            }
+      "Photo Engraving": {
+        "Materials": {
+          "Acrylic": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "40"
+          },
+          "Alumamark": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "22"
+          },
+          "Cork": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "25"
+          },
+          "Fleece": {
+            "DPI": "200",
+            "Speed": "100",
+            "Power": "15"
+          },
+          "Glass": {
+            "DPI": "300",
+            "Speed": "40",
+            "Power": "100"
+          },
+          "Leather": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "25"
+          },
+          "Marble": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "40"
+          },
+          "Painted Brass": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "40"
+          },
+          "Plastics": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "25"
+          },
+          "Stainless Steel": {
+            "DPI": "500",
+            "Speed": "20",
+            "Power": "100"
+          },
+          "Wood": {
+            "DPI": "500",
+            "Speed": "50",
+            "Power": "100"
           }
-        },
-        "Cutting": {
-          "Materials": {
-            "Acryic": {
-              "3 milimeter": {
-                "Frequency": "100",
-                "Speed": "10",
-                "Power": "100"
-              },
-              "6 milimeter": {
-                "Frequency": "100",
-                "Speed": "4",
-                "Power": "100"
-              }
-            },
-            "Leather": {
-              "Frequency": "10",
-              "Speed": "30",
+        }
+      },
+      "Cutting": {
+        "Materials": {
+          "Acryic": {
+            "3 milimeter": {
+              "Frequency": "100",
+              "Speed": "10",
               "Power": "100"
             },
-            "Mat Board": {
+            "6 milimeter": {
               "Frequency": "100",
-              "Speed": "20",
+              "Speed": "4",
               "Power": "100"
-            },
-            "Twill": {
-              "Frequency": "100",
-              "Speed": "50",
-              "Power": "40"
-            },
-            "Wood": {
-              "3 milimeter": {
-                "Frequency": "10",
-                "Speed": "20",
-                "Power": "100"
-              },
-              "6 milimeter": {
-                "Frequency": "50",
-                "Speed": "4",
-                "Power": "100"
-              }
-            },
-            "Plastic": {
-              "Frequency": "100",
-              "Speed": "20",
-              "Power": "80"
             }
+          },
+          "Leather": {
+            "Frequency": "10",
+            "Speed": "30",
+            "Power": "100"
+          },
+          "Mat Board": {
+            "Frequency": "100",
+            "Speed": "20",
+            "Power": "100"
+          },
+          "Twill": {
+            "Frequency": "100",
+            "Speed": "50",
+            "Power": "40"
+          },
+          "Wood": {
+            "3 milimeter": {
+              "Frequency": "10",
+              "Speed": "20",
+              "Power": "100"
+            },
+            "6 milimeter": {
+              "Frequency": "50",
+              "Speed": "4",
+              "Power": "100"
+            }
+          },
+          "Plastic": {
+            "Frequency": "100",
+            "Speed": "20",
+            "Power": "80"
           }
         }
       }
     },
     "50 Watt": {
-      "description": "The 50 Watt fusion maker laser is a high power option capable of handling a wide range of materials including thicker wood, acrylic and leather up to 1/2 inch thick. It is sutable for both intricate engraving and heavy-duty cutting tasks.",
-      "operations": {
-        "Photo Engraving": {
-          "Materials": {
-            "Acrylic": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "30"
-            },
-            "Alumamark": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "25"
-            },
-            "Cork": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "20"
-            },
-            "Fleece": {
-              "DPI": "200",
-              "Speed": "100",
-              "Power": "10"
-            },
-            "Glass": {
-              "DPI": "300",
-              "Speed": "50",
-              "Power": "100"
-            },
-            "Leather": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "15"
-            },
-            "Marble": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "30"
-            },
-            "Painted Brass": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "30"
-            },
-            "Plastics": {
-              "DPI": "300",
-              "Speed": "100",
-              "Power": "20"
-            },
-            "Stainless Steel": {
-              "DPI": "500",
-              "Speed": "25",
-              "Power": "100"
-            },
-            "Wood": {
-              "DPI": "500",
-              "Speed": "60",
-              "Power": "100"
-            }
+      "Photo Engraving": {
+        "Materials": {
+          "Acrylic": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "30"
+          },
+          "Alumamark": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "25"
+          },
+          "Cork": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "20"
+          },
+          "Fleece": {
+            "DPI": "200",
+            "Speed": "100",
+            "Power": "10"
+          },
+          "Glass": {
+            "DPI": "300",
+            "Speed": "50",
+            "Power": "100"
+          },
+          "Leather": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "15"
+          },
+          "Marble": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "30"
+          },
+          "Painted Brass": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "30"
+          },
+          "Plastics": {
+            "DPI": "300",
+            "Speed": "100",
+            "Power": "20"
+          },
+          "Stainless Steel": {
+            "DPI": "500",
+            "Speed": "25",
+            "Power": "100"
+          },
+          "Wood": {
+            "DPI": "500",
+            "Speed": "60",
+            "Power": "100"
           }
-        },
-        "Cutting": {
-          "Materials": {
-            "Acryic": {
-              "3 milimeter": {
-                "Frequency": "100",
-                "Speed": "12",
-                "Power": "100"
-              },
-              "6 milimeter": {
-                "Frequency": "100",
-                "Speed": "6",
-                "Power": "100"
-              },
-              "9.5 milimeter": {
-                "Frequency": "100",
-                "Speed": "2",
-                "Power": "100"
-              }
-            },
-            "Leather": {
-              "Frequency": "10",
-              "Speed": "40",
+        }
+      },
+      "Cutting": {
+        "Materials": {
+          "Acryic": {
+            "3 milimeter": {
+              "Frequency": "100",
+              "Speed": "12",
               "Power": "100"
             },
-            "Mat Board": {
+            "6 milimeter": {
               "Frequency": "100",
-              "Speed": "25",
+              "Speed": "6",
               "Power": "100"
             },
-            "Twill": {
+            "9.5 milimeter": {
               "Frequency": "100",
-              "Speed": "65 ",
-              "Power": "40"
-            },
-            "Wood": {
-              "3 milimeter": {
-                "Frequency": "20",
-                "Speed": "825",
-                "Power": "100"
-              },
-              "6 milimeter": {
-                "Frequency": "20",
-                "Speed": "6",
-                "Power": "100"
-              },
-              "9.5 milimeter": {
-                "Frequency": "10",
-                "Speed": "2",
-                "Power": "100"
-              }
-            },
-            "Plastic": {
-              "Frequency": "100",
-              "Speed": "25",
-              "Power": "60"
+              "Speed": "2",
+              "Power": "100"
             }
+          },
+          "Leather": {
+            "Frequency": "10",
+            "Speed": "40",
+            "Power": "100"
+          },
+          "Mat Board": {
+            "Frequency": "100",
+            "Speed": "25",
+            "Power": "100"
+          },
+          "Twill": {
+            "Frequency": "100",
+            "Speed": "65 ",
+            "Power": "40"
+          },
+          "Wood": {
+            "3 milimeter": {
+              "Frequency": "20",
+              "Speed": "825",
+              "Power": "100"
+            },
+            "6 milimeter": {
+              "Frequency": "20",
+              "Speed": "6",
+              "Power": "100"
+            },
+            "9.5 milimeter": {
+              "Frequency": "10",
+              "Speed": "2",
+              "Power": "100"
+            }
+          },
+          "Plastic": {
+            "Frequency": "100",
+            "Speed": "25",
+            "Power": "60"
           }
         }
       }
