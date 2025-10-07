@@ -2,12 +2,14 @@ import WattList from "./WattList";
 import OperationList from "./OperationList";
 import MaterialList from "./MaterialList";
 import OptionsList from "./OptionsList";
+import ThicknessList from "./ThicknessList";
 
 import {
   getWatt,
   getOPerationType,
   getMaterials,
   getOptions,
+  getThickness,
 } from "./getFunctions";
 
 interface Props {
@@ -22,6 +24,8 @@ interface Props {
   setActiveOperation: (v: string) => void;
   activeMaterial: string;
   setActiveMaterial: (v: string) => void;
+  activeThickness: string;
+  setActiveThickness: (v: string) => void;
 }
 
 export default function MachineCard({
@@ -36,12 +40,13 @@ export default function MachineCard({
   setActiveOperation,
   activeMaterial,
   setActiveMaterial,
+  activeThickness,
+  setActiveThickness,
 }: Props) {
   const isActive = activeMachine === machine;
 
   return (
     <div className="m-[10px] flex flex-col justify-center items-center">
-      {/* Machine header */}
       <div
         className={`w-full text-center cursor-pointer ${
           isActive ? "bg-slate-400" : "bg-gray-300"
@@ -57,7 +62,6 @@ export default function MachineCard({
         <p>{description}</p>
       </div>
 
-      {/* Sub-lists */}
       <WattList
         watts={getWatt(machine, data)}
         isActive={isActive}
@@ -80,7 +84,21 @@ export default function MachineCard({
         isActive={isActive}
         activeMaterial={activeMaterial}
         setActiveMaterial={setActiveMaterial}
+        resetThickness={() => setActiveThickness("")}
       />
+
+      {/* <ThicknessList
+        thickness={getThickness(
+          machine,
+          activeWatt,
+          activeOperation,
+          activeMaterial,
+          data
+        )}
+        isActive
+        activeThickness={activeThickness}
+        setactiveThickness={setActiveThickness}
+      /> */}
 
       <OptionsList
         options={getOptions(

@@ -3,6 +3,7 @@ interface Props {
   isActive: boolean;
   activeMaterial: string;
   setActiveMaterial: (m: string) => void;
+  resetThickness: () => void;
 }
 
 export default function MaterialList({
@@ -10,6 +11,7 @@ export default function MaterialList({
   isActive,
   activeMaterial,
   setActiveMaterial,
+  resetThickness,
 }: Props) {
   return (
     <div className="flex flex-wrap">
@@ -20,6 +22,7 @@ export default function MaterialList({
             isActive ? "block" : "hidden"
           } ${activeMaterial === material ? "bg-slate-400" : "bg-gray-300"}`}
           onClick={() => {
+            resetThickness();
             setActiveMaterial(activeMaterial === material ? "" : material);
           }}
         >
