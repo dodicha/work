@@ -38,7 +38,6 @@ export default function Page() {
   const [activeWatt, setActiveWatt] = useState<string>("");
   const [activeOperation, setActiveOperation] = useState<string>("");
   const [activeMaterial, setActiveMaterial] = useState<string>("");
-  const [activeThcikness, setActiveThcikness] = useState<string>("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,8 +64,6 @@ export default function Page() {
           setActiveOperation={setActiveOperation}
           activeMaterial={activeMaterial}
           setActiveMaterial={setActiveMaterial}
-          activeThickness={activeThcikness}
-          setActiveThickness={setActiveThcikness}
         />
       ))}
     </div>

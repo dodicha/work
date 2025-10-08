@@ -60,16 +60,9 @@
       },
       "Cutting": {
         "Acrylic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "3",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "3",
+          "Power": "100"
         },
         "Mat Board": {
           "Frequency": "50",
@@ -82,11 +75,9 @@
           "Power": "100"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "10",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "10",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -155,21 +146,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "4",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "4",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -187,16 +166,9 @@
           "Power": "100"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "15",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "2",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -265,21 +237,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "12",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "3",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "6",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -297,21 +257,9 @@
           "Power": "80"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "3",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "5",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "3",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -380,26 +328,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "4",
-            "Power": "100"
-          },
-          "13 milimeter": {
-            "Frequency": "100",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "4",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -417,21 +348,9 @@
           "Power": "60"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "4",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "6",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "4",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -499,71 +418,35 @@
         }
       },
       "Cutting": {
-        "Materials": {
-          "Acryic": {
-            "3 milimeter": {
-              "Frequency": "100",
-              "Speed": "30",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "100",
-              "Speed": "10",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "100",
-              "Speed": "5",
-              "Power": "100"
-            },
-            "13 milimeter": {
-              "Frequency": "100",
-              "Speed": "2",
-              "Power": "100"
-            }
-          },
-          "Leather": {
-            "Frequency": "50",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "Mat Board": {
-            "Frequency": "50",
-            "Speed": "30",
-            "Power": "25"
-          },
-          "Twill": {
-            "Frequency": "25",
-            "Speed": "90",
-            "Power": "50"
-          },
-          "Wood": {
-            "3 milimeter": {
-              "Frequency": "10",
-              "Speed": "30",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "10",
-              "Speed": "12",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "10",
-              "Speed": "8",
-              "Power": "100"
-            },
-            "12 milimeter": {
-              "Frequency": "10",
-              "Speed": "4",
-              "Power": "100"
-            }
-          },
-          "Plastic": {
-            "Frequency": "100",
-            "Speed": "20",
-            "Power": "25"
-          }
+        "Acryic": {
+          "Frequency": "100",
+          "Speed": "5",
+          "Power": "100"
+        },
+        "Leather": {
+          "Frequency": "50",
+          "Speed": "25",
+          "Power": "100"
+        },
+        "Mat Board": {
+          "Frequency": "50",
+          "Speed": "30",
+          "Power": "25"
+        },
+        "Twill": {
+          "Frequency": "25",
+          "Speed": "90",
+          "Power": "50"
+        },
+        "Wood": {
+          "Frequency": "10",
+          "Speed": "8",
+          "Power": "100"
+        },
+        "Plastic": {
+          "Frequency": "100",
+          "Speed": "20",
+          "Power": "25"
         }
       }
     }
@@ -634,16 +517,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "5",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "2",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -661,16 +537,9 @@
           "Power": "40"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "3",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "50",
-            "Speed": "3",
-            "Power": "40"
-          }
+          "Frequency": "50",
+          "Speed": "3",
+          "Power": "40"
         },
         "Plastic": {
           "Frequency": "100",
@@ -749,16 +618,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "3",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "3",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -776,16 +638,9 @@
           "Power": "35"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "50",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "50",
+          "Speed": "1",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -864,21 +719,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "7",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "1",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "1",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -896,21 +739,9 @@
           "Power": "100"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "2",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "2",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -989,21 +820,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "2",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -1021,21 +840,9 @@
           "Power": "100"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "10",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "3",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "3",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -1114,21 +921,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "10",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "3",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "3",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -1146,21 +941,9 @@
           "Power": "80"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "5",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "5",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -1239,26 +1022,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "12",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "7",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "3",
-            "Power": "100"
-          },
-          "13 milimeter": {
-            "Frequency": "100",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "3",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -1428,32 +1194,28 @@
         }
       },
       "Annealing": {
-        "Materials": {
-          "Stainless Steel": {
-            "DPI": "600",
-            "speed": "7-12",
-            "Power": "100",
-            "Frequency": "1",
-            "focus": "+.08 to +.11"
-          },
-          "Titanium": {
-            "DPI": "600",
-            "speed": "7-12",
-            "Power": "100",
-            "Frequency": "1",
-            "focus": "+.08 to +.11"
-          }
+        "Stainless Steel": {
+          "DPI": "600",
+          "speed": "7-12",
+          "Power": "100",
+          "Frequency": "1",
+          "focus": "+.08 to +.11"
+        },
+        "Titanium": {
+          "DPI": "600",
+          "speed": "7-12",
+          "Power": "100",
+          "Frequency": "1",
+          "focus": "+.08 to +.11"
         }
       },
       "Polishing": {
-        "Materials": {
-          "Stainless Steel": {
-            "DPI": "600",
-            "speed": "60-70",
-            "Power": "35-40",
-            "Frequency": "50-60",
-            "focus": "0"
-          }
+        "Stainless Steel": {
+          "DPI": "600",
+          "speed": "60-70",
+          "Power": "35-40",
+          "Frequency": "50-60",
+          "focus": "0"
         }
       }
     },
@@ -1590,16 +1352,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "2",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "10",
@@ -1617,16 +1372,9 @@
           "Power": "40"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "20",
-            "Speed": "15",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "20",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "20",
+          "Speed": "2",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -1637,229 +1385,183 @@
     },
     "40 Watt": {
       "Photo Engraving": {
-        "Materials": {
-          "Acrylic": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "40"
-          },
-          "Alumamark": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "22"
-          },
-          "Cork": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "25"
-          },
-          "Fleece": {
-            "DPI": "200",
-            "Speed": "100",
-            "Power": "15"
-          },
-          "Glass": {
-            "DPI": "300",
-            "Speed": "40",
-            "Power": "100"
-          },
-          "Leather": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "25"
-          },
-          "Marble": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "40"
-          },
-          "Painted Brass": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "40"
-          },
-          "Plastics": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "25"
-          },
-          "Stainless Steel": {
-            "DPI": "500",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "Wood": {
-            "DPI": "500",
-            "Speed": "50",
-            "Power": "100"
-          }
+        "Acrylic": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "40"
+        },
+        "Alumamark": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "22"
+        },
+        "Cork": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "25"
+        },
+        "Fleece": {
+          "DPI": "200",
+          "Speed": "100",
+          "Power": "15"
+        },
+        "Glass": {
+          "DPI": "300",
+          "Speed": "40",
+          "Power": "100"
+        },
+        "Leather": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "25"
+        },
+        "Marble": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "40"
+        },
+        "Painted Brass": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "40"
+        },
+        "Plastics": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "25"
+        },
+        "Stainless Steel": {
+          "DPI": "500",
+          "Speed": "20",
+          "Power": "100"
+        },
+        "Wood": {
+          "DPI": "500",
+          "Speed": "50",
+          "Power": "100"
         }
       },
       "Cutting": {
-        "Materials": {
-          "Acryic": {
-            "3 milimeter": {
-              "Frequency": "100",
-              "Speed": "10",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "100",
-              "Speed": "4",
-              "Power": "100"
-            }
-          },
-          "Leather": {
-            "Frequency": "10",
-            "Speed": "30",
-            "Power": "100"
-          },
-          "Mat Board": {
-            "Frequency": "100",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "Twill": {
-            "Frequency": "100",
-            "Speed": "50",
-            "Power": "40"
-          },
-          "Wood": {
-            "3 milimeter": {
-              "Frequency": "10",
-              "Speed": "20",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "50",
-              "Speed": "4",
-              "Power": "100"
-            }
-          },
-          "Plastic": {
-            "Frequency": "100",
-            "Speed": "20",
-            "Power": "80"
-          }
+        "Acryic": {
+          "Frequency": "100",
+          "Speed": "4",
+          "Power": "100"
+        },
+        "Leather": {
+          "Frequency": "10",
+          "Speed": "30",
+          "Power": "100"
+        },
+        "Mat Board": {
+          "Frequency": "100",
+          "Speed": "20",
+          "Power": "100"
+        },
+        "Twill": {
+          "Frequency": "100",
+          "Speed": "50",
+          "Power": "40"
+        },
+        "Wood": {
+          "Frequency": "50",
+          "Speed": "4",
+          "Power": "100"
+        },
+        "Plastic": {
+          "Frequency": "100",
+          "Speed": "20",
+          "Power": "80"
         }
       }
     },
     "50 Watt": {
       "Photo Engraving": {
-        "Materials": {
-          "Acrylic": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "30"
-          },
-          "Alumamark": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "25"
-          },
-          "Cork": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "20"
-          },
-          "Fleece": {
-            "DPI": "200",
-            "Speed": "100",
-            "Power": "10"
-          },
-          "Glass": {
-            "DPI": "300",
-            "Speed": "50",
-            "Power": "100"
-          },
-          "Leather": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "15"
-          },
-          "Marble": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "30"
-          },
-          "Painted Brass": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "30"
-          },
-          "Plastics": {
-            "DPI": "300",
-            "Speed": "100",
-            "Power": "20"
-          },
-          "Stainless Steel": {
-            "DPI": "500",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "Wood": {
-            "DPI": "500",
-            "Speed": "60",
-            "Power": "100"
-          }
+        "Acrylic": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "30"
+        },
+        "Alumamark": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "25"
+        },
+        "Cork": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "20"
+        },
+        "Fleece": {
+          "DPI": "200",
+          "Speed": "100",
+          "Power": "10"
+        },
+        "Glass": {
+          "DPI": "300",
+          "Speed": "50",
+          "Power": "100"
+        },
+        "Leather": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "15"
+        },
+        "Marble": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "30"
+        },
+        "Painted Brass": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "30"
+        },
+        "Plastics": {
+          "DPI": "300",
+          "Speed": "100",
+          "Power": "20"
+        },
+        "Stainless Steel": {
+          "DPI": "500",
+          "Speed": "25",
+          "Power": "100"
+        },
+        "Wood": {
+          "DPI": "500",
+          "Speed": "60",
+          "Power": "100"
         }
       },
       "Cutting": {
-        "Materials": {
-          "Acryic": {
-            "3 milimeter": {
-              "Frequency": "100",
-              "Speed": "12",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "100",
-              "Speed": "6",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "100",
-              "Speed": "2",
-              "Power": "100"
-            }
-          },
-          "Leather": {
-            "Frequency": "10",
-            "Speed": "40",
-            "Power": "100"
-          },
-          "Mat Board": {
-            "Frequency": "100",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "Twill": {
-            "Frequency": "100",
-            "Speed": "65 ",
-            "Power": "40"
-          },
-          "Wood": {
-            "3 milimeter": {
-              "Frequency": "20",
-              "Speed": "825",
-              "Power": "100"
-            },
-            "6 milimeter": {
-              "Frequency": "20",
-              "Speed": "6",
-              "Power": "100"
-            },
-            "9.5 milimeter": {
-              "Frequency": "10",
-              "Speed": "2",
-              "Power": "100"
-            }
-          },
-          "Plastic": {
-            "Frequency": "100",
-            "Speed": "25",
-            "Power": "60"
-          }
+        "Acryic": {
+          "Frequency": "100",
+          "Speed": "6",
+          "Power": "100"
+        },
+        "Leather": {
+          "Frequency": "10",
+          "Speed": "40",
+          "Power": "100"
+        },
+        "Mat Board": {
+          "Frequency": "100",
+          "Speed": "25",
+          "Power": "100"
+        },
+        "Twill": {
+          "Frequency": "100",
+          "Speed": "65 ",
+          "Power": "40"
+        },
+        "Wood": {
+          "Frequency": "20",
+          "Speed": "6",
+          "Power": "100"
+        },
+        "Plastic": {
+          "Frequency": "100",
+          "Speed": "25",
+          "Power": "60"
         }
       }
     }
@@ -1925,21 +1627,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "3",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "3",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -1957,21 +1647,9 @@
           "Power": "100"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "3",
-            "Power": "100"
-          },
-          "96 milimeter": {
-            "Frequency": "10",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "3",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -2040,21 +1718,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "4",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "4",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -2072,21 +1738,9 @@
           "Power": "100"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "4",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "4",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -2155,21 +1809,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "12",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "3",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "6",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -2187,26 +1829,9 @@
           "Power": "80"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "10",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "5",
-            "Power": "100"
-          },
-          "12 milimeter": {
-            "Frequency": "10",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "5",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -2275,26 +1900,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "16",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "4",
-            "Power": "100"
-          },
-          "12 milimeter": {
-            "Frequency": "100",
-            "Speed": "1",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "4",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -2312,26 +1920,9 @@
           "Power": "70"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "22",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "11",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "6",
-            "Power": "100"
-          },
-          "12 milimeter": {
-            "Frequency": "10",
-            "Speed": "3",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "6",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -2400,26 +1991,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "100",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "100",
-            "Speed": "10",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "100",
-            "Speed": "5",
-            "Power": "100"
-          },
-          "12 milimeter": {
-            "Frequency": "100",
-            "Speed": "2",
-            "Power": "100"
-          }
+          "Frequency": "100",
+          "Speed": "5",
+          "Power": "100"
         },
         "Leather": {
           "Frequency": "50",
@@ -2437,26 +2011,9 @@
           "Power": "60"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "10",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "10",
-            "Speed": "13",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "10",
-            "Speed": "7",
-            "Power": "100"
-          },
-          "12 milimeter": {
-            "Frequency": "10",
-            "Speed": "4",
-            "Power": "100"
-          }
+          "Frequency": "10",
+          "Speed": "7",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "100",
@@ -2874,16 +2431,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "9",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "5",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "5",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -2911,16 +2461,9 @@
           "Power": "50"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "8",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "8",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -3014,16 +2557,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "12",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "6",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "6",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -3051,16 +2587,9 @@
           "Power": "45"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "30",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "10",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "10",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -3154,21 +2683,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "15",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "8",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "5000",
-            "Speed": "4",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "4",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -3196,21 +2713,9 @@
           "Power": "40"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "35",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "15",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "500",
-            "Speed": "6",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "6",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -3304,21 +2809,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "12",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "5000",
-            "Speed": "4",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "4",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -3346,21 +2839,9 @@
           "Power": "35"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "40",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "500",
-            "Speed": "10",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "10",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -3454,21 +2935,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "15",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "5000",
-            "Speed": "5",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "5",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -3496,21 +2965,9 @@
           "Power": "25"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "45",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "25",
-            "Power": "100"
-          },
-          "9.5 milimeter": {
-            "Frequency": "500",
-            "Speed": "12",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "12",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -3606,16 +3063,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "20",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "5",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "5",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -3643,16 +3093,9 @@
           "Power": "30"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "70",
-            "Power": "60"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "20",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "20",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -3746,16 +3189,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "30",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "10",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "10",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -3783,16 +3219,9 @@
           "Power": "25"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "70",
-            "Power": "45"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "30",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "30",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -3886,16 +3315,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "40",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "25",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "25",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -3923,16 +3345,9 @@
           "Power": "20"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "70",
-            "Power": "35"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "40",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "40",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",
@@ -4026,16 +3441,9 @@
       },
       "Cutting": {
         "Acryic": {
-          "3 milimeter": {
-            "Frequency": "5000",
-            "Speed": "50",
-            "Power": "100"
-          },
-          "6 milimeter": {
-            "Frequency": "5000",
-            "Speed": "30",
-            "Power": "100"
-          }
+          "Frequency": "5000",
+          "Speed": "30",
+          "Power": "100"
         },
         "Cork": {
           "Frequency": "500",
@@ -4063,16 +3471,9 @@
           "Power": "15"
         },
         "Wood": {
-          "3 milimeter": {
-            "Frequency": "500",
-            "Speed": "70",
-            "Power": "25"
-          },
-          "6 milimeter": {
-            "Frequency": "500",
-            "Speed": "50",
-            "Power": "100"
-          }
+          "Frequency": "500",
+          "Speed": "50",
+          "Power": "100"
         },
         "Plastic": {
           "Frequency": "5000",

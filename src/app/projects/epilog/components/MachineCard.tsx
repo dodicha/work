@@ -2,7 +2,6 @@ import WattList from "./WattList";
 import OperationList from "./OperationList";
 import MaterialList from "./MaterialList";
 import OptionsList from "./OptionsList";
-import ThicknessList from "./ThicknessList";
 
 import {
   getWatt,
@@ -10,6 +9,7 @@ import {
   getMaterials,
   getOptions,
   getThickness,
+  checkThickness,
 } from "./getFunctions";
 
 interface Props {
@@ -24,8 +24,6 @@ interface Props {
   setActiveOperation: (v: string) => void;
   activeMaterial: string;
   setActiveMaterial: (v: string) => void;
-  activeThickness: string;
-  setActiveThickness: (v: string) => void;
 }
 
 export default function MachineCard({
@@ -40,8 +38,6 @@ export default function MachineCard({
   setActiveOperation,
   activeMaterial,
   setActiveMaterial,
-  activeThickness,
-  setActiveThickness,
 }: Props) {
   const isActive = activeMachine === machine;
 
@@ -84,21 +80,7 @@ export default function MachineCard({
         isActive={isActive}
         activeMaterial={activeMaterial}
         setActiveMaterial={setActiveMaterial}
-        resetThickness={() => setActiveThickness("")}
       />
-
-      {/* <ThicknessList
-        thickness={getThickness(
-          machine,
-          activeWatt,
-          activeOperation,
-          activeMaterial,
-          data
-        )}
-        isActive
-        activeThickness={activeThickness}
-        setactiveThickness={setActiveThickness}
-      /> */}
 
       <OptionsList
         options={getOptions(

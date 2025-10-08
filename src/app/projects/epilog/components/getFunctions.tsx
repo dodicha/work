@@ -38,24 +38,7 @@ export const getOptions = (
     return acc;
   }, [] as string[]);
 
-  if (typeof values === "object") {
-    const optKeys = Object.keys(values);
-    const optValues = Object.values(values);
-
-    const option = optKeys.reduce((acc, curr, index) => {
-      acc.push(`${curr} : ${optValues[index]}`);
-      return acc;
-    }, [] as string[]);
-
-    const result = keys.reduce((acc, curr, index) => {
-      acc.push(`${curr} : ${option[index]}`);
-      return acc;
-    }, [] as string[]);
-
-    return result;
-  } else {
-    return opt;
-  }
+  return opt;
 };
 
 export const getThickness = (
@@ -65,16 +48,24 @@ export const getThickness = (
   material: string,
   data: any
 ) => {
-  const target = data?.[machineName]?.[watt]?.[operation]?.[material];
+  return Object.keys(
+    data?.[machineName]?.[watt]?.[operation]?.[material] || []
+  );
+};
 
-  if (!target || typeof target !== "object") return [];
-
-  // თუ პირველ key-ის value არის ობიექტი (ანუ thickness-ს შეიცავს)
-  const firstValue = target[Object.keys(target)[0]];
-
-  // თუ პირველი value ობიექტია, მაშინ ეს thickness-ებია
-  const hasThickness =
-    firstValue && typeof firstValue === "object" && !Array.isArray(firstValue);
-
-  return hasThickness ? Object.keys(target) : [];
+export const checkThickness = (
+  machineName: string,
+  watt: string,
+  operation: string,
+  material: string,
+  data: any
+) => {
+  const values = Object.values(
+    data?.[machineName]?.[watt]?.[operation]?.[material] || []
+  );
+  if (typeof values[0] !== "object") {
+    return false;
+  } else {
+    return true;
+  }
 };
