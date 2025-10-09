@@ -20,7 +20,7 @@ export default function WattList({
       {watts.map((watt, idx) => (
         <div
           key={idx}
-          className={`rounded-md m-[5px] p-[15px] cursor-pointer ${
+          className={`sm:rounded-md m-[5px] p-[15px] cursor-pointer ${
             isActive ? "block" : "hidden"
           } ${activeWatt === watt ? "bg-slate-400" : "bg-gray-300"}`}
           onClick={() => {

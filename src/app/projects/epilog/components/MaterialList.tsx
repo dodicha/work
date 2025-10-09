@@ -16,7 +16,7 @@ export default function MaterialList({
       {materials.map((material, idx) => (
         <div
           key={idx}
-          className={`rounded-md m-[5px] p-[15px] cursor-pointer ${
+          className={`sm:rounded-md m-[5px] p-[15px] cursor-pointer ${
             isActive ? "block" : "hidden"
           } ${activeMaterial === material ? "bg-slate-400" : "bg-gray-300"}`}
           onClick={() => {

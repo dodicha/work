@@ -23,10 +23,10 @@ export default function About() {
   return (
     <div
       className="
-        w-1/2 min-h-screen 
+        w-full min-h-screen 
         border-x-4 border-black 
         flex flex-col 
-        px-4 sm:px-6 lg:flex-col lg:px-10
+        px-4 sm:px-6 lg:flex-col lg:px-10 
       "
     >
       {/* Header Section */}

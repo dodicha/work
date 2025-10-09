@@ -40,32 +40,3 @@ export const getOptions = (
 
   return opt;
 };
-
-export const getThickness = (
-  machineName: string,
-  watt: string,
-  operation: string,
-  material: string,
-  data: any
-) => {
-  return Object.keys(
-    data?.[machineName]?.[watt]?.[operation]?.[material] || []
-  );
-};
-
-export const checkThickness = (
-  machineName: string,
-  watt: string,
-  operation: string,
-  material: string,
-  data: any
-) => {
-  const values = Object.values(
-    data?.[machineName]?.[watt]?.[operation]?.[material] || []
-  );
-  if (typeof values[0] !== "object") {
-    return false;
-  } else {
-    return true;
-  }
-};

@@ -8,8 +8,6 @@ import {
   getOPerationType,
   getMaterials,
   getOptions,
-  getThickness,
-  checkThickness,
 } from "./getFunctions";
 
 interface Props {
@@ -39,14 +37,15 @@ export default function MachineCard({
   activeMaterial,
   setActiveMaterial,
 }: Props) {
-  const isActive = activeMachine === machine;
+  const isActive: boolean = activeMachine === machine;
 
   return (
-    <div className="m-[10px] flex flex-col justify-center items-center">
+    <div
+      className={`m-[10px] sm:flex flex-col justify-center items-center  lg:w-[45%] xl:w-[30%]`}
+    >
       <div
-        className={`w-full text-center cursor-pointer ${
-          isActive ? "bg-slate-400" : "bg-gray-300"
-        }`}
+        className={`sm:m-[10px] text-center cursor-pointer transition-all duration-300 
+      ${isActive ? "bg-slate-400 scale-105" : "bg-gray-300"}`}
         onClick={() => {
           setActiveWatt("");
           setActiveOperation("");

@@ -49,7 +49,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center items-start  p-4">
       {machineNames.map((machine) => (
         <MachineCard
           key={machine}

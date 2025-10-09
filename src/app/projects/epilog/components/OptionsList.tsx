@@ -11,7 +11,7 @@ export default function OptionsList({ options, isActive }: Props) {
       }`}
     >
       {options.map((opt, idx) => (
-        <p key={idx} className="m-[5px]">
+        <p key={idx} className="sm:m-[5px]">
           {opt}
         </p>
       ))}

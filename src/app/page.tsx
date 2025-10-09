@@ -26,7 +26,7 @@ export default function ResumePage() {
       </h1>
 
       {/* მობილურზე სვეტები გადადის column-ში */}
-      <div className="flex flex-col lg:flex-row pt-6 lg:pt-12 px-4 lg:px-12">
+      <div className="flex flex-col lg:flex-row pt-6 lg:pt-12 px-4 lg:px-12 ">
         <About />
 
         <div className="w-full lg:w-2/3">

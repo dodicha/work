@@ -18,7 +18,7 @@ export default function OperationList({
       {operations.map((operation, idx) => (
         <div
           key={idx}
-          className={`rounded-md m-[5px] p-[15px] cursor-pointer ${
+          className={`sm:rounded-md m-[5px] p-[15px] cursor-pointer ${
             isActive ? "block" : "hidden"
           } ${activeOperation === operation ? "bg-slate-400" : "bg-gray-300"}`}
           onClick={() => {
