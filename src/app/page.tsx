@@ -1,15 +1,9 @@
-"use client";
-
 import About from "../components/About";
 import Experiance from "../components/Experiance";
 import Skills from "../components/Skills";
-import Image from "next/image";
 import Evidence from "../components/Evidence";
-import { useEffect, useState } from "react";
 
 export default function ResumePage() {
-  // const [showExperiance, setShowExperiance] = useState(false);
-
   return (
     <main
       className="w-full lg:min-h-screen font-serif overflow-x-hidden"
@@ -26,7 +20,7 @@ export default function ResumePage() {
       </h1>
 
       {/* მობილურზე სვეტები გადადის column-ში */}
-      <div className="flex flex-col lg:flex-row pt-6 lg:pt-12 px-4 lg:px-12 ">
+      <div className="flex flex-col lg:flex-row  pt-6 lg:pt-12 px-4 lg:px-12 ">
         <About />
 
         <div className="w-full lg:w-2/3">

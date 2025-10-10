@@ -12,6 +12,13 @@ const projects = [
     date: "2025",
     link: "/projects/epilog",
   },
+  {
+    title: "Property valuation",
+    description:
+      "A modern web platform that provides detailed information about property valuation services, methodology, and expertise.",
+    date: "2025",
+    link: "/projects/valuation",
+  },
 ];
 export default function Evidence() {
   return (

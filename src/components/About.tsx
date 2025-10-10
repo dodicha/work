@@ -8,18 +8,18 @@ const aboutMe = [
   "You can always count on him for something special.",
 ];
 
-export default function About() {
-  const description = aboutMe.map((disc: string, _index: number) => {
-    return (
-      <div key={_index} className="flex items-start">
-        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black mr-3">
-          •
-        </span>
-        <span className="font-serif">{disc}</span>
-      </div>
-    );
-  });
+const description = aboutMe.map((disc: string, _index: number) => {
+  return (
+    <div key={_index} className="flex items-start">
+      <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-black mr-3">
+        •
+      </span>
+      <span className="font-serif">{disc}</span>
+    </div>
+  );
+});
 
+export default function About() {
   return (
     <div
       className="
@@ -27,10 +27,11 @@ export default function About() {
         border-x-4 border-black 
         flex flex-col 
         px-4 sm:px-6 lg:flex-col lg:px-10 
+        lg:w-1/2
       "
     >
       {/* Header Section */}
-      <div className="flex flex-col lg:flex-row border-b-2 border-dashed border-black">
+      <div className="flex flex-col lg:flex-row border-b-2 border-dashed border-black ">
         {/* Left Side */}
         <div className="text-center lg:w-1/2 flex flex-col items-center justify-center py-6">
           <h1 className="font-extrabold tracking-widest drop-shadow-lg text-4xl sm:text-5xl md:text-6xl lg:text-5xl">
