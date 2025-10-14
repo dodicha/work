@@ -1,11 +1,12 @@
 import React from "react";
-
-import ContactButtons from "./components/ContactButtons";
+import { EmailForm, ViberButton, WhatsappButton } from "./components/Contact";
 
 export default function page() {
   return (
     <div>
-      <ContactButtons />
+      <ViberButton />
+      <WhatsappButton />
+      <EmailForm />
     </div>
   );
 }
