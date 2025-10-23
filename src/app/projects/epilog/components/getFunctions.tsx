@@ -1,11 +1,14 @@
-export const getWatt = (machineName: string, data: any): string[] => {
+import { MachineData } from "./Types";
+import { EpilogSetups } from "./Types";
+
+export const getWatt = (machineName: string, data: EpilogSetups): string[] => {
   return Object.keys(data?.[machineName] || []);
 };
 
 export const getOPerationType = (
   machineName: string,
   watt: string,
-  data: any
+  data: EpilogSetups
 ): string[] => {
   return Object.keys(data?.[machineName]?.[watt] || []);
 };
@@ -14,7 +17,7 @@ export const getMaterials = (
   machineName: string,
   watt: string,
   operation: string,
-  data: any
+  data: EpilogSetups
 ) => {
   return Object.keys(data?.[machineName]?.[watt]?.[operation] || []);
 };
@@ -24,7 +27,7 @@ export const getOptions = (
   watt: string,
   operation: string,
   material: string,
-  data: any
+  data: EpilogSetups
 ) => {
   const keys = Object.keys(
     data?.[machineName]?.[watt]?.[operation]?.[material] || []
