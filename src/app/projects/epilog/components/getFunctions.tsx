@@ -1,4 +1,3 @@
-import { MachineData } from "./Types";
 import { EpilogSetups } from "./Types";
 
 export const getWatt = (machineName: string, data: EpilogSetups): string[] => {
