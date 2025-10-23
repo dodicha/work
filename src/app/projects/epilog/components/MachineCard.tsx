@@ -14,7 +14,7 @@ import {
 interface MachineCardProps {
   machine: string;
   description: string;
-  data: EpilogSetups;
+  data: EpilogSetups | null;
   activeMachine: string;
   setActiveMachine: (machine: string) => void;
   activeWatt: string;
