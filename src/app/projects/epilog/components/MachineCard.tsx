@@ -2,7 +2,7 @@ import WattList from "./WattList";
 import OperationList from "./OperationList";
 import MaterialList from "./MaterialList";
 import OptionsList from "./OptionsList";
-import { MachineData } from "./Types";
+import { EpilogSetups } from "./Types";
 
 import {
   getWatt,
@@ -14,7 +14,7 @@ import {
 interface MachineCardProps {
   machine: string;
   description: string;
-  data: MachineData | null;
+  data: EpilogSetups;
   activeMachine: string;
   setActiveMachine: (machine: string) => void;
   activeWatt: string;
