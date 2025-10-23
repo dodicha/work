@@ -19,6 +19,11 @@ const projects = [
     date: "2025",
     link: "/projects/valuation",
   },
+  {
+    title: "Learning",
+    description: "learning and testing some features",
+    link: "/projects/learning",
+  },
 ];
 export default function Evidence() {
   return (
