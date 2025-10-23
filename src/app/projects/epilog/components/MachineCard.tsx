@@ -2,6 +2,7 @@ import WattList from "./WattList";
 import OperationList from "./OperationList";
 import MaterialList from "./MaterialList";
 import OptionsList from "./OptionsList";
+import { MachineData } from "./Types";
 
 import {
   getWatt,
@@ -10,18 +11,18 @@ import {
   getOptions,
 } from "./getFunctions";
 
-interface Props {
+interface MachineCardProps {
   machine: string;
   description: string;
-  data: any;
+  data: MachineData | null;
   activeMachine: string;
-  setActiveMachine: (v: string) => void;
+  setActiveMachine: (machine: string) => void;
   activeWatt: string;
-  setActiveWatt: (v: string) => void;
+  setActiveWatt: (watt: string) => void;
   activeOperation: string;
-  setActiveOperation: (v: string) => void;
+  setActiveOperation: (operation: string) => void;
   activeMaterial: string;
-  setActiveMaterial: (v: string) => void;
+  setActiveMaterial: (material: string) => void;
 }
 
 export default function MachineCard({
@@ -36,7 +37,7 @@ export default function MachineCard({
   setActiveOperation,
   activeMaterial,
   setActiveMaterial,
-}: Props) {
+}: MachineCardProps) {
   const isActive: boolean = activeMachine === machine;
 
   return (

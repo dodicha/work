@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import MachineCard from "./components/MachineCard";
+import { MachineData } from "./components/Types";
 
 const machineDescriptions: Record<string, string> = {
   "Fusion Edge":
@@ -32,7 +33,7 @@ const machineNames = [
 ];
 
 export default function Page() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<MachineData | null>(null);
 
   const [activeMachine, setActiveMachine] = useState<string>("");
   const [activeWatt, setActiveWatt] = useState<string>("");
