@@ -1,0 +1,14 @@
+{
+  "en": { "services": "Services", "about": "About", "contact": "Contact" },
+  "ka": {
+    "services": "სერვისები",
+    "about": "ჩვენ შესახებ",
+    "contact": "კონტაქტი"
+  },
+  "ru": { "services": "Сервисы", "about": "О нас", "contact": "Контакт" },
+  "tr": {
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  }
+}
