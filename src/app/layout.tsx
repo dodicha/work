@@ -20,4 +20,3 @@ export default function RootLayout({
     </html>
   );
 }
-// This layout wraps the entire application, providing a consistent structure

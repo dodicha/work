@@ -42,7 +42,7 @@ export default function Page() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch("/epilogSetups.json");
+      const res = await fetch("/data/epilogSetups.json");
       const json = await res.json();
       setData(json);
     };
