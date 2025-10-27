@@ -6,7 +6,7 @@ import { useLanguage } from "../context/LanguageProvider";
 
 export default function NavBar() {
   const linkKeys = ["services", "about", "contact"];
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, selectedLanguageData } = useLanguage();
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -20,7 +20,7 @@ export default function NavBar() {
           <ul className="flex space-x-8 font-medium text-xl">
             {linkKeys.map((link, i) => (
               <li key={i} className="hover:text-yellow-400 cursor-pointer">
-                {link}
+                {selectedLanguageData?.[link]}
               </li>
             ))}
           </ul>

@@ -1,14 +1,30 @@
 {
-  "en": { "services": "Services", "about": "About", "contact": "Contact" },
+  "en": {
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "evaluate": "Evaluate Your Property",
+    "true market value": "Find out your property's true market value — fast, reliable, and professional."
+  },
   "ka": {
     "services": "სერვისები",
     "about": "ჩვენ შესახებ",
-    "contact": "კონტაქტი"
+    "contact": "კონტაქტი",
+    "evaluate": "შეაფასეთ თქვენი ქონება",
+    "true market value": "გაიგეთ თქვენი ქონების ნამდვილი საბაზრო ღირებულება — სწრაფად, საიმედოდ და პროფესიონალურად."
   },
-  "ru": { "services": "Сервисы", "about": "О нас", "contact": "Контакт" },
+  "ru": {
+    "services": "Сервисы",
+    "about": "О нас",
+    "contact": "Контакт",
+    "evaluate": "Оцените вашу недвижимость",
+    "true market value": "Узнайте реальную рыночную стоимость вашей недвижимости — быстро, надежно и профессионально."
+  },
   "tr": {
     "services": "Hizmetler",
     "about": "Hakkımızda",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "evaluate": "Mülkünüzü Değerlendirin",
+    "true market value": "Mülkünüzün gerçek piyasa değerini öğrenin — hızlı, güvenilir ve profesyonel."
   }
 }

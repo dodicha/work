@@ -1,14 +1,17 @@
 "use client";
+import React, { useContext, useEffect, useState, createContext } from "react";
 
-import React, { useContext, useEffect } from "react";
-import { createContext, useState } from "react";
-interface languageContextType {
-  language: string;
-  setLanguage: (lang: string) => void;
-  selectedLanguageData: object | null;
+interface TranslationData {
+  [key: string]: string;
 }
 
-const LanguageContext = createContext<languageContextType | undefined>(
+interface LanguageContextType {
+  language: string;
+  setLanguage: (lang: string) => void;
+  selectedLanguageData: TranslationData | null;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined
 );
 
@@ -18,9 +21,8 @@ export default function LanguageProvider({
   children: React.ReactNode;
 }) {
   const [language, setLanguage] = useState("en");
-  const [selectedLanguageData, setSelectedLanguageData] = useState<
-    object | null
-  >(null);
+  const [selectedLanguageData, setSelectedLanguageData] =
+    useState<TranslationData | null>(null);
 
   useEffect(() => {
     const getLanguage = async () => {
@@ -30,8 +32,6 @@ export default function LanguageProvider({
     };
     getLanguage();
   }, [language]);
-
-  console.log(language);
 
   return (
     <LanguageContext.Provider
