@@ -6,7 +6,7 @@ import LanguageProvider from "./context/LanguageProvider";
 export default function page() {
   return (
     <LanguageProvider>
-      <div className="w-full h-screen flex  justify-center ">
+      <div className="w-full h-screen flex justify-center items-center ">
         <NavBar />
         <HomeSlider />
       </div>
