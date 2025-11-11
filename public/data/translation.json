@@ -6,10 +6,8 @@
     "evaluate": "Evaluate Your Property",
     "true market value": "Find out your property's true market value — fast, reliable, and professional.",
     "support": "Support from a Team of Professionals",
-    "our team": "Our Team",
-    "evaluated properties": "Evaluated Properties",
-    "experience": "Years of Experience",
-    "offer": "We Offer"
+    "properties valuated": "Properties valuated",
+    "of work experience": "Of work experience"
   },
   "ka": {
     "services": "სერვისები",
@@ -18,10 +16,8 @@
     "evaluate": "შეაფასეთ თქვენი ქონება",
     "true market value": "გაიგეთ თქვენი ქონების ნამდვილი საბაზრო ღირებულება — სწრაფად, საიმედოდ და პროფესიონალურად.",
     "support": "პროფესიონალთა გუნდის მხარდაჭერა",
-    "our team": "ჩვენი გუნდი",
-    "evaluated properties": "შეფასებული ქონება",
-    "experience": "წლიანი გამოცდილება",
-    "offer": "ჩვენ გთავაზობთ"
+    "properties valuated": "შეფასებული ქონება",
+    "of work experience": "სამუშაო გამოცდილება"
   },
   "ru": {
     "services": "Сервисы",
@@ -30,10 +26,8 @@
     "evaluate": "Оцените вашу недвижимость",
     "true market value": "Узнайте реальную рыночную стоимость вашей недвижимости — быстро, надежно и профессионально.",
     "support": "Поддержка команды профессионалов",
-    "our team": "Наша команда",
-    "evaluated properties": "Оцененные объекты недвижимости",
-    "experience": "Лет опыта",
-    "offer": "Мы предлагаем"
+    "properties valuated": "Оценено объектов недвижимости",
+    "of work experience": "Опыт работы"
   },
   "tr": {
     "services": "Hizmetler",
@@ -42,9 +36,7 @@
     "evaluate": "Mülkünüzü Değerlendirin",
     "true market value": "Mülkünüzün gerçek piyasa değerini öğrenin — hızlı, güvenilir ve profesyonel.",
     "support": "Profesyonel Bir Ekibin Desteği",
-    "our team": "Ekibimiz",
-    "evaluated properties": "Değerlendirilen Mülkler",
-    "experience": "Yıllık Deneyim",
-    "offer": "Sunuyoruz"
+    "properties valuated": "Değerlendirilen Mülkler",
+    "of work experience": "İş Deneyimi"
   }
 }

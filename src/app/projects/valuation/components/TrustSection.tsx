@@ -2,35 +2,37 @@
 
 import React from "react";
 import { useLanguage } from "../context/LanguageProvider";
+import {
+  Home,
+  Award,
+  House,
+  Sprout,
+  MapPinPlus,
+  Building2,
+} from "lucide-react";
 
 export default function TrustSection() {
   const { selectedLanguageData } = useLanguage();
   return (
-    <section className="w-11/12  flex flex-wrap mt-[30px] gap-4">
-      <div className="w-full text-2xl text-center  font-semibold mb-[15px]">
-        <h1>{selectedLanguageData?.["our team"] ?? ""}</h1>
-      </div>
-      <div className="rounded-2xl w-full text-xl h-[150px] font-semibold bg-slate-100 text-left p-6">
-        <h2 className="text-3xl  sm:text-2x text-gray-800 font-fira">
-          35 000+
-        </h2>
-        <p className="text-xl font-normal text-gray-700 mt-[25px]">
-          {selectedLanguageData?.["evaluated properties"] ?? ""}
+    <section className="w-1/4  border ml-[-1150px] p-4   flex flex-wrap mt-[30px] gap-10">
+      {" "}
+      {/* 1 */}
+      <div className="flex flex-col items-center text-center ">
+        <Building2 className="text-blue-500 w-10 h-10 mb-3" />
+        <h3 className="text-xl font-semibold">35,000+</h3>
+        <p className="text-gray-500 text-sm">
+          {selectedLanguageData?.["properties valuated"] ?? ""}
         </p>
       </div>
-      <div className="rounded-2xl w-full text-xl h-[150px] font-semibold bg-slate-100 text-left p-6">
-        <h2 className="text-3xl  sm:text-2x text-gray-800 font-fira">17+</h2>
-        <p className="text-xl font-normal text-gray-700 mt-[25px]">
-          {selectedLanguageData?.["experience"] ?? ""}
+      {/* 2 */}
+      <div className="flex flex-col items-center text-center ">
+        <Award className="text-blue-500 w-10 h-10 mb-3" />
+        <h3 className="text-xl font-semibold">
+          17+ <span>{selectedLanguageData?.["years"]}</span>{" "}
+        </h3>
+        <p className="text-gray-500 text-sm">
+          {selectedLanguageData?.["of work experience"]}
         </p>
-      </div>
-      <div className="w-full text-2xl text-center  font-semibold">
-        <h1>{selectedLanguageData?.["offer"] ?? ""}</h1>
-      </div>
-      <div>
-        <h1 className="text-xl text-gray-900 font-fira">
-          პროფესიონალთა გუნდის მხარდაჭერა
-        </h1>
       </div>
     </section>
   );
