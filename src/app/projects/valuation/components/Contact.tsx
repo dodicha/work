@@ -6,7 +6,7 @@ import emailjs from "emailjs-com";
 
 export function ViberButton() {
   const handleViberClick = () => {
-    const viberUrl = "viber://chat?number=995571330455";
+    const viberUrl = "viber://chat?number=995551333358";
     const fallbackUrl = "https://www.viber.com/download/";
 
     // ვცდილობთ ვაიბერის ბმულის გახსნას ახალ ტაბში
@@ -32,7 +32,7 @@ export function ViberButton() {
 }
 
 export function WhatsappButton() {
-  const whatsappLink = "https://wa.me/995571330455";
+  const whatsappLink = "https://wa.me/995551333358";
 
   return (
     <div className="flex gap-4 items-center">

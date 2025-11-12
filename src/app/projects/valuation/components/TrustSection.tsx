@@ -2,14 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "../context/LanguageProvider";
-import {
-  Home,
-  Award,
-  House,
-  Sprout,
-  MapPinPlus,
-  Building2,
-} from "lucide-react";
+import { Award, Building2 } from "lucide-react";
 
 export default function TrustSection() {
   const { selectedLanguageData } = useLanguage();
