@@ -9,14 +9,13 @@ import TrustSection from "./components/TrustSection";
 export default function page() {
   return (
     <LanguageProvider>
-      <div className=" w-full  flex flex-col justify-center items-center ">
+      <div className="w-full">
         <NavBar />
         <HomeSlider />
-        <TrustSection />
-        <div
-          style={{ backgroundImage: `url(/images/valuation/valuation.png)` }}
-          className="w-1/2 h-[800px] bg-slate-700 text-white text-center"
-        ></div>
+        <div className="flex mt-[15px]">
+          <TrustSection />
+          <div className="w-full bg-slate-400 mr-[70px]"></div>
+        </div>
       </div>
     </LanguageProvider>
   );

@@ -7,8 +7,7 @@ import { Award, Building2 } from "lucide-react";
 export default function TrustSection() {
   const { selectedLanguageData } = useLanguage();
   return (
-    <section className="w-1/4  border ml-[-1150px] p-4   flex flex-wrap mt-[30px] gap-10">
-      {" "}
+    <section className=" w-1/3 ml-[70px]">
       {/* 1 */}
       <div className="flex flex-col items-center text-center ">
         <Building2 className="text-blue-500 w-10 h-10 mb-3" />
