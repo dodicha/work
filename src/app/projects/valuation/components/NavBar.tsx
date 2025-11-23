@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { ViberButton, WhatsappButton } from "./Contact";
+import { useState } from "react";
+
 import { useLanguage } from "../context/LanguageProvider";
 
 export default function NavBar() {
@@ -15,7 +15,6 @@ export default function NavBar() {
       <div className="max-w-8xl mx-4 py-[10px] flex justify-between items-center">
         <div className="text-2xl font-bold">LOGO</div>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex space-x-8 font-medium text-xl">
             {linkKeys.map((link, i) => (
@@ -24,11 +23,6 @@ export default function NavBar() {
               </li>
             ))}
           </ul>
-
-          {/* <div className="flex flex-col gap-2 ml-4">
-            <ViberButton />
-            <WhatsappButton />
-          </div> */}
 
           <div className="flex space-x-2 ml-4">
             {["ka", "ru", "en", "tr"].map((lang) => (

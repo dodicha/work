@@ -11,17 +11,17 @@ import TrustSection from "./components/TrustSection";
 const bedroomOptions = [1, 2, 3, 4, 5];
 const buildingOptions = ["Apartment", "House", "Office", "Land"];
 
-export default function page() {
+export default function Page() {
   const [bedrooms, setBedrooms] = useState(1);
   const [buildingType, setBuildingType] = useState("");
   const [activeHouse, setActiveHouse] = useState(false);
   const [activeApartment, setActiveApartment] = useState(false);
   const [acticeOffice, setActiveOffice] = useState(false);
   const [activeLand, setActiveLand] = useState(false);
-  const [activeAddress, setActiveAddress] = useState(false);
-  const [activeBedrooms, setActiveBedrooms] = useState(false);
-  const [activeLivingArea, setActiveLivingArea] = useState(false);
-  const [activeLivingFloor, setActiveLivingFloor] = useState(false);
+  // const [activeAddress, setActiveAddress] = useState(false);
+  // const [activeBedrooms, setActiveBedrooms] = useState(false);
+  // const [activeLivingArea, setActiveLivingArea] = useState(false);
+  // const [activeLivingFloor, setActiveLivingFloor] = useState(false);
   const activeType = [
     setActiveApartment,
     setActiveHouse,
