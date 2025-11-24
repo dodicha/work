@@ -46,28 +46,20 @@ export default function TrustSection() {
   const trustSectionComponents = icons.map((item, index) => {
     const Icon = item.component;
     return (
-      <div className="flex flex-col items-center   text-center w-2/5 bg-red-500 ">
-        <Icon className="text-blue-500  w-10 h-10 mb-3" />
-        <h3 className="text-xl font-semibold">{item.title}</h3>
-        <p className="text-gray-500 text-sm">{item.description}</p>
+      <div
+        key={index}
+        className="flex flex-col items-center text-center w-[80px]  "
+      >
+        <Icon className="text-blue-500  w-8 h-8 mb-3" />
+        <h3 className=" font-semibold">{item.title}</h3>
+        <p className="text-gray-500 text-xs">{item.description}</p>
       </div>
     );
   });
 
   return (
-    <section className=" w-4/5 bg-black ml-[30px] mt-12 justify-center h-min mr-4 flex flex-wrap gap-6 ">
+    <section className=" w-11/13 mt-2  justify-center h-min flex flex-wrap gap-6 ">
       {trustSectionComponents}
     </section>
   );
 }
-
-// რისი საშუალება გექნება ჩვენთან?
-
-// პროფესიონალთა გუნდის მხარდაჭერა
-// გამოცდილმა სპეციალისტებმა დაგეხმარებიან ყველა ეტაპზე — იურიდიული, ტექნიკური და საბაზრო საკითხებით.
-
-// ნებისმიერი ტიპის უძრავი ქონების შეფასება
-// სწრაფი, ობიექტური და დეტალური შეფასება — ბინები, სახლები, კომერციული ფართები და მიწა.
-
-// ინსპექტორის მოსვლა მთელი საქართველოს მასშტაბით — სრულიად უფასოდ
-// ადგილზე შემოწმება და სრული დაზუსტებული ანგარიში — ხარჯი თქვენთვის ნულოვანი.

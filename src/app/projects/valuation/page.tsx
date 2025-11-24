@@ -15,7 +15,7 @@ export default function Page() {
       <div className="w-full">
         <NavBar />
         <HomeSlider />
-        <div className="flex flex-col mt-[15px]">
+        <div className="flex flex-col p-4  mt-[15px]">
           <TrustSection />
           <FastValuation />
         </div>

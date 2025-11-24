@@ -23,7 +23,7 @@ export default function FastValuation() {
     setActiveLand,
   ];
   return (
-    <div className="w-full  mr-[30px] text-center">
+    <div className=" mt-10  text-center">
       <h2 className="font-semibold text-2xl mb-2">
         Instant Property Valuation
       </h2>
@@ -115,12 +115,33 @@ export default function FastValuation() {
             className=" rounded-lg h-[44px] px-3 py-3 placeholder:text-xs"
           />
         </div>
+        <div className={`flex-1 mb-4 ${activeHouse ? "block" : "hidden"}`}>
+          <label className="block mb-1 font-sm">Yard Area (sq ft)</label>
+          <input
+            onInput={(e: React.FormEvent<HTMLInputElement>) => {
+              // არ მივცეთ "-" ჩაწერის უფლება
+              const input = e.currentTarget;
+              if (input.value.includes("-")) {
+                input.value = input.value.replace(/-/g, "");
+              }
+
+              // თუ 0-ზე ნაკლებია → გაუქმდეს
+              if (Number(input.value) < 0) {
+                input.value = "0";
+              }
+            }}
+            min="0"
+            type="number"
+            placeholder="e.g. 1500"
+            className=" rounded-lg h-[44px] px-3 py-3 placeholder:text-xs"
+          />
+        </div>
         <div
           className={`mb-4 ${
             activeApartment || acticeOffice ? "block" : "hidden"
           }`}
         >
-          <label>Living floor</label>
+          <label>{acticeOffice ? "Floor" : "Living Floor"}</label>
           <input
             min="1"
             onInput={(e: React.FormEvent<HTMLInputElement>) => {
