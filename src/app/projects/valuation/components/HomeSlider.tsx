@@ -23,7 +23,7 @@ export default function HomeSlider() {
 
   return (
     <div
-      className=" w-11/12 h-[200px] m-auto mt-[70px] bg-center bg-cover rounded-2xl flex items-center justify-center transition-all duration-700 "
+      className=" w-11/12 h-[250px] m-auto mt-[70px] bg-center bg-cover rounded-2xl flex items-center justify-center transition-all duration-700 md:h-[350px]"
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       <div className="flex flex-col items-center text-center text-white px-4 z-20">

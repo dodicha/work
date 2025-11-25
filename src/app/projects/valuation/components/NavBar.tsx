@@ -1,8 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import ReactCountryFlag from "react-country-flag";
 
 import { useLanguage } from "../context/LanguageProvider";
+
+const languageList = [
+  { code: "ka", flag: "GE" },
+  { code: "ru", flag: "RU" },
+  { code: "en", flag: "GB" },
+];
 
 export default function NavBar() {
   const linkKeys = ["services", "about", "contact"];
@@ -11,7 +18,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full bg-black/70 text-white fixed top-0 left-0  ">
+    <nav className="w-full bg-black/80 text-white fixed top-0 left-0 z-50  ">
       <div className="max-w-8xl mx-4 py-[10px] flex justify-between items-center">
         <div className="text-2xl font-bold">LOGO</div>
 
@@ -25,17 +32,22 @@ export default function NavBar() {
           </ul>
 
           <div className="flex space-x-2 ml-4">
-            {["ka", "ru", "en", "tr"].map((lang) => (
+            {languageList.map(({ code, flag }) => (
               <button
-                key={lang}
-                onClick={() => setLanguage(lang)}
-                className={`px-2 py-1 rounded ml-[4px] ${
-                  language === lang
+                key={code}
+                onClick={() => setLanguage(code)}
+                className={`px-2 py-1 rounded ml-[4px] flex items-center gap-1 ${
+                  language === code
                     ? "bg-yellow-400 text-black font-semibold"
                     : "hover:bg-gray-800"
                 }`}
               >
-                {lang.toUpperCase()}
+                <ReactCountryFlag
+                  countryCode={flag}
+                  svg
+                  style={{ width: "1.2em", height: "1.2em" }}
+                />
+                {code.toUpperCase()}
               </button>
             ))}
           </div>
@@ -44,17 +56,17 @@ export default function NavBar() {
         {/* Mobile */}
         <div className="md:hidden flex items-center ">
           <div className="">
-            {["ka", "ru", "en", "tr"].map((lang) => (
+            {languageList.map(({ code, flag }) => (
               <button
-                key={lang}
-                onClick={() => setLanguage(lang)}
+                key={code}
+                onClick={() => setLanguage(code)}
                 className={`px-2 py-1 rounded ml-[4px]  ${
-                  language === lang
+                  language === code
                     ? "bg-yellow-400 text-black font-semibold"
                     : ""
                 }`}
               >
-                {lang.toUpperCase()}
+                {code.toUpperCase()}
               </button>
             ))}
           </div>
