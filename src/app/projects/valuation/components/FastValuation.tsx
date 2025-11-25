@@ -23,7 +23,7 @@ export default function FastValuation() {
     setActiveLand,
   ];
   return (
-    <div className=" mt-10  text-center md:w-1/2 md:mt-0">
+    <div className=" mt-10  text-center md:w-1/2 md:mt-0 lg:w-2/5 ">
       <h2 className="font-semibold text-2xl mb-2">
         Instant Property Valuation
       </h2>
