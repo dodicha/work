@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useLanguage } from "../context/LanguageProvider";
+// import { useLanguage } from "../context/LanguageProvider";
 import {
   Award,
   Building2,
