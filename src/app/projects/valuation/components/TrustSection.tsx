@@ -41,7 +41,7 @@ const icons = [
 ];
 
 export default function TrustSection() {
-  const { selectedLanguageData } = useLanguage();
+  // const { selectedLanguageData } = useLanguage();
 
   const trustSectionComponents = icons.map((item, index) => {
     const Icon = item.component;

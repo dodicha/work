@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import HomeSlider from "./components/HomeSlider";
 import NavBar from "./components/NavBar";
 import LanguageProvider from "./context/LanguageProvider";

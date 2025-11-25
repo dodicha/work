@@ -56,7 +56,7 @@ export default function NavBar() {
         {/* Mobile */}
         <div className="md:hidden flex items-center ">
           <div className="">
-            {languageList.map(({ code, flag }) => (
+            {languageList.map(({ code }) => (
               <button
                 key={code}
                 onClick={() => setLanguage(code)}
