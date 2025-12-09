@@ -22,6 +22,18 @@ export default function FastValuation() {
     setActiveOffice,
     setActiveLand,
   ];
+
+  async function fetchData(region: string) {
+    const res = await fetch("/api/valuation", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ region }),
+    });
+
+    const data = await res.json();
+    console.log(data);
+  }
+
   return (
     <div className=" mt-10  text-center md:w-1/2 md:mt-0 lg:w-2/5 ">
       <h2 className="font-semibold text-2xl mb-2">
@@ -190,6 +202,7 @@ export default function FastValuation() {
           not be considered an official appraisal.
         </p>
       </div>
+      <button onClick={() => fetchData("თბილისი")}>Get Data</button>
     </div>
   );
 }
