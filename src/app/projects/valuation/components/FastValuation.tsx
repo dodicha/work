@@ -26,12 +26,16 @@ export default function FastValuation() {
   async function fetchData(region: string) {
     const res = await fetch("/api/valuation", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ region }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        cadastral: "01.11.04.027.018",
+      }),
     });
 
     const data = await res.json();
-    console.log(data);
+    console.log("RESULT:", data);
   }
 
   return (
@@ -202,7 +206,7 @@ export default function FastValuation() {
           not be considered an official appraisal.
         </p>
       </div>
-      <button onClick={() => fetchData("თბილისი")}>Get Data</button>
+      <button onClick={() => fetchData("tbilisi")}>Get Data</button>
     </div>
   );
 }
