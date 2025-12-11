@@ -2,8 +2,13 @@
 
 import React from "react";
 import { useState } from "react";
-const bedroomOptions = [1, 2, 3, 4, 5];
+const RoomOptions = [1, 2, 3, 4, 5];
 const buildingOptions = ["Apartment", "House", "Office", "Land"];
+const mdgomareoba = [
+  "Needs Renovation",
+  "Fully Renovated",
+  "In Average Condition",
+];
 
 export default function FastValuation() {
   const [bedrooms, setBedrooms] = useState(1);
@@ -12,30 +17,47 @@ export default function FastValuation() {
   const [activeApartment, setActiveApartment] = useState(false);
   const [acticeOffice, setActiveOffice] = useState(false);
   const [activeLand, setActiveLand] = useState(false);
+  const [activeCondition, setActiveCondition] = useState("");
+  const [formCadastral, setFormCadastral] = useState("");
+  const [livingAreaEntered, setLivingAreaEntered] = useState("");
+  const [valuationResult, setValuationResult] = useState<number | null>(null);
+  const [loading, setLoading] = useState(false);
+
   //   const [activeAddress, setActiveAddress] = useState(false);
   //   const [activeBedrooms, setActiveBedrooms] = useState(false);
   //   const [activeLivingArea, setActiveLivingArea] = useState(false);
   //   const [activeLivingFloor, setActiveLivingFloor] = useState(false);
-  const activeType = [
+  const activeBuildingType = [
     setActiveApartment,
     setActiveHouse,
     setActiveOffice,
     setActiveLand,
   ];
 
-  async function fetchData(region: string) {
+  async function getValuation() {
+    setLoading(true);
+    setValuationResult(null);
+
     const res = await fetch("/api/valuation", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        cadastral: "01.11.04.027.018",
+        cadastral: formCadastral,
+        buildingType,
+        condition: activeCondition,
+        bedrooms,
+        livingArea: livingAreaEntered ? Number(livingAreaEntered) : null,
       }),
     });
 
     const data = await res.json();
     console.log("RESULT:", data);
+
+    if (data?.average_price) {
+      setValuationResult(data.average_price);
+    }
+
+    setLoading(false);
   }
 
   return (
@@ -56,9 +78,10 @@ export default function FastValuation() {
               <button
                 key={n}
                 onClick={() => {
+                  setActiveCondition("");
                   setBuildingType(n);
-                  activeType[index](true);
-                  activeType.map((n, i) => {
+                  activeBuildingType[index](true);
+                  activeBuildingType.map((n, i) => {
                     if (i !== index) {
                       n(false);
                     }
@@ -80,19 +103,45 @@ export default function FastValuation() {
           <label className="block mb-1 font-sm">Address</label>
           <input
             type="text"
-            placeholder="Your Property Address"
+            placeholder="Your Property Address or Cadastral Code"
+            value={formCadastral}
+            onChange={(e) => setFormCadastral(e.target.value)}
             className="w-full h-[45px] rounded-lg px-2 py-3 focus:ring-2 focus:ring-blue-500 placeholder:text-xs"
           ></input>
         </div>
-
+        <div
+          className={`mb-4 ${
+            activeApartment || activeHouse || acticeOffice ? "block" : "hidden"
+          }`}
+        >
+          <label className="block mb-2 font-sm">Condition</label>
+          <div className="flex flex-wrap  gap-2">
+            {mdgomareoba.map((n, index) => (
+              <button
+                key={n}
+                onClick={() => {
+                  setActiveCondition(n);
+                }}
+                className={`w-[45%] py-2 rounded-lg border 
+                    ${
+                      activeCondition === n
+                        ? "bg-blue-600 text-white"
+                        : "bg-gray-100"
+                    }`}
+              >
+                {n}
+              </button>
+            ))}
+          </div>
+        </div>
         <div
           className={`mb-4 ${
             activeApartment || activeHouse ? "block" : "hidden"
           }`}
         >
-          <label className="block mb-2 font-sm">Bedrooms</label>
+          <label className="block mb-2 font-sm">Rooms</label>
           <div className="flex gap-2">
-            {bedroomOptions.map((n) => (
+            {RoomOptions.map((n) => (
               <button
                 key={n}
                 onClick={() => setBedrooms(n)}
@@ -106,6 +155,7 @@ export default function FastValuation() {
             ))}
           </div>
         </div>
+
         <div
           className={`flex-1 mb-4 ${
             activeApartment || activeHouse || acticeOffice ? "block" : "hidden"
@@ -128,6 +178,8 @@ export default function FastValuation() {
             min="0"
             type="number"
             placeholder="e.g. 1500"
+            value={livingAreaEntered}
+            onChange={(e) => setLivingAreaEntered(e.target.value)}
             className=" rounded-lg h-[44px] px-3 py-3 placeholder:text-xs"
           />
         </div>
@@ -198,7 +250,10 @@ export default function FastValuation() {
             className=" rounded-lg h-[44px] px-3 py-3 placeholder:text-xs"
           />
         </div>
-        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition ">
+        <button
+          onClick={() => getValuation()}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition "
+        >
           Get Valuation
         </button>
         <p className="text-xs text-gray-500 mt-4 text-center">
@@ -206,7 +261,29 @@ export default function FastValuation() {
           not be considered an official appraisal.
         </p>
       </div>
-      <button onClick={() => fetchData("tbilisi")}>Get Data</button>
+      {loading && (
+        <p className="text-center mt-4 text-blue-600 font-semibold">
+          Calculating valuation...
+        </p>
+      )}
+
+      {valuationResult !== null && (
+        <div className="mt-6 p-4 bg-blue-50 border border-blue-300 rounded-lg">
+          <h3 className="text-xl font-semibold text-blue-700">
+            Estimated Market Value
+          </h3>
+
+          <p className="text-3xl font-bold text-blue-900 mt-2">
+            ₾ {valuationResult.toLocaleString()}
+          </p>
+
+          <p className="text-[11px] text-gray-500 mt-3 italic">
+            This is an estimated value and not an exact appraisal. Actual value
+            may vary depending on building condition, documentation, location
+            precision and market fluctuations.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
