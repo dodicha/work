@@ -5,7 +5,7 @@ import HomeSlider from "./components/HomeSlider";
 import NavBar from "./components/NavBar";
 import LanguageProvider from "./context/LanguageProvider";
 import TrustSection from "./components/TrustSection";
-// import FastValuation from "./components/FastValuation";
+import FastValuation from "./components/FastValuation";
 
 // telegrami gasakeTebelia
 
@@ -17,7 +17,7 @@ export default function Page() {
         <HomeSlider />
         <div className="flex flex-col p-4  mt-[15px] md:flex-row lg:justify-center lg:gap-16">
           <TrustSection />
-          {/* <FastValuation /> */}
+          <FastValuation />
         </div>
       </div>
     </LanguageProvider>
