@@ -34,7 +34,7 @@ export async function POST(req: Request) {
 
     const [rows] = (await connection.execute(
       `
-      SELECT 
+      SELECT
         ROUND(
           AVG(
             CAST(
@@ -59,6 +59,7 @@ export async function POST(req: Request) {
         AND danishnuleba = ?
         AND sakadastro_kodi LIKE CONCAT(?, '%')
       `,
+
       [minArea, maxArea, condition, propertyType, cadastralPrefix]
     )) as any[];
 
