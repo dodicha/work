@@ -16,11 +16,12 @@ export default function FastValuation() {
   const [activeHouse, setActiveHouse] = useState(false);
   const [activeApartment, setActiveApartment] = useState(false);
   const [acticeOffice, setActiveOffice] = useState(false);
-  // const [activeLand, setActiveLand] = useState(false);
+  const [activeLand, setActiveLand] = useState(false);
 
   const [activeCondition, setActiveCondition] = useState("");
   const [formCadastral, setFormCadastral] = useState("");
   const [livingAreaEntered, setLivingAreaEntered] = useState("");
+  const [areaSizeEntered, setAreaSizeEntered] = useState("");
 
   const [valuationResult, setValuationResult] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
@@ -29,7 +30,7 @@ export default function FastValuation() {
     setActiveApartment,
     setActiveHouse,
     setActiveOffice,
-    // setActiveLand,
+    setActiveLand,
   ];
 
   async function getValuation() {
@@ -190,6 +191,20 @@ export default function FastValuation() {
           />
         </div>
 
+        <div
+          className={`mb-4 ${activeHouse || activeLand ? "block" : "hidden"}`}
+        >
+          <label className="block mb-1 font-sm">Area Size (sq ft)</label>
+          <input
+            type="number"
+            min="0"
+            placeholder="e.g. 1500"
+            value={areaSizeEntered}
+            onChange={(e) => setAreaSizeEntered(e.target.value)}
+            className="rounded-lg h-[44px] px-3 py-3 placeholder:text-xs"
+          />
+        </div>
+
         <button
           onClick={getValuation}
           className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition"
@@ -214,7 +229,7 @@ export default function FastValuation() {
             Estimated Market Value
           </h3>
           <p className="text-3xl font-bold text-blue-900 mt-2">
-            ₾ {valuationResult.toLocaleString()}
+            $ {valuationResult.toLocaleString()}
           </p>
         </div>
       )}

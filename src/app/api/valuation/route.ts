@@ -6,19 +6,19 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { cadastral, condition, propertyType, area } = body;
 
-    if (
-      !cadastral ||
-      !condition ||
-      !propertyType ||
-      area === null ||
-      area === undefined ||
-      Number.isNaN(Number(area))
-    ) {
-      return NextResponse.json(
-        { error: "Missing or invalid fields" },
-        { status: 400 }
-      );
-    }
+    // if (
+    //   !cadastral ||
+    //   !condition ||
+    //   !propertyType ||
+    //   area === null ||
+    //   area === undefined ||
+    //   Number.isNaN(Number(area))
+    // ) {
+    //   return NextResponse.json(
+    //     { error: "Missing or invalid fields" },
+    //     { status: 400 }
+    //   );
+    // }
 
     const minArea = Number(area) - 15;
     const maxArea = Number(area) + 15;
