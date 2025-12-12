@@ -4,55 +4,74 @@ import mysql from "mysql2/promise";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { cadastral, condition, livingArea } = body;
+    const { cadastral, condition, propertyType, area } = body;
 
-    if (!cadastral || !condition || !livingArea) {
-      return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+    if (
+      !cadastral ||
+      !condition ||
+      !propertyType ||
+      area === null ||
+      area === undefined ||
+      Number.isNaN(Number(area))
+    ) {
+      return NextResponse.json(
+        { error: "Missing or invalid fields" },
+        { status: 400 }
+      );
     }
 
-    // 1) პირველი 3 სეგმენტი საკადასტრო კოდიდან
-    const segments3 = cadastral.split(".").slice(0, 3).join(".");
+    const minArea = Number(area) - 15;
+    const maxArea = Number(area) + 15;
+    const cadastralPrefix = String(cadastral).slice(0, 8);
 
-    // 2) ფართის დიაპაზონი
-    const areaMin = Number(livingArea) - 15;
-    const areaMax = Number(livingArea) + 15;
-
-    // 3) ქართული condition-ს ვიგებთ map-ით
-    const conditionMap: Record<string, string> = {
-      "Needs Renovation": "სარემონტო",
-      "Fully Renovated": "გარემონტებული",
-      "In Average Condition": "საშუალო დონის რემონტი",
-    };
-
-    const dbCondition = conditionMap[condition];
-
-    // 4) SQL query
-    const conn = await mysql.createConnection({
+    const connection = await mysql.createConnection({
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
+      port: 3306,
     });
 
-    const [rows] = await conn.execute<any[]>(
+    const [rows]: any = await connection.execute(
       `
-      SELECT ROUND(AVG(sabazro_girebulebа), 2) AS avg_price
-      FROM valuation
-      WHERE sakadastro_kodi LIKE CONCAT(?, ".%")
+      SELECT 
+        ROUND(
+          AVG(
+            CAST(
+              REPLACE(
+                REPLACE(sabazro_girebuleba, ' ', ''),
+                ',',
+                ''
+              ) AS UNSIGNED
+            )
+          )
+        ) AS avg_price
+      FROM eval
+      WHERE
+        CAST(
+          REPLACE(
+            REPLACE(binis_saerto_farti, ',', '.'),
+            ' ',
+            ''
+          ) AS DECIMAL(10,2)
+        ) BETWEEN ? AND ?
         AND mdgomareoba = ?
-        AND binis_saerto_farti BETWEEN ? AND ?
+        AND danishnuleba = ?
+        AND sakadastro_kodi LIKE CONCAT(?, '%')
       `,
-      [segments3, dbCondition, areaMin, areaMax]
+      [minArea, maxArea, condition, propertyType, cadastralPrefix]
     );
 
+    await connection.end();
+
     return NextResponse.json({
-      segments3,
-      areaMin,
-      areaMax,
-      conditionDB: dbCondition,
-      average_price: rows[0].avg_price ?? 0,
+      avg_price: rows[0]?.avg_price ?? null,
     });
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 500 });
+  } catch (error: any) {
+    console.error("SERVER ERROR:", error);
+    return NextResponse.json(
+      { error: "Server error", message: error.message },
+      { status: 500 }
+    );
   }
 }
