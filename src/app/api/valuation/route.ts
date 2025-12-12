@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       port: 3306,
     });
 
-    const [rows]: any = await connection.execute(
+    const [rows] = (await connection.execute(
       `
       SELECT 
         ROUND(
@@ -60,7 +60,7 @@ export async function POST(req: Request) {
         AND sakadastro_kodi LIKE CONCAT(?, '%')
       `,
       [minArea, maxArea, condition, propertyType, cadastralPrefix]
-    );
+    )) as any[];
 
     await connection.end();
 

@@ -16,7 +16,7 @@ export default function FastValuation() {
   const [activeHouse, setActiveHouse] = useState(false);
   const [activeApartment, setActiveApartment] = useState(false);
   const [acticeOffice, setActiveOffice] = useState(false);
-  const [activeLand, setActiveLand] = useState(false);
+  // const [activeLand, setActiveLand] = useState(false);
 
   const [activeCondition, setActiveCondition] = useState("");
   const [formCadastral, setFormCadastral] = useState("");
@@ -29,7 +29,7 @@ export default function FastValuation() {
     setActiveApartment,
     setActiveHouse,
     setActiveOffice,
-    setActiveLand,
+    // setActiveLand,
   ];
 
   async function getValuation() {
