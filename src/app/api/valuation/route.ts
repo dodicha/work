@@ -1,18 +1,32 @@
 import { NextResponse } from "next/server";
 import mysql from "mysql2/promise";
+import { RowDataPacket } from "mysql2";
+
+type RequestBody = {
+  cadastral: string;
+  condition: string;
+  propertyType: string;
+  area: number;
+};
+
+type AvgPriceRow = RowDataPacket & {
+  avg_price: number | null;
+};
 
 export async function POST(req: Request) {
+  let connection: mysql.Connection | null = null;
+
   try {
-    const body = await req.json();
+    const body: RequestBody = await req.json();
     const { cadastral, condition, propertyType, area } = body;
 
+    // // ✅ ვალიდაცია
     // if (
     //   !cadastral ||
     //   !condition ||
     //   !propertyType ||
-    //   area === null ||
-    //   area === undefined ||
-    //   Number.isNaN(Number(area))
+    //   typeof area !== "number" ||
+    //   Number.isNaN(area)
     // ) {
     //   return NextResponse.json(
     //     { error: "Missing or invalid fields" },
@@ -20,79 +34,65 @@ export async function POST(req: Request) {
     //   );
     // }
 
-    const minArea = Number(area) - 15;
-    const maxArea = Number(area) + 15;
-    const cadastralPrefix = String(cadastral).slice(0, 8);
+    // ✅ გამოთვლები
+    const minArea = area - 15;
+    const maxArea = area + 15;
 
-    const connection = await mysql.createConnection({
+    // მაგ: 01.10.10.
+    const cadastralPrefix = cadastral.split(".").slice(0, 3).join(".") + ".";
+
+    // ✅ DB connection
+    connection = await mysql.createConnection({
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
+      database: process.env.DB_NAME, // valuation
       port: 3306,
     });
 
-    // const [rows] = (await connection.execute(
-    //   `
-    //   SELECT
-    //     ROUND(
-    //       AVG(
-    //         CAST(
-    //           REPLACE(
-    //             REPLACE(sabazro_girebuleba, ' ', ''),
-    //             ',',
-    //             ''
-    //           ) AS UNSIGNED
-    //         )
-    //       )
-    //     ) AS avg_price
-    //   FROM eval
-    //   WHERE
-    //     CAST(
-    //       REPLACE(
-    //         REPLACE(binis_saerto_farti, ',', '.'),
-    //         ' ',
-    //         ''
-    //       ) AS DECIMAL(10,2)
-    //     ) BETWEEN ? AND ?
-    //     AND mdgomareoba = ?
-    //     AND danishnuleba = ?
-    //     AND sakadastro_kodi LIKE CONCAT(?, '%')
-    //   `,
-
-    //   [minArea, maxArea, condition, propertyType, cadastralPrefix]
-    // )) as any[];
-
-    const [rows] = await connection.execute(
+    const [rows] = await connection.execute<AvgPriceRow[]>(
       `
-  SELECT ROUND(
-    AVG(
-      CAST(
-        REPLACE(
-          REPLACE(sabazro_girebuleba, ' ', ''),
-          ',',
-          ''
-        ) AS UNSIGNED
-      )
-    )
-  ) AS avg_price
-  FROM filtered
-  WHERE sakadastro_kodi LIKE CONCAT(?, '%')
-  AND TRIM(mdgomareoba) = ?
-  `,
-      [cadastralPrefix, condition]
+      SELECT
+        ROUND(
+          AVG(
+            CAST(
+              REPLACE(
+                REPLACE(sabazro_girebuleba, ' ', ''),
+                ',',
+                ''
+              ) AS UNSIGNED
+            )
+          )
+        ) AS avg_price
+      FROM filtered
+      WHERE
+        CAST(
+          REPLACE(
+            REPLACE(binis_saerto_farti, ',', '.'),
+            ' ',
+            ''
+          ) AS DECIMAL(10,2)
+        ) BETWEEN ? AND ?
+        AND TRIM(mdgomareoba) = ?
+        AND TRIM(danishnuleba) = ?
+        AND sakadastro_kodi LIKE CONCAT(?, '%')
+      `,
+      [minArea, maxArea, condition, propertyType, cadastralPrefix]
     );
 
-    await connection.end();
+    const avgPrice = rows[0]?.avg_price ?? null;
 
     return NextResponse.json({
-      avg_price: rows[0]?.avg_price ?? null,
+      avg_price: avgPrice,
     });
-  } catch (error: any) {
+  } catch (error) {
     console.error("SERVER ERROR:", error);
-    return NextResponse.json(
-      { error: "Server error", message: error.message },
-      { status: 500 }
-    );
+
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
+  } finally {
+    // ✅ connection ყოველთვის იხურება
+    if (connection) {
+      await connection.end();
+    }
   }
 }
