@@ -32,36 +32,56 @@ export async function POST(req: Request) {
       port: 3306,
     });
 
-    const [rows] = (await connection.execute(
-      `
-      SELECT
-        ROUND(
-          AVG(
-            CAST(
-              REPLACE(
-                REPLACE(sabazro_girebuleba, ' ', ''),
-                ',',
-                ''
-              ) AS UNSIGNED
-            )
-          )
-        ) AS avg_price
-      FROM eval
-      WHERE
-        CAST(
-          REPLACE(
-            REPLACE(binis_saerto_farti, ',', '.'),
-            ' ',
-            ''
-          ) AS DECIMAL(10,2)
-        ) BETWEEN ? AND ?
-        AND mdgomareoba = ?
-        AND danishnuleba = ?
-        AND sakadastro_kodi LIKE CONCAT(?, '%')
-      `,
+    // const [rows] = (await connection.execute(
+    //   `
+    //   SELECT
+    //     ROUND(
+    //       AVG(
+    //         CAST(
+    //           REPLACE(
+    //             REPLACE(sabazro_girebuleba, ' ', ''),
+    //             ',',
+    //             ''
+    //           ) AS UNSIGNED
+    //         )
+    //       )
+    //     ) AS avg_price
+    //   FROM eval
+    //   WHERE
+    //     CAST(
+    //       REPLACE(
+    //         REPLACE(binis_saerto_farti, ',', '.'),
+    //         ' ',
+    //         ''
+    //       ) AS DECIMAL(10,2)
+    //     ) BETWEEN ? AND ?
+    //     AND mdgomareoba = ?
+    //     AND danishnuleba = ?
+    //     AND sakadastro_kodi LIKE CONCAT(?, '%')
+    //   `,
 
-      [minArea, maxArea, condition, propertyType, cadastralPrefix]
-    )) as any[];
+    //   [minArea, maxArea, condition, propertyType, cadastralPrefix]
+    // )) as any[];
+
+    const [rows] = await connection.execute(
+      `
+  SELECT ROUND(
+    AVG(
+      CAST(
+        REPLACE(
+          REPLACE(sabazro_girebuleba, ' ', ''),
+          ',',
+          ''
+        ) AS UNSIGNED
+      )
+    )
+  ) AS avg_price
+  FROM filtered
+  WHERE sakadastro_kodi LIKE CONCAT(?, '%')
+  AND TRIM(mdgomareoba) = ?
+  `,
+      [cadastralPrefix, condition]
+    );
 
     await connection.end();
 
