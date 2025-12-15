@@ -74,7 +74,7 @@ export async function POST(req: Request) {
           ) AS DECIMAL(10,2)
         ) BETWEEN ? AND ?
         AND TRIM(mdgomareoba) = ?
-        AND TRIM(danishnuleba) = ?
+        AND TRIM(arsebuli_gamokeneba) = ?
         AND sakadastro_kodi LIKE CONCAT(?, '%')
       `,
       [minArea, maxArea, condition, propertyType, cadastralPrefix]
