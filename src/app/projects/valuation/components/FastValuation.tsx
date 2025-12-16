@@ -44,7 +44,7 @@ export default function FastValuation() {
         : activeCondition === "Fully Renovated"
         ? "გარემონტებული"
         : activeCondition === "In Average Condition"
-        ? "საშუალო"
+        ? "საშუალო დონის რემონტი"
         : "";
 
     const mappedBuildingType =
