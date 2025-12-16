@@ -52,31 +52,35 @@ export async function POST(req: Request) {
 
     const [rows] = await connection.execute<AvgPriceRow[]>(
       `
-      SELECT
-        ROUND(
-          AVG(
-            CAST(
-              REPLACE(
-                REPLACE(sabazro_girebuleba, ' ', ''),
-                ',',
-                ''
-              ) AS UNSIGNED
-            )
-          )
-        ) AS avg_price
-      FROM filtered
-      WHERE
+  SELECT
+    ROUND(AVG(max_price)) AS avg_price
+  FROM (
+    SELECT
+      sakadastro_kodi,
+      MAX(
         CAST(
           REPLACE(
-            REPLACE(binis_saerto_farti, ',', '.'),
-            ' ',
+            REPLACE(sabazro_girebuleba, ' ', ''),
+            ',',
             ''
-          ) AS DECIMAL(10,2)
-        ) BETWEEN ? AND ?
-        AND TRIM(mdgomareoba) = ?
-        AND TRIM(arsebuli_gamokeneba) = ?
-        AND sakadastro_kodi LIKE CONCAT(?, '%')
-      `,
+          ) AS UNSIGNED
+        )
+      ) AS max_price
+    FROM filtered
+    WHERE
+      CAST(
+        REPLACE(
+          REPLACE(binis_saerto_farti, ',', '.'),
+          ' ',
+          ''
+        ) AS DECIMAL(10,2)
+      ) BETWEEN ? AND ?
+      AND TRIM(mdgomareoba) = ?
+      AND TRIM(arsebuli_gamokeneba) = ?
+      AND sakadastro_kodi LIKE CONCAT(?, '%')
+    GROUP BY sakadastro_kodi
+  ) t
+  `,
       [minArea, maxArea, condition, propertyType, cadastralPrefix]
     );
 
