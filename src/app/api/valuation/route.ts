@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import mysql from "mysql2/promise";
 import { RowDataPacket } from "mysql2";
 
+export const runtime = "nodejs";
+
 type RequestBody = {
   cadastral: string;
   condition: string;
