@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 const RoomOptions = [1, 2, 3, 4, 5];
 const buildingOptions = ["Apartment", "House", "Office", "Land"];
@@ -23,7 +23,11 @@ export default function FastValuation() {
   const [livingAreaEntered, setLivingAreaEntered] = useState("");
   const [areaSizeEntered, setAreaSizeEntered] = useState("");
 
-  const [valuationResult, setValuationResult] = useState<number | null>(null);
+  const [valuationResult, setValuationResult] = useState<{
+    min: number;
+    max: number;
+  } | null>(null);
+
   const [loading, setLoading] = useState(false);
 
   const activeBuildingType = [
@@ -58,25 +62,33 @@ export default function FastValuation() {
         ? "მიწა"
         : "";
 
-    const res = await fetch("/api/valuation", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        cadastral: formCadastral,
-        condition: mappedCondition,
-        propertyType: mappedBuildingType,
-        area: livingAreaEntered ? Number(livingAreaEntered) : null,
-      }),
-    });
+    try {
+      const res = await fetch("/api/valuation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          cadastral: formCadastral,
+          condition: mappedCondition,
+          propertyType: mappedBuildingType,
+          area: livingAreaEntered ? Number(livingAreaEntered) : null,
+        }),
+      });
 
-    const data = await res.json();
-    console.log("RESULT:", data);
+      const data = await res.json();
+      console.log("RESULT:", data);
 
-    if (data?.avg_price !== null && data?.avg_price !== undefined) {
-      setValuationResult(data.avg_price);
+      // ✅ ახალი ლოგიკა — დიაპაზონი
+      if (data?.price_range?.min !== null && data?.price_range?.max !== null) {
+        setValuationResult({
+          min: data.price_range.min,
+          max: data.price_range.max,
+        });
+      }
+    } catch (error) {
+      console.error("UI ERROR:", error);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
 
   return (
@@ -223,13 +235,14 @@ export default function FastValuation() {
         </p>
       )}
 
-      {valuationResult !== null && (
+      {valuationResult && (
         <div className="mt-6 p-4 bg-blue-50 border border-blue-300 rounded-lg">
           <h3 className="text-xl font-semibold text-blue-700">
             Estimated Market Value
           </h3>
           <p className="text-3xl font-bold text-blue-900 mt-2">
-            $ {valuationResult.toLocaleString()}
+            $ {Number(valuationResult.min).toLocaleString()} –{" "}
+            {Number(valuationResult.max).toLocaleString()}
           </p>
         </div>
       )}
