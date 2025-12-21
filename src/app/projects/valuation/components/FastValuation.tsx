@@ -1,6 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { AlertTriangle } from "lucide-react";
+// import { ViberButton, WhatsappButton } from "./Contact";
+import dynamic from "next/dynamic";
+
+const ViberButton = dynamic(() => import("./contact/ViberButton"), {
+  ssr: false,
+});
+
+const WhatsappButton = dynamic(() => import("./contact/WhatsappButton"), {
+  ssr: false,
+});
 
 const RoomOptions = [1, 2, 3, 4, 5];
 const buildingOptions = ["Apartment", "House", "Office", "Land"];
@@ -244,6 +255,24 @@ export default function FastValuation() {
             $ {Number(valuationResult.min).toLocaleString()} –{" "}
             {Number(valuationResult.max).toLocaleString()}
           </p>
+          <div className="mt-6">
+            <AlertTriangle className="inline-block ml-2 text-red-700" />
+            <p className="mt-4 text-sm text-gray-700 leading-relaxed">
+              აღნიშნული ღირებულება არის
+              <span className="font-semibold"> სავარაუდო და არაოფიციალური</span>
+              . ქონების რეალური საბაზრო ღირებულების დასადგენად მნიშვნელოვანია
+              მრავალი დამატებითი ფაქტორი.
+              <br />
+              <span className="font-medium text-gray-800">
+                ოფიციალური შეფასების დასკვნის მისაღებად გთხოვთ, დაუკავშირდეთ
+                ჩვენს ექსპერტებს.
+              </span>
+            </p>
+            <div className="flex mt-6 justify-center gap-10">
+              <ViberButton />
+              <WhatsappButton />
+            </div>
+          </div>
         </div>
       )}
     </div>
