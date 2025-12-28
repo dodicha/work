@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import ReactCountryFlag from "react-country-flag";
-
+import Link from "next/link";
 import { useLanguage } from "../context/LanguageProvider";
 
 const languageList = [
@@ -25,9 +25,13 @@ export default function NavBar() {
         <div className="hidden md:flex items-center gap-8">
           <ul className="flex space-x-8 font-medium text-xl">
             {linkKeys.map((link, i) => (
-              <li key={i} className="hover:text-yellow-400 cursor-pointer">
+              <Link
+                href="/projects/valuation/contact"
+                key={i}
+                className="hover:text-yellow-400 cursor-pointer"
+              >
                 {selectedLanguageData?.[link]}
-              </li>
+              </Link>
             ))}
           </ul>
 

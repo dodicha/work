@@ -5,11 +5,11 @@ import { AlertTriangle } from "lucide-react";
 // import { ViberButton, WhatsappButton } from "./Contact";
 import dynamic from "next/dynamic";
 
-const ViberButton = dynamic(() => import("./contact/ViberButton"), {
+const ViberButton = dynamic(() => import("./buttons/ViberButton"), {
   ssr: false,
 });
 
-const WhatsappButton = dynamic(() => import("./contact/WhatsappButton"), {
+const WhatsappButton = dynamic(() => import("./buttons/WhatsappButton"), {
   ssr: false,
 });
 
