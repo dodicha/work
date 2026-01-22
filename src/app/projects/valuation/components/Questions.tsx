@@ -1,8 +1,5 @@
 import React from "react";
-import { Clock, icons } from "lucide-react";
-import { ShieldCheck } from "lucide-react";
-import { FileText } from "lucide-react";
-import { BadgeDollarSign } from "lucide-react";
+import { Clock, ShieldCheck, FileText, BadgeDollarSign } from "lucide-react";
 
 const questions = [
   {
