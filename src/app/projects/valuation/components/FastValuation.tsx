@@ -57,21 +57,21 @@ export default function FastValuation() {
       activeCondition === "Needs Renovation"
         ? "სარემონტო"
         : activeCondition === "Fully Renovated"
-        ? "გარემონტებული"
-        : activeCondition === "In Average Condition"
-        ? "საშუალო დონის რემონტი"
-        : "";
+          ? "გარემონტებული"
+          : activeCondition === "In Average Condition"
+            ? "საშუალო დონის რემონტი"
+            : "";
 
     const mappedBuildingType =
       buildingType === "Apartment"
         ? "ბინა"
         : buildingType === "House"
-        ? "სახლი"
-        : buildingType === "Office"
-        ? "ოფისი"
-        : buildingType === "Land"
-        ? "მიწა"
-        : "";
+          ? "სახლი"
+          : buildingType === "Office"
+            ? "ოფისი"
+            : buildingType === "Land"
+              ? "მიწა"
+              : "";
 
     try {
       const res = await fetch("/api/valuation", {

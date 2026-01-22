@@ -58,7 +58,7 @@ export default function TrustSection() {
   });
 
   return (
-    <section className=" w-11/13   justify-center h-min flex  flex-wrap gap-4 md:w-1/2 md:mt-16 md:h-min md:gap-10 lg:w-2/5">
+    <section className="w-11/13 justify-center h-min flex  flex-wrap gap-4 md:w-1/2 md:mt-16 md:h-min md:gap-10 lg:w-2/5">
       {trustSectionComponents}
     </section>
   );
