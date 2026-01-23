@@ -37,31 +37,33 @@ export default function Questions() {
     null,
   );
 
+  const FrequentlyAskedQuestions = questions.map((item, index) => {
+    const Icon = item.icons;
+    return (
+      <div
+        key={index}
+        className="self-start  cursor-pointer border rounded-xl p-2 w-[80%] lg:w-[40%] lg:mt-10 hover:bg-green-500"
+        onClick={() => {
+          setActiveQuestion(index + 1 === activeQuestion ? null : index + 1);
+        }}
+      >
+        <Icon className="text-blue-500 w-6 h-6 mt-2 mx-auto" />
+        <h2 className=" font-semibold text-center mt-2 mb-2">
+          {item.question}
+        </h2>
+        <hr></hr>
+        <h3
+          className={`mt-4 ${activeQuestion === item.id ? "block" : "hidden"}`}
+        >
+          {item.answer}
+        </h3>
+      </div>
+    );
+  });
+
   return (
     <div className=" h-min w-11/12 rounded-2xl m-auto mt-4 justify-center  flex  flex-wrap gap-4 ">
-      {questions.map((item, index) => (
-        <div key={index} className="">
-          <div
-            className="border rounded-xl p-2"
-            onClick={() => {
-              setActiveQuestion(
-                index + 1 === activeQuestion ? null : index + 1,
-              );
-            }}
-          >
-            <item.icons className="text-blue-500 w-6 h-6 mt-2 mx-auto" />
-            <h2 className=" font-semibold text-center mt-2 mb-2">
-              {item.question}
-            </h2>
-            <hr></hr>
-            <h3
-              className={`mt-4 ${activeQuestion === item.id ? "block" : "hidden"}`}
-            >
-              {item.answer}
-            </h3>
-          </div>
-        </div>
-      ))}
+      {FrequentlyAskedQuestions}
     </div>
   );
 }
