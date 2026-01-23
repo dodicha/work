@@ -1,0 +1,25 @@
+[
+  {
+    "district": "მუხიანი",
+    "geometryId": "mukhiani",
+    "data": {
+      "2024": {
+        "apartment": {
+          "Needs Renovation": {
+            "min": 840,
+            "max": 1250
+          },
+          "In Average Condition": {
+            "min": 975,
+            "max": 1320
+          },
+
+          "Fully Renovated": {
+            "min": 1175,
+            "max": 1680
+          }
+        }
+      }
+    }
+  }
+]
