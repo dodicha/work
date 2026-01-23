@@ -103,7 +103,7 @@ export default function FastValuation() {
   }
 
   return (
-    <div className="mt-10  text-center md:w-1/2 md:mt-0 lg:w-11/12 lg:m-auto ">
+    <div className="mt-10  text-center md:w-1/2 md:mt-0 lg:w-1/2 lg:m-auto ">
       <h2 className="font-semibold text-2xl mb-2">
         Instant Property Valuation
       </h2>

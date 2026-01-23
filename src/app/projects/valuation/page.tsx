@@ -6,6 +6,7 @@ import LanguageProvider from "./context/LanguageProvider";
 import TrustSection from "./components/TrustSection";
 import FastValuation from "./components/FastValuation";
 import Questions from "./components/Questions";
+import Map from "./components/Map";
 
 // telegrami gasakeTebelia
 
@@ -19,7 +20,10 @@ export default function Page() {
           <TrustSection />
           <Questions />
         </div>
-        <FastValuation />
+        <div className="flex items-center justify-center bg-slate-500 p-8 gap-10">
+          <FastValuation />
+          <Map />
+        </div>
       </div>
     </LanguageProvider>
   );
