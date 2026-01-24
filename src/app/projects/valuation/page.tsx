@@ -20,10 +20,10 @@ export default function Page() {
           <TrustSection />
           <Questions />
         </div>
-        <div className="flex items-center justify-center bg-slate-500 p-8 gap-10">
+        <div className="flex justify-center">
           <FastValuation />
-          <Map />
         </div>
+        <Map />
       </div>
     </LanguageProvider>
   );
