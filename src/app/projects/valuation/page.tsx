@@ -16,13 +16,14 @@ export default function Page() {
       <div className="w-full  ">
         <NavBar />
         <HomeSlider />
+        <div className="flex justify-center">
+          <FastValuation />
+        </div>
         <div className="flex flex-col p-4  mt-[15px] md:flex-row md:p-8 lg:m-auto lg:ml-[80px]  lg:gap-10">
           <TrustSection />
           <Questions />
         </div>
-        <div className="flex justify-center">
-          <FastValuation />
-        </div>
+
         <Map />
       </div>
     </LanguageProvider>

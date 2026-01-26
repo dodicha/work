@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { AlertTriangle } from "lucide-react";
+import Select from "react-select";
+
+import {
+  MapPin,
+  LineChart,
+  Paintbrush,
+  ChevronDown,
+  Maximize2,
+} from "lucide-react";
 // import { ViberButton, WhatsappButton } from "./Contact";
 import dynamic from "next/dynamic";
 
@@ -20,7 +28,7 @@ const condition = [
   "Fully Renovated",
   "In Average Condition",
 ];
-const districts = [
+const districtsList = [
   "მუხიანი",
   "გლდანი",
   "ავჭალა",
@@ -52,6 +60,7 @@ const districts = [
   "ორთაჭალა",
   "ფონიჭალა",
 ];
+
 const propertyDiscriptionOptions = [
   "district",
   "condition",
@@ -59,23 +68,138 @@ const propertyDiscriptionOptions = [
   "calculate",
 ];
 
+const districtOptions = districtsList.map((d) => ({
+  value: d,
+  label: d,
+}));
+
+const conditionOptions = condition.map((c) => ({
+  value: c,
+  label: c,
+}));
+
+const valuationBarIcons = [
+  <MapPin className="w-5 h-5 text-blue-500" />,
+  <Paintbrush className="w-5 h-5 text-blue-500" />,
+  <Maximize2 className="w-5 h-5 text-blue-500" />,
+  <LineChart className="w-5 h-5 text-blue-500" />,
+];
+
 export default function FastValuation() {
-  const valuationBar = propertyDiscriptionOptions.map((item, index) => {
-    return (
-      <div
-        key={index}
-        className="cursor-pointer w-[20%] m-auto border rounded-2xl"
-      >
-        {item}
-      </div>
-    );
-  });
+  const [activeDistrict, setActiveDistrict] = useState(false);
+  const [activeCondition, setActiveCondition] = useState(false);
+
+  const [district, setDistrict] = useState<{
+    value: string;
+    label: string;
+  } | null>(null);
+  const [condition, setCondition] = useState<{
+    value: string;
+    label: string;
+  } | null>(null);
+  const [areaSize, setAreaSize] = useState("");
+
+  const handleCalculate = () => {
+    console.log({
+      district,
+      condition,
+      areaSize,
+    });
+  };
+  // const valuationBar = propertyDiscriptionOptions.map((item, index) => {
+  //   return (
+  //     <div
+  //       key={index}
+  //       className={`flex cursor-pointer w-[25%] m-auto gap-4 border-r p-2 ${index === 3 ? "bg-blue-500 text-white border-2xl rounded-2xl" : ""}`}
+  //       onClick={() => {
+  //         index === 0
+  //           ? setActiveDistrict(!activeDistrict)
+  //           : index === 1 && setActiveCondition(!activeCondition);
+  //       }}
+  //     >
+  //       <div>{valuationBarIcons[index]}</div>
+  //       <div>{item}</div>
+  //       <div>
+  //         <ChevronDown
+  //           className={index === 2 || index === 3 ? "hidden" : "block"}
+  //         />
+  //       </div>
+  //     </div>
+  //   );
+  // });
 
   return (
-    <div className="lg:w-5/6 lg:h-[150px] lg:bg-slate-600 text-center">
-      <h1 className="text-2xl mt-4">Quickly evaluate your apartment</h1>
-      <div className="flex items-center justify-center mt-4">
-        {valuationBar}
+    // <div className="lg:w-5/6  lg:bg-slate-300 lg:rounded-3xl text-center m-auto flex flex-col  my-4 py-4">
+    //   <h1 className="text-2xl  m-auto">Quickly evaluate your apartment</h1>
+
+    //   <div className="flex flex-wrap m-auto mt-8 w-11/12 bg-white rounded-md p-2">
+    //     {valuationBar}
+    //     <div
+    //       className={`w-[25%] h-[150px] bg-black mt-4 ${activeDistrict ? "block" : "hidden"}`}
+    //     ></div>
+    //     <div
+    //       className={`w-[25%] h-[150px] bg-red-300 ml-[25%] mt-4 ${activeCondition ? "block" : "hidden"}`}
+    //     ></div>
+    //   </div>
+    // </div>
+    <div className="w-full flex justify-center mt-10">
+      <div className="flex items-center bg-white rounded-full shadow-lg overflow-hidden w-full max-w-4xl">
+        {/* District */}
+        <div className="flex-1 border-r px-3 py-2">
+          <Select
+            options={districtOptions}
+            placeholder="District"
+            value={district}
+            onChange={setDistrict}
+            className="text-sm"
+            styles={{
+              control: (base) => ({
+                ...base,
+                border: "none",
+                boxShadow: "none",
+                minHeight: "40px",
+              }),
+            }}
+          />
+        </div>
+
+        {/* Condition */}
+        <div className="flex-1 border-r px-3 py-2">
+          <Select
+            options={conditionOptions}
+            placeholder="Condition"
+            value={condition}
+            onChange={setCondition}
+            className="text-sm"
+            styles={{
+              control: (base) => ({
+                ...base,
+                border: "none",
+                boxShadow: "none",
+                minHeight: "40px",
+              }),
+            }}
+          />
+        </div>
+
+        {/* Area Size */}
+        <div className="flex-1 border-r px-3 py-2">
+          <input
+            type="number"
+            placeholder="Area Size (m²)"
+            value={areaSize}
+            onChange={(e) => setAreaSize(e.target.value)}
+            className="w-full outline-none text-sm"
+          />
+        </div>
+
+        {/* Button */}
+        <button
+          onClick={handleCalculate}
+          className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-3 h-full"
+        >
+          Calculate
+        </button>
       </div>
     </div>
   );
