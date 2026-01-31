@@ -1,6 +1,5 @@
-[
-  {
-    "district": "მუხიანი",
+{
+  "მუხიანი": {
     "geometryId": "mukhiani",
     "data": {
       "2024": {
@@ -39,8 +38,7 @@
       }
     }
   },
-  {
-    "district": "გლდანი",
+  "გლდანი": {
     "geometryId": "gldani",
     "data": {
       "2024": {
@@ -79,8 +77,7 @@
       }
     }
   },
-  {
-    "district": "ავჭალა",
+  "ავჭალა": {
     "geometryId": "avchala",
     "data": {
       "2024": {
@@ -119,8 +116,7 @@
       }
     }
   },
-  {
-    "district": "თემქა",
+  "თემქა": {
     "geometryId": "temka",
     "data": {
       "2024": {
@@ -159,8 +155,7 @@
       }
     }
   },
-  {
-    "district": "სანზონა",
+  "სანზონა": {
     "geometryId": "sanzona",
     "data": {
       "2024": {
@@ -199,7 +194,7 @@
       }
     }
   },
-  {
+  "ნაძალადევი": {
     "district": "ნაძალადევი",
     "geometryId": "nadzaladevi",
     "data": {
@@ -239,7 +234,7 @@
       }
     }
   },
-  {
+  "დიდუბე": {
     "district": "დიდუბე",
     "geometryId": "didube",
     "data": {
@@ -279,8 +274,7 @@
       }
     }
   },
-  {
-    "district": "ჩუღურეთი",
+  "ჩუღურეთი": {
     "geometryId": "chugureti",
     "data": {
       "2024": {
@@ -319,8 +313,7 @@
       }
     }
   },
-  {
-    "district": "ავლაბარი",
+  "ავლაბარი": {
     "geometryId": "avlabari",
     "data": {
       "2024": {
@@ -359,8 +352,7 @@
       }
     }
   },
-  {
-    "district": "ლოტკინი",
+  "ლოტკინი": {
     "geometryId": "lotkini",
     "data": {
       "2024": {
@@ -399,8 +391,7 @@
       }
     }
   },
-  {
-    "district": "სამგორი",
+  "სამგორი": {
     "geometryId": "samgori",
     "data": {
       "2024": {
@@ -439,8 +430,7 @@
       }
     }
   },
-  {
-    "district": "ისანი",
+  "ისანი": {
     "geometryId": "isani",
     "data": {
       "2024": {
@@ -479,9 +469,7 @@
       }
     }
   },
-  {
-    "district": "ვაზისუბანი",
-    "geometryId": "vazisubani",
+  "ვაზისუბანი": {
     "data": {
       "2024": {
         "apartment": {
@@ -519,8 +507,7 @@
       }
     }
   },
-  {
-    "district": "ვარკეთილი",
+  "ვარკეთილი": {
     "geometryId": "varketiili",
     "data": {
       "2024": {
@@ -559,8 +546,7 @@
       }
     }
   },
-  {
-    "district": "აფრიკა",
+  "აფრიკა": {
     "geometryId": "afrika",
     "data": {
       "2024": {
@@ -599,8 +585,7 @@
       }
     }
   },
-  {
-    "district": "ლილო",
+  "ლილო": {
     "geometryId": "lilo",
     "data": {
       "2024": {
@@ -639,8 +624,7 @@
       }
     }
   },
-  {
-    "district": "ორხევი",
+  "ორხევი": {
     "geometryId": "orxevi",
     "data": {
       "2024": {
@@ -679,8 +663,7 @@
       }
     }
   },
-  {
-    "district": "დიღომი 7",
+  "დიღომი 7": {
     "geometryId": "digomi 7",
     "data": {
       "2024": {
@@ -719,8 +702,7 @@
       }
     }
   },
-  {
-    "district": "დიდი დიღმი",
+  "დიდი დიღომი": {
     "geometryId": "didi digomi",
     "data": {
       "2024": {
@@ -759,8 +741,7 @@
       }
     }
   },
-  {
-    "district": "დიღმის მასივი",
+  "დიღმის მასივი": {
     "geometryId": "digmis masivi",
     "data": {
       "2024": {
@@ -799,8 +780,7 @@
       }
     }
   },
-  {
-    "district": "ვაშლიჯვარი",
+  "ვაშლიჯვარი": {
     "geometryId": "vashlijvari",
     "data": {
       "2024": {
@@ -839,8 +819,7 @@
       }
     }
   },
-  {
-    "district": "ნუცუბიძის პლატო",
+  "ნუცუბიძის პლატო": {
     "geometryId": "nucubidzis platoo",
     "data": {
       "2024": {
@@ -879,8 +858,7 @@
       }
     }
   },
-  {
-    "district": "საბურთალო",
+  "საბურთალო": {
     "geometryId": "saburtalo",
     "data": {
       "2024": {
@@ -919,8 +897,7 @@
       }
     }
   },
-  {
-    "district": "ვაკე",
+  "ვაკე": {
     "geometryId": "vake",
     "data": {
       "2024": {
@@ -959,8 +936,7 @@
       }
     }
   },
-  {
-    "district": "ვერა",
+  "ვერა": {
     "geometryId": "vera",
     "data": {
       "2024": {
@@ -999,8 +975,7 @@
       }
     }
   },
-  {
-    "district": "მთაწმინდა",
+  "მთაწმინდა": {
     "geometryId": "mthatsminda",
     "data": {
       "2024": {
@@ -1039,8 +1014,7 @@
       }
     }
   },
-  {
-    "district": "სოლოლაკი",
+  "სოლოლაკი": {
     "geometryId": "sololaki",
     "data": {
       "2024": {
@@ -1079,8 +1053,7 @@
       }
     }
   },
-  {
-    "district": "ორთაჭალა",
+  "ორთაჭალა": {
     "geometryId": "ortachala",
     "data": {
       "2024": {
@@ -1119,8 +1092,7 @@
       }
     }
   },
-  {
-    "district": "ფონიჭალა",
+  "ფონიჭალა": {
     "geometryId": "fonichala",
     "data": {
       "2024": {
@@ -1159,4 +1131,4 @@
       }
     }
   }
-]
+}
