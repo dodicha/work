@@ -3,21 +3,6 @@
 import { useState, useEffect } from "react";
 import Select from "react-select";
 
-// import { MapPin, LineChart, Paintbrush, Maximize2 } from "lucide-react";
-// import { ViberButton, WhatsappButton } from "./Contact";
-// import dynamic from "next/dynamic";
-// import { label } from "framer-motion/client";
-
-// const ViberButton = dynamic(() => import("./buttons/ViberButton"), {
-//   ssr: false,
-// });
-
-// const WhatsappButton = dynamic(() => import("./buttons/WhatsappButton"), {
-//   ssr: false,
-// });
-
-// const RoomOptions = [1, 2, 3, 4, 5];
-// const buildingOptions = ["Apartment"];
 const condition = [
   "Needs Renovation",
   "Fully Renovated",
@@ -56,13 +41,6 @@ const districtsList = [
   "ფონიჭალა",
 ];
 
-// const propertyDiscriptionOptions = [
-//   "district",
-//   "condition",
-//   "Area Size",
-//   "calculate",
-// ];
-
 const districtOptions = districtsList.map((d) => ({
   value: d,
   label: d,
@@ -73,15 +51,9 @@ const conditionOptions = condition.map((c) => ({
   label: c,
 }));
 
-// const valuationBarIcons = [
-//   <MapPin className="w-5 h-5 text-blue-500" />,
-//   <Paintbrush className="w-5 h-5 text-blue-500" />,
-//   <Maximize2 className="w-5 h-5 text-blue-500" />,
-//   <LineChart className="w-5 h-5 text-blue-500" />,
-// ];
-
 export default function FastValuation() {
   const [data, setData] = useState(null);
+  const [valuationResult, setValuationResult] = useState<string>("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -91,6 +63,22 @@ export default function FastValuation() {
     };
     fetchData();
   }, []);
+
+  const calculatePrice = (
+    district: string,
+    condition: string,
+    area: number,
+  ) => {
+    const minPrice =
+      data?.[district][2025]?.["apartment"]?.[condition]?.["min"];
+    const maxPrice =
+      data?.[district][2025]?.["apartment"]?.[condition]?.["max"];
+    let priceRange: string = "";
+    if (minPrice && maxPrice) {
+      priceRange = `${minPrice * area} - ${maxPrice * area}`;
+    }
+    return priceRange;
+  };
 
   const [district, setDistrict] = useState<{
     value: string;
@@ -104,11 +92,20 @@ export default function FastValuation() {
 
   const handleCalculate = () => {
     console.log(data);
+    let prise = "";
+    if (district && condition && areaSize) {
+      prise = calculatePrice(
+        district.value,
+        condition.value,
+        parseFloat(areaSize),
+      );
+      setValuationResult(prise);
+    }
   };
 
   return (
-    <div className="w-full flex justify-center mt-10">
-      <div className="flex items-center bg-black    w-full max-w-4xl">
+    <div className="w-full flex flex-col justify-center mt-10 h-[80px]">
+      <div className="flex items-center     w-full max-w-4xl">
         {/* District */}
         <div className="flex-1  px-3 py-2 ">
           <Select
@@ -166,6 +163,7 @@ export default function FastValuation() {
           Calculate
         </button>
       </div>
+      <div className="text-center mt-6">{valuationResult}</div>
     </div>
   );
 }
