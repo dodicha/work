@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Select from "react-select";
+import RippleButton from "./buttons/RippleButton";
+import { MapPin, Hammer, Ruler } from "lucide-react";
 
 const condition = [
   "Needs Renovation",
@@ -35,7 +37,7 @@ const districtsList = [
   "საბურთალო",
   "ვაკე",
   "ვერა",
-  "მუხმთაწმინდაიანი",
+  "მთაწმინდა",
   "სოლოლაკი",
   "ორთაჭალა",
   "ფონიჭალა",
@@ -104,64 +106,82 @@ export default function FastValuation() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center mt-10 h-[80px]">
-      <div className="flex items-center     w-full max-w-4xl">
+    <div className="w-full flex flex-col items-center justify-center mt-10 ">
+      <div className="flex items-center justify-center bg-slate-100 rounded-lg  flex-row gap-10  w-11/12 ">
         {/* District */}
-        <div className="flex-1  px-3 py-2 ">
-          <Select
-            options={districtOptions}
-            placeholder="District"
-            value={district}
-            onChange={setDistrict}
-            className="text-sm"
-            styles={{
-              control: (base) => ({
-                ...base,
-                border: "none",
-                boxShadow: "none",
-                minHeight: "40px",
-              }),
-            }}
-          />
+        <div className="flex flex-row px-3 py-2 gap-4">
+          <MapPin className="text-gray-500 m-auto" size={30} />
+          <div>
+            <h6 className="text-gray-500 text-sm ml-2">DISTRICT</h6>
+            <Select
+              options={districtOptions}
+              placeholder="Select District"
+              value={district}
+              onChange={setDistrict}
+              className="text-sm "
+              styles={{
+                control: (base) => ({
+                  ...base,
+                  border: "none",
+                  boxShadow: "none",
+                  minHeight: "42px",
+                  width: "150px",
+                  backgroundColor: "",
+                }),
+              }}
+            />
+          </div>
         </div>
 
         {/* Condition */}
-        <div className="flex-1 border-r px-3 py-2">
-          <Select
-            options={conditionOptions}
-            placeholder="Condition"
-            value={condition}
-            onChange={setCondition}
-            className="text-sm"
-            styles={{
-              control: (base) => ({
-                ...base,
-                border: "none",
-                boxShadow: "none",
-                minHeight: "40px",
-              }),
-            }}
-          />
+        <div className="flex flex-row  px-3 py-2 gap-4">
+          <Hammer className="text-gray-500 m-auto" size={30} />
+          <div>
+            <h6 className="text-gray-500 text-sm ml-2">CONDITION</h6>
+            <Select
+              options={conditionOptions}
+              placeholder="Select Condition"
+              value={condition}
+              onChange={setCondition}
+              className="text-sm"
+              styles={{
+                control: (base) => ({
+                  ...base,
+                  border: "none",
+                  boxShadow: "none",
+                  minHeight: "42px",
+                  width: "200px",
+                  backgroundColor: "",
+                }),
+              }}
+            />
+          </div>
         </div>
 
         {/* Area Size */}
-        <div className="flex-1 border-r px-3 py-2">
-          <input
-            type="number"
-            placeholder="Area Size (m²)"
-            value={areaSize}
-            onChange={(e) => setAreaSize(e.target.value)}
-            className="w-full outline-none text-sm"
-          />
+        <div className="flex flex-row  border-r px-3 py-2 gap-4">
+          <Ruler className="text-gray-500 m-auto" size={30} />
+          <div>
+            <h6 className="text-gray-500 text-sm">AREA SIZE (m²)</h6>
+            <input
+              type="number"
+              placeholder="e.g. 130"
+              value={areaSize}
+              onChange={(e) => setAreaSize(e.target.value)}
+              className="w-full h-[42px] rounded  outline-none text-sm bg-transparent [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            />
+          </div>
         </div>
 
+        <div className="">
+          <RippleButton
+            onClick={handleCalculate}
+            className="bg-blue-500  hover:bg-blue-600 text-white py-4 px-4 rounded-xl font-semibold transition "
+          >
+            Calculate Valuation
+          </RippleButton>
+        </div>
         {/* Button */}
-        <button
-          onClick={handleCalculate}
-          className="bg-blue-500 hover:bg-blue-600 transition text-white px-8 py-3 h-full"
-        >
-          Calculate
-        </button>
       </div>
       <div className="text-center mt-6">{valuationResult}</div>
     </div>
