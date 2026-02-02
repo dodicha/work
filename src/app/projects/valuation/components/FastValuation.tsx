@@ -3,7 +3,15 @@
 import { useState, useEffect } from "react";
 import Select from "react-select";
 import RippleButton from "./buttons/RippleButton";
-import { MapPin, Hammer, Ruler } from "lucide-react";
+import {
+  MapPinHouse,
+  Hammer,
+  Ruler,
+  BadgeCheck,
+  Receipt,
+  ShieldAlert,
+  Landmark,
+} from "lucide-react";
 
 const condition = [
   "Needs Renovation",
@@ -55,7 +63,10 @@ const conditionOptions = condition.map((c) => ({
 
 export default function FastValuation() {
   const [data, setData] = useState(null);
-  const [valuationResult, setValuationResult] = useState<string>("");
+  const [minPrice, setMinPrice] = useState<number | null>(null);
+  const [maxPrice, setMaxPrice] = useState<number | null>(null);
+  const [fastValuationResult, setFastValuationResult] =
+    useState<boolean>(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -75,12 +86,17 @@ export default function FastValuation() {
       data?.[district][2025]?.["apartment"]?.[condition]?.["min"];
     const maxPrice =
       data?.[district][2025]?.["apartment"]?.[condition]?.["max"];
-    let priceRange: string = "";
+    let minimum: number | null = null;
+    let maximum: number | null = null;
     if (minPrice && maxPrice) {
-      priceRange = `${minPrice * area} - ${maxPrice * area}`;
+      minimum = minPrice * area;
+      maximum = maxPrice * area;
     }
-    return priceRange;
+    setMinPrice(minimum);
+    setMaxPrice(maximum);
   };
+
+  // const [minValuationPrice, maxValuationPrice] = calculatePrice();
 
   const [district, setDistrict] = useState<{
     value: string;
@@ -94,23 +110,23 @@ export default function FastValuation() {
 
   const handleCalculate = () => {
     console.log(data);
-    let prise = "";
     if (district && condition && areaSize) {
-      prise = calculatePrice(
-        district.value,
-        condition.value,
-        parseFloat(areaSize),
-      );
-      setValuationResult(prise);
+      calculatePrice(district.value, condition.value, parseFloat(areaSize));
+      setFastValuationResult(true);
     }
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center mt-10 ">
-      <div className="flex items-center justify-center bg-slate-100 rounded-lg  flex-row gap-10  w-11/12 ">
+    <div className="w-full flex flex-col items-center justify-center mt-10 bg-slate-300 p-6">
+      <div className="text-4xl text-left w-11/12">
+        <p className="font-bold leading-normal">
+          Find out the approximate market value <br></br> of your property
+        </p>
+      </div>
+      <div className="flex items-center justify-center bg-slate-100 rounded-lg  flex-row gap-10  w-11/12 mt-6">
         {/* District */}
         <div className="flex flex-row px-3 py-2 gap-4">
-          <MapPin className="text-gray-500 m-auto" size={30} />
+          <MapPinHouse className="text-gray-500 m-auto" size={30} />
           <div>
             <h6 className="text-gray-500 text-sm ml-2">DISTRICT</h6>
             <Select
@@ -173,7 +189,7 @@ export default function FastValuation() {
           </div>
         </div>
 
-        <div className="">
+        <div>
           <RippleButton
             onClick={handleCalculate}
             className="bg-blue-500  hover:bg-blue-600 text-white py-4 px-4 rounded-xl font-semibold transition "
@@ -183,7 +199,45 @@ export default function FastValuation() {
         </div>
         {/* Button */}
       </div>
-      <div className="text-center mt-6">{valuationResult}</div>
+      <div
+        className={`text-center mt-6 w-11/12  bg-slate-100 rounded-xl p-6 ${fastValuationResult ? "block" : "hidden"}`}
+      >
+        <div className="flex flex-row items-center bg-blue-300 w-fit rounded-full p-2 gap-2 text-blue-800">
+          <BadgeCheck />
+          <p className="font-semibold text-md text-left">Estimated Value</p>
+        </div>
+        <div className="flex flex-row items-center gap-1 mt-4 font-semibold text-green-800">
+          <Receipt size={38} />
+          <p className="text-left text-4xl">
+            {minPrice} - {maxPrice}
+          </p>
+        </div>
+        <div className="flex flex-row gap-4 items-center text-left font-mediumt  w-1/2 mt-4">
+          <ShieldAlert size={90} className="text-red-600" />
+          <p className="font-semibold text-lg">
+            The calculation is based on data from 2025 and is indicative, as
+            detailed information about the property is necessary to determine
+            the exact value.
+          </p>
+        </div>
+        <div className="flex flex-row items-center justify-between mt-10  bg-blue-200 p-6 rounded-xl border-[1px] border-blue-400">
+          <div className="flex flex-row gap-4 items-center">
+            <Landmark
+              className="bg-white rounded-2xl p-2 text-blue-600"
+              size={55}
+            />
+            <p className="font-medium">
+              Need an exact valuation? <br></br>
+              <span className="font-normal text-gray-500">
+                Connect with our expert for a detailed information
+              </span>
+            </p>
+          </div>
+          <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl ">
+            <button>Contact an Agent</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
