@@ -214,9 +214,9 @@ export default function FastValuation() {
             {minPrice} - {maxPrice}
           </p>
         </div>
-        <div className="flex flex-row gap-4 items-center text-left font-mediumt  w-1/2 mt-4">
+        <div className="flex flex-row lg:gap-4 gap-6 items-center text-left font-mediumt w-full lg:w-1/2 mt-4">
           <ShieldAlert size={90} className="text-red-600" />
-          <p className="font-semibold text-lg">
+          <p className="font-semibold lg:text-lg text-md">
             The calculation is based on data from 2025 and is indicative, as
             detailed information about the property is necessary to determine
             the exact value.
@@ -235,7 +235,7 @@ export default function FastValuation() {
               </span>
             </p>
           </div>
-          <div className="flex flex-col gap-2 ">
+          <div className="flex flex-col gap-2 mt-4">
             <ViberButton />
             <WhatsappButton />
           </div>
