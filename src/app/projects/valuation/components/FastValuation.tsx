@@ -12,6 +12,8 @@ import {
   ShieldAlert,
   Landmark,
 } from "lucide-react";
+import ViberButton from "./buttons/ViberButton";
+import WhatsappButton from "./buttons/WhatsappButton";
 
 const condition = [
   "Needs Renovation",
@@ -220,7 +222,7 @@ export default function FastValuation() {
             the exact value.
           </p>
         </div>
-        <div className="flex flex-row items-center justify-between mt-10  bg-blue-200 p-6 rounded-xl border-[1px] border-blue-400">
+        <div className="flex flex-row items-center justify-between mt-10  bg-blue-200 p-4 rounded-xl border-[1px] border-blue-400">
           <div className="flex flex-row gap-4 items-center">
             <Landmark
               className="bg-white rounded-2xl p-2 text-blue-600"
@@ -233,8 +235,9 @@ export default function FastValuation() {
               </span>
             </p>
           </div>
-          <div className="bg-blue-500 hover:bg-blue-600 p-3 rounded-xl ">
-            <button>Contact an Agent</button>
+          <div className="flex flex-col gap-2 ">
+            <ViberButton />
+            <WhatsappButton />
           </div>
         </div>
       </div>
