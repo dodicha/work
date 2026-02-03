@@ -121,11 +121,11 @@ export default function FastValuation() {
   return (
     <div className="w-full flex flex-col items-center justify-center mt-10 bg-slate-300 p-6">
       <div className="text-4xl text-left w-11/12">
-        <p className="font-bold leading-normal">
+        <p className="lg:font-semibold lg:text-3xl leading-normal text-sm">
           Find out the approximate market value <br></br> of your property
         </p>
       </div>
-      <div className="flex items-center justify-center bg-slate-100 rounded-lg  flex-row gap-10  w-11/12 mt-6">
+      <div className="flex lg:items-center  p-4 bg-slate-100 rounded-lg  flex-wrap  gap-2 lg:justify-between  lg:w-11/12 lg:px-16 mt-6">
         {/* District */}
         <div className="flex flex-row px-3 py-2 gap-4">
           <MapPinHouse className="text-gray-500 m-auto" size={30} />
@@ -222,7 +222,7 @@ export default function FastValuation() {
             the exact value.
           </p>
         </div>
-        <div className="flex flex-row items-center justify-between mt-10  bg-blue-200 p-4 rounded-xl border-[1px] border-blue-400">
+        <div className="flex flex-wrap items-center justify-between mt-10  bg-blue-200 p-4 rounded-xl border-[1px] border-blue-400">
           <div className="flex flex-row gap-4 items-center">
             <Landmark
               className="bg-white rounded-2xl p-2 text-blue-600"
