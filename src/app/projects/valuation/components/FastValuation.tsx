@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import ViberButton from "./buttons/ViberButton";
 import WhatsappButton from "./buttons/WhatsappButton";
+import DistrictMap from "./DistrictMap";
 
 const condition = [
   "Needs Renovation",
@@ -235,6 +236,10 @@ export default function FastValuation() {
               </span>
             </p>
           </div>
+          <div style={{ height: 500, background: "red" }}>
+            <DistrictMap year={"2025"} condition="Needs Renovation" />
+          </div>
+
           <div className="flex flex-col gap-2 mt-4">
             <ViberButton />
             <WhatsappButton />
