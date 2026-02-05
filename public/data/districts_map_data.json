@@ -1,0 +1,1578 @@
+{
+  "meta": {
+    "currency": "USD",
+    "unit": "price_per_sqm",
+    "years": [
+      2024,
+      2025
+    ]
+  },
+  "districts": [
+    {
+      "id": "მუხიანი",
+      "name": "მუხიანი",
+      "geometryId": "მუხიანი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 840,
+              "max": 1250
+            },
+            "2025": {
+              "min": 950,
+              "max": 1380
+            },
+            "change": {
+              "minPercent": 13.1,
+              "maxPercent": 10.4,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 975,
+              "max": 1320
+            },
+            "2025": {
+              "min": 1140,
+              "max": 1690
+            },
+            "change": {
+              "minPercent": 16.92,
+              "maxPercent": 28.03,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1175,
+              "max": 1680
+            },
+            "2025": {
+              "min": 1250,
+              "max": 1830
+            },
+            "change": {
+              "minPercent": 6.38,
+              "maxPercent": 8.93,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "გლდანი",
+      "name": "გლდანი",
+      "geometryId": "გლდანი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1000,
+              "max": 1700
+            },
+            "2025": {
+              "min": 1000,
+              "max": 1700
+            },
+            "change": {
+              "minPercent": 0.0,
+              "maxPercent": 0.0,
+              "trend": "stable"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1250,
+              "max": 2000
+            },
+            "2025": {
+              "min": 1250,
+              "max": 2000
+            },
+            "change": {
+              "minPercent": 0.0,
+              "maxPercent": 0.0,
+              "trend": "stable"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1350,
+              "max": 2120
+            },
+            "2025": {
+              "min": 1350,
+              "max": 2120
+            },
+            "change": {
+              "minPercent": 0.0,
+              "maxPercent": 0.0,
+              "trend": "stable"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ავჭალა",
+      "name": "ავჭალა",
+      "geometryId": "ავჭალა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 650,
+              "max": 780
+            },
+            "2025": {
+              "min": 750,
+              "max": 830
+            },
+            "change": {
+              "minPercent": 15.38,
+              "maxPercent": 6.41,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 840,
+              "max": 1150
+            },
+            "2025": {
+              "min": 900,
+              "max": 1230
+            },
+            "change": {
+              "minPercent": 7.14,
+              "maxPercent": 6.96,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 950,
+              "max": 1250
+            },
+            "2025": {
+              "min": 980,
+              "max": 1330
+            },
+            "change": {
+              "minPercent": 3.16,
+              "maxPercent": 6.4,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "თემქა",
+      "name": "თემქა",
+      "geometryId": "თემქა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 840,
+              "max": 1170
+            },
+            "2025": {
+              "min": 1020,
+              "max": 1450
+            },
+            "change": {
+              "minPercent": 21.43,
+              "maxPercent": 23.93,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 960,
+              "max": 1450
+            },
+            "2025": {
+              "min": 1140,
+              "max": 1660
+            },
+            "change": {
+              "minPercent": 18.75,
+              "maxPercent": 14.48,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1100,
+              "max": 1660
+            },
+            "2025": {
+              "min": 1210,
+              "max": 2120
+            },
+            "change": {
+              "minPercent": 10.0,
+              "maxPercent": 27.71,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "სანზონა",
+      "name": "სანზონა",
+      "geometryId": "სანზონა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 800,
+              "max": 1070
+            },
+            "2025": {
+              "min": 990,
+              "max": 1215
+            },
+            "change": {
+              "minPercent": 23.75,
+              "maxPercent": 13.55,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1280,
+              "max": 1530
+            },
+            "2025": {
+              "min": 1310,
+              "max": 1575
+            },
+            "change": {
+              "minPercent": 2.34,
+              "maxPercent": 2.94,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1460,
+              "max": 1600
+            },
+            "2025": {
+              "min": 1320,
+              "max": 1870
+            },
+            "change": {
+              "minPercent": -9.59,
+              "maxPercent": 16.88,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ნაძალადევი",
+      "name": "ნაძალადევი",
+      "geometryId": "ნაძალადევი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 945,
+              "max": 1420
+            },
+            "2025": {
+              "min": 1230,
+              "max": 1760
+            },
+            "change": {
+              "minPercent": 30.16,
+              "maxPercent": 23.94,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1080,
+              "max": 1685
+            },
+            "2025": {
+              "min": 1230,
+              "max": 1895
+            },
+            "change": {
+              "minPercent": 13.89,
+              "maxPercent": 12.46,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1280,
+              "max": 2065
+            },
+            "2025": {
+              "min": 1390,
+              "max": 2430
+            },
+            "change": {
+              "minPercent": 8.59,
+              "maxPercent": 17.68,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "დიდუბე",
+      "name": "დიდუბე",
+      "geometryId": "დიდუბე",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 980,
+              "max": 1700
+            },
+            "2025": {
+              "min": 1030,
+              "max": 1875
+            },
+            "change": {
+              "minPercent": 5.1,
+              "maxPercent": 10.29,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1160,
+              "max": 1900
+            },
+            "2025": {
+              "min": 1325,
+              "max": 2250
+            },
+            "change": {
+              "minPercent": 14.22,
+              "maxPercent": 18.42,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1270,
+              "max": 2140
+            },
+            "2025": {
+              "min": 1470,
+              "max": 2400
+            },
+            "change": {
+              "minPercent": 15.75,
+              "maxPercent": 12.15,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ჩუღურეთი",
+      "name": "ჩუღურეთი",
+      "geometryId": "ჩუღურეთი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1080,
+              "max": 1645
+            },
+            "2025": {
+              "min": 1050,
+              "max": 1835
+            },
+            "change": {
+              "minPercent": -2.78,
+              "maxPercent": 11.55,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1150,
+              "max": 1715
+            },
+            "2025": {
+              "min": 1300,
+              "max": 1990
+            },
+            "change": {
+              "minPercent": 13.04,
+              "maxPercent": 16.03,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1350,
+              "max": 2425
+            },
+            "2025": {
+              "min": 1535,
+              "max": 2770
+            },
+            "change": {
+              "minPercent": 13.7,
+              "maxPercent": 14.23,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ავლაბარი",
+      "name": "ავლაბარი",
+      "geometryId": "ავლაბარი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 900,
+              "max": 1380
+            },
+            "2025": {
+              "min": 1015,
+              "max": 1570
+            },
+            "change": {
+              "minPercent": 12.78,
+              "maxPercent": 13.77,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1550,
+              "max": 2150
+            },
+            "2025": {
+              "min": 1340,
+              "max": 2315
+            },
+            "change": {
+              "minPercent": -13.55,
+              "maxPercent": 7.67,
+              "trend": "down"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1350,
+              "max": 2240
+            },
+            "2025": {
+              "min": 1760,
+              "max": 2635
+            },
+            "change": {
+              "minPercent": 30.37,
+              "maxPercent": 17.63,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ლოტკინი",
+      "name": "ლოტკინი",
+      "geometryId": "ლოტკინი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 670,
+              "max": 825
+            },
+            "2025": {
+              "min": 705,
+              "max": 850
+            },
+            "change": {
+              "minPercent": 5.22,
+              "maxPercent": 3.03,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 750,
+              "max": 1035
+            },
+            "2025": {
+              "min": 770,
+              "max": 1175
+            },
+            "change": {
+              "minPercent": 2.67,
+              "maxPercent": 13.53,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 935,
+              "max": 1500
+            },
+            "2025": {
+              "min": 1485,
+              "max": 2000
+            },
+            "change": {
+              "minPercent": 58.82,
+              "maxPercent": 33.33,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "სამგორი",
+      "name": "სამგორი",
+      "geometryId": "სამგორი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 665,
+              "max": 970
+            },
+            "2025": {
+              "min": 735,
+              "max": 1060
+            },
+            "change": {
+              "minPercent": 10.53,
+              "maxPercent": 9.28,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1215,
+              "max": 1675
+            },
+            "2025": {
+              "min": 1225,
+              "max": 1835
+            },
+            "change": {
+              "minPercent": 0.82,
+              "maxPercent": 9.55,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1340,
+              "max": 1940
+            },
+            "2025": {
+              "min": 1425,
+              "max": 2035
+            },
+            "change": {
+              "minPercent": 6.34,
+              "maxPercent": 4.9,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ისანი",
+      "name": "ისანი",
+      "geometryId": "ისანი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 695,
+              "max": 1005
+            },
+            "2025": {
+              "min": 885,
+              "max": 1100
+            },
+            "change": {
+              "minPercent": 27.34,
+              "maxPercent": 9.45,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1120,
+              "max": 1775
+            },
+            "2025": {
+              "min": 1200,
+              "max": 1835
+            },
+            "change": {
+              "minPercent": 7.14,
+              "maxPercent": 3.38,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1495,
+              "max": 2215
+            },
+            "2025": {
+              "min": 1625,
+              "max": 2320
+            },
+            "change": {
+              "minPercent": 8.7,
+              "maxPercent": 4.74,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ვაზისუბანი",
+      "name": "ვაზისუბანი",
+      "geometryId": "ვაზისუბანი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 845,
+              "max": 1555
+            },
+            "2025": {
+              "min": 970,
+              "max": 1600
+            },
+            "change": {
+              "minPercent": 14.79,
+              "maxPercent": 2.89,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1030,
+              "max": 1720
+            },
+            "2025": {
+              "min": 1060,
+              "max": 1735
+            },
+            "change": {
+              "minPercent": 2.91,
+              "maxPercent": 0.87,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1065,
+              "max": 1615
+            },
+            "2025": {
+              "min": 1265,
+              "max": 1880
+            },
+            "change": {
+              "minPercent": 18.78,
+              "maxPercent": 16.41,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ვარკეთილი",
+      "name": "ვარკეთილი",
+      "geometryId": "ვარკეთილი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 790,
+              "max": 1415
+            },
+            "2025": {
+              "min": 970,
+              "max": 1515
+            },
+            "change": {
+              "minPercent": 22.78,
+              "maxPercent": 7.07,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 980,
+              "max": 1710
+            },
+            "2025": {
+              "min": 1075,
+              "max": 1580
+            },
+            "change": {
+              "minPercent": 9.69,
+              "maxPercent": -7.6,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1050,
+              "max": 1650
+            },
+            "2025": {
+              "min": 1210,
+              "max": 1855
+            },
+            "change": {
+              "minPercent": 15.24,
+              "maxPercent": 12.42,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "აფრიკა",
+      "name": "აფრიკა",
+      "geometryId": "აფრიკა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 900,
+              "max": 1080
+            },
+            "2025": {
+              "min": 860,
+              "max": 1230
+            },
+            "change": {
+              "minPercent": -4.44,
+              "maxPercent": 13.89,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 805,
+              "max": 1055
+            },
+            "2025": {
+              "min": 955,
+              "max": 1480
+            },
+            "change": {
+              "minPercent": 18.63,
+              "maxPercent": 40.28,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 915,
+              "max": 1260
+            },
+            "2025": {
+              "min": 810,
+              "max": 1560
+            },
+            "change": {
+              "minPercent": -11.48,
+              "maxPercent": 23.81,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ლილო",
+      "name": "ლილო",
+      "geometryId": "ლილო",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 640,
+              "max": 850
+            },
+            "2025": {
+              "min": 785,
+              "max": 1015
+            },
+            "change": {
+              "minPercent": 22.66,
+              "maxPercent": 19.41,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 805,
+              "max": 1045
+            },
+            "2025": {
+              "min": 870,
+              "max": 1305
+            },
+            "change": {
+              "minPercent": 8.07,
+              "maxPercent": 24.88,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 720,
+              "max": 925
+            },
+            "2025": {
+              "min": 885,
+              "max": 1300
+            },
+            "change": {
+              "minPercent": 22.92,
+              "maxPercent": 40.54,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ორხევი",
+      "name": "ორხევი",
+      "geometryId": "ორხევი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 775,
+              "max": 1280
+            },
+            "2025": {
+              "min": 785,
+              "max": 1315
+            },
+            "change": {
+              "minPercent": 1.29,
+              "maxPercent": 2.73,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 765,
+              "max": 920
+            },
+            "2025": {
+              "min": 870,
+              "max": 1135
+            },
+            "change": {
+              "minPercent": 13.73,
+              "maxPercent": 23.37,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 915,
+              "max": 1135
+            },
+            "2025": {
+              "min": 960,
+              "max": 1265
+            },
+            "change": {
+              "minPercent": 4.92,
+              "maxPercent": 11.45,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "დიღომი-7",
+      "name": "დიღომი 7",
+      "geometryId": "დიღომი-7",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 975,
+              "max": 1315
+            },
+            "2025": {
+              "min": 925,
+              "max": 1300
+            },
+            "change": {
+              "minPercent": -5.13,
+              "maxPercent": -1.14,
+              "trend": "down"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1135,
+              "max": 1800
+            },
+            "2025": {
+              "min": 1180,
+              "max": 1885
+            },
+            "change": {
+              "minPercent": 3.96,
+              "maxPercent": 4.72,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1180,
+              "max": 1895
+            },
+            "2025": {
+              "min": 1300,
+              "max": 2380
+            },
+            "change": {
+              "minPercent": 10.17,
+              "maxPercent": 25.59,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "დიდი-დიღომი",
+      "name": "დიდი დიღომი",
+      "geometryId": "დიდი-დიღომი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 935,
+              "max": 1360
+            },
+            "2025": {
+              "min": 931,
+              "max": 1410
+            },
+            "change": {
+              "minPercent": -0.43,
+              "maxPercent": 3.68,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1090,
+              "max": 1530
+            },
+            "2025": {
+              "min": 1185,
+              "max": 1785
+            },
+            "change": {
+              "minPercent": 8.72,
+              "maxPercent": 16.67,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1195,
+              "max": 2065
+            },
+            "2025": {
+              "min": 1275,
+              "max": 2030
+            },
+            "change": {
+              "minPercent": 6.69,
+              "maxPercent": -1.69,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "დიღმის-მასივი",
+      "name": "დიღმის მასივი",
+      "geometryId": "დიღმის-მასივი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1030,
+              "max": 1535
+            },
+            "2025": {
+              "min": 1240,
+              "max": 1740
+            },
+            "change": {
+              "minPercent": 20.39,
+              "maxPercent": 13.36,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1350,
+              "max": 1885
+            },
+            "2025": {
+              "min": 1325,
+              "max": 1885
+            },
+            "change": {
+              "minPercent": -1.85,
+              "maxPercent": 0.0,
+              "trend": "stable"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1250,
+              "max": 1925
+            },
+            "2025": {
+              "min": 1380,
+              "max": 2375
+            },
+            "change": {
+              "minPercent": 10.4,
+              "maxPercent": 23.38,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ვაშლიჯვარი",
+      "name": "ვაშლიჯვარი",
+      "geometryId": "ვაშლიჯვარი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 915,
+              "max": 1100
+            },
+            "2025": {
+              "min": 980,
+              "max": 1175
+            },
+            "change": {
+              "minPercent": 7.1,
+              "maxPercent": 6.82,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1250,
+              "max": 1600
+            },
+            "2025": {
+              "min": 1080,
+              "max": 1545
+            },
+            "change": {
+              "minPercent": -13.6,
+              "maxPercent": -3.44,
+              "trend": "down"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1265,
+              "max": 2165
+            },
+            "2025": {
+              "min": 1485,
+              "max": 2895
+            },
+            "change": {
+              "minPercent": 17.39,
+              "maxPercent": 33.72,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ნუცუბიძის-პლატო",
+      "name": "ნუცუბიძის პლატო",
+      "geometryId": "ნუცუბიძის-პლატო",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 890,
+              "max": 1560
+            },
+            "2025": {
+              "min": 1000,
+              "max": 1175
+            },
+            "change": {
+              "minPercent": 12.36,
+              "maxPercent": -24.68,
+              "trend": "down"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1395,
+              "max": 2165
+            },
+            "2025": {
+              "min": 1275,
+              "max": 1930
+            },
+            "change": {
+              "minPercent": -8.6,
+              "maxPercent": -10.85,
+              "trend": "down"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1490,
+              "max": 2615
+            },
+            "2025": {
+              "min": 1605,
+              "max": 2610
+            },
+            "change": {
+              "minPercent": 7.72,
+              "maxPercent": -0.19,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "საბურთალო",
+      "name": "საბურთალო",
+      "geometryId": "საბურთალო",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1200,
+              "max": 1360
+            },
+            "2025": {
+              "min": 1340,
+              "max": 1600
+            },
+            "change": {
+              "minPercent": 11.67,
+              "maxPercent": 17.65,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1760,
+              "max": 2050
+            },
+            "2025": {
+              "min": 1840,
+              "max": 2230
+            },
+            "change": {
+              "minPercent": 4.55,
+              "maxPercent": 8.78,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 2300,
+              "max": 2625
+            },
+            "2025": {
+              "min": 2260,
+              "max": 2850
+            },
+            "change": {
+              "minPercent": -1.74,
+              "maxPercent": 8.57,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ვაკე",
+      "name": "ვაკე",
+      "geometryId": "ვაკე",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1075,
+              "max": 2175
+            },
+            "2025": {
+              "min": 1175,
+              "max": 2460
+            },
+            "change": {
+              "minPercent": 9.3,
+              "maxPercent": 13.1,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1255,
+              "max": 2370
+            },
+            "2025": {
+              "min": 1375,
+              "max": 2640
+            },
+            "change": {
+              "minPercent": 9.56,
+              "maxPercent": 11.39,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1410,
+              "max": 2625
+            },
+            "2025": {
+              "min": 1480,
+              "max": 2850
+            },
+            "change": {
+              "minPercent": 4.96,
+              "maxPercent": 8.57,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ვერა",
+      "name": "ვერა",
+      "geometryId": "ვერა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1610,
+              "max": 1930
+            },
+            "2025": {
+              "min": 1930,
+              "max": 2460
+            },
+            "change": {
+              "minPercent": 19.88,
+              "maxPercent": 27.46,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1640,
+              "max": 2170
+            },
+            "2025": {
+              "min": 1760,
+              "max": 2640
+            },
+            "change": {
+              "minPercent": 7.32,
+              "maxPercent": 21.66,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 2100,
+              "max": 2620
+            },
+            "2025": {
+              "min": 2180,
+              "max": 2850
+            },
+            "change": {
+              "minPercent": 3.81,
+              "maxPercent": 8.78,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "მთაწმინდა",
+      "name": "მთაწმინდა",
+      "geometryId": "მთაწმინდა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1610,
+              "max": 1930
+            },
+            "2025": {
+              "min": 1930,
+              "max": 2100
+            },
+            "change": {
+              "minPercent": 19.88,
+              "maxPercent": 8.81,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1640,
+              "max": 2170
+            },
+            "2025": {
+              "min": 1760,
+              "max": 2640
+            },
+            "change": {
+              "minPercent": 7.32,
+              "maxPercent": 21.66,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 2100,
+              "max": 2620
+            },
+            "2025": {
+              "min": 2180,
+              "max": 2850
+            },
+            "change": {
+              "minPercent": 3.81,
+              "maxPercent": 8.78,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "სოლოლაკი",
+      "name": "სოლოლაკი",
+      "geometryId": "სოლოლაკი",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1140,
+              "max": 1800
+            },
+            "2025": {
+              "min": 1555,
+              "max": 2100
+            },
+            "change": {
+              "minPercent": 36.4,
+              "maxPercent": 16.67,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1735,
+              "max": 2080
+            },
+            "2025": {
+              "min": 1510,
+              "max": 1945
+            },
+            "change": {
+              "minPercent": -12.97,
+              "maxPercent": -6.49,
+              "trend": "down"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 2100,
+              "max": 2655
+            },
+            "2025": {
+              "min": 2180,
+              "max": 2850
+            },
+            "change": {
+              "minPercent": 3.81,
+              "maxPercent": 7.34,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ორთაჭალა",
+      "name": "ორთაჭალა",
+      "geometryId": "ორთაჭალა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 1000,
+              "max": 1680
+            },
+            "2025": {
+              "min": 1160,
+              "max": 1715
+            },
+            "change": {
+              "minPercent": 16.0,
+              "maxPercent": 2.08,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 1370,
+              "max": 2250
+            },
+            "2025": {
+              "min": 1320,
+              "max": 2365
+            },
+            "change": {
+              "minPercent": -3.65,
+              "maxPercent": 5.11,
+              "trend": "stable"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 1450,
+              "max": 2400
+            },
+            "2025": {
+              "min": 1610,
+              "max": 2965
+            },
+            "change": {
+              "minPercent": 11.03,
+              "maxPercent": 23.54,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "ფონიჭალა",
+      "name": "ფონიჭალა",
+      "geometryId": "ფონიჭალა",
+      "realEstate": {
+        "apartment": {
+          "Needs Renovation": {
+            "2024": {
+              "min": 715,
+              "max": 1325
+            },
+            "2025": {
+              "min": 800,
+              "max": 1265
+            },
+            "change": {
+              "minPercent": 11.89,
+              "maxPercent": -4.53,
+              "trend": "up"
+            }
+          },
+          "In Average Condition": {
+            "2024": {
+              "min": 780,
+              "max": 1030
+            },
+            "2025": {
+              "min": 1060,
+              "max": 1385
+            },
+            "change": {
+              "minPercent": 35.9,
+              "maxPercent": 34.47,
+              "trend": "up"
+            }
+          },
+          "Fully Renovated": {
+            "2024": {
+              "min": 995,
+              "max": 1385
+            },
+            "2025": {
+              "min": 1260,
+              "max": 1675
+            },
+            "change": {
+              "minPercent": 26.63,
+              "maxPercent": 20.94,
+              "trend": "up"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
